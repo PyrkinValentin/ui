@@ -1,0 +1,17 @@
+.tooltip__popup {
+  @apply relative px-3 py-2 max-w-xs rounded-lg bg-overlay border border-border shadow-lg text-sm text-foreground
+  wrap-break-word origin-(--transform-origin) transition motion-reduce:transition-none transform-gpu;
+
+  &:focus-visible {
+    @apply status-focus;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    @apply opacity-0 scale-90;
+  }
+}
+
+.tooltip__arrow {
+  @apply floating-arrow;
+}

@@ -1,0 +1,69 @@
+@utility status-disable {
+  @apply opacity-50 pointer-events-none;
+}
+
+@utility status-focus {
+  @apply z-10 ring-2 ring-focus ring-offset-2 ring-offset-background outline-none;
+}
+
+@utility status-invalid {
+  @apply z-10 ring-2 ring-danger ring-offset-2 ring-offset-background outline-none;
+}
+
+@utility icon-tiny {
+  & > svg {
+    @apply size-3.5;
+  }
+}
+
+@utility icon-xs {
+  & > svg {
+    @apply size-4;
+  }
+}
+
+@utility icon-sm {
+  & > svg {
+    @apply size-4.5;
+  }
+}
+
+@utility icon-md {
+  & > svg {
+    @apply size-5;
+  }
+}
+
+@utility icon-lg {
+  & > svg {
+    @apply size-5.5;
+  }
+}
+
+@utility icon-xl {
+  & > svg {
+    @apply size-6;
+  }
+}
+
+@utility floating-arrow {
+  @apply -z-10 size-2.5 bg-inherit border border-transparent border-b-inherit border-r-inherit rounded-br-[3px];
+
+  &[data-side="top"] {
+    @apply bottom-0 translate-y-1/2 rotate-45;
+  }
+
+  &[data-side="bottom"] {
+    @apply top-0 -translate-y-1/2 rotate-225;
+  }
+
+  &[data-side="left"],
+  &[data-side="inline-start"] {
+    @apply right-0 translate-x-1/2 -rotate-45;
+  }
+
+  &[data-side="right"],
+  &[data-side="inline-end"] {
+    @apply left-0 -translate-x-1/2 rotate-135;
+  }
+}

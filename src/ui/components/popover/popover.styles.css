@@ -1,0 +1,38 @@
+.popover__backdrop {
+  @apply fixed inset-0 bg-backdrop transition-opacity motion-reduce:transition-none;
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    @apply opacity-0;
+  }
+}
+
+.popover__popup {
+  @apply relative px-4 py-3 rounded-lg bg-overlay border border-border shadow-lg origin-(--transform-origin)
+  transition motion-reduce:transition-none transform-gpu;
+
+  &:focus-visible {
+    @apply status-focus;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    @apply opacity-0 scale-90;
+  }
+}
+
+.popover__arrow {
+  @apply floating-arrow;
+}
+
+.popover__title {
+  @apply font-medium text-sm text-foreground text-pretty;
+}
+
+.popover__description {
+  @apply text-sm text-muted text-pretty;
+
+  .popover__title + & {
+    @apply mt-1;
+  }
+}

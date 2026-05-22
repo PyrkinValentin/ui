@@ -1,0 +1,58 @@
+.alert {
+  @apply relative px-4 py-3 w-full flex items-center gap-4 rounded-lg;
+
+  &:has(.alert__description) {
+    @apply items-start;
+  }
+
+  &[data-variant="primary"] {
+    @apply bg-surface;
+  }
+
+  &[data-variant="secondary"] {
+    @apply bg-secondary;
+  }
+}
+
+.alert__indicator {
+  @apply flex items-center justify-center icon-md;
+}
+
+.alert__content {
+  @apply flex grow flex-col items-start;
+}
+
+.alert__title {
+  @apply font-medium text-sm text-foreground text-pretty;
+}
+
+.alert__description {
+  @apply text-sm text-muted text-pretty;
+
+  .alert__title + & {
+    @apply mt-1;
+  }
+}
+
+.alert__indicator,
+.alert__title {
+  &[data-status="neutral"] {
+    @apply text-foreground;
+  }
+
+  &[data-status="info"] {
+    @apply text-primary;
+  }
+
+  &[data-status="success"] {
+    @apply text-success;
+  }
+
+  &[data-status="warning"] {
+    @apply text-warning;
+  }
+
+  &[data-status="danger"] {
+    @apply text-danger;
+  }
+}

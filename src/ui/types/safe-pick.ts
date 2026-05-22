@@ -1,0 +1,1 @@
+export type SafePick<T, K extends keyof T> = Omit<T, Exclude<keyof T, K>>
