@@ -6,7 +6,7 @@ import { useCallback } from "react"
 
 export const useMergeRefs = <R>(...refs: (Ref<R> | undefined)[]): RefCallback<R> => {
 	return useCallback((instance: R | null) => {
-		const cleanups: Array<() => void> = []
+		const cleanups: (() => void)[] = []
 
 		for (let i = 0; i < refs.length; i++) {
 			const ref = refs[i]

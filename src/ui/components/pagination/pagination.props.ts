@@ -33,6 +33,7 @@ export type PaginationRootProps = UIComponentProps<"nav", PaginationRootState> &
 	 */
 	onPageChange?: (page: number, eventDetails: PaginationRootChangeEventDetails) => void
 }
+
 export type PaginationListState = object
 export type PaginationListProps = UIComponentProps<"ul", PaginationListState>
 

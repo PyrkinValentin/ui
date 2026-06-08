@@ -1,0 +1,36 @@
+.otp-field {
+  @apply w-fit inline-flex items-center gap-2;
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.otp-field__input {
+  @apply relative size-10 block text-center rounded-md outline-none bg-surface text-surface-foreground text-sm
+  placeholder:text-muted appearance-none transition motion-reduce:transition-none;
+
+  .otp-field:hover &:not(:focus) {
+    @apply bg-surface-hover;
+  }
+
+  &:focus {
+    @apply z-10 status-focus;
+  }
+
+  &[data-invalid] {
+    @apply status-invalid;
+  }
+}
+
+.otp-field__separator {
+  @apply text-neutral;
+
+  & > svg {
+    @apply size-4.5;
+  }
+
+  &[data-orientation="vertical"] {
+    @apply rotate-90;
+  }
+}

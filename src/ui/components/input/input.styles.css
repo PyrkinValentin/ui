@@ -2,12 +2,12 @@
   @apply relative px-4 w-full h-10 block rounded-md outline-none bg-surface text-surface-foreground text-sm
   placeholder:text-muted appearance-none transition motion-reduce:transition-none;
 
-  &:hover {
+  &:hover:not(:focus) {
     @apply bg-surface-hover;
   }
 
   &:focus {
-    @apply z-10 status-focus bg-surface;
+    @apply z-10 status-focus;
   }
 
   &[data-disabled] {

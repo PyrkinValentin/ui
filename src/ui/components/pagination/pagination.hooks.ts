@@ -41,7 +41,7 @@ export const usePaginationSync = (options: UsePaginationSyncOptions) => {
 
 export const usePaginationManager = (options: UsePaginationManagerOptions): UsePaginationManagerReturn => {
 	const {
-		page,
+		page = 1,
 		total,
 		siblings = 1,
 		boundaries = 1,

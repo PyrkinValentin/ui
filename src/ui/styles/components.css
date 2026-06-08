@@ -12,6 +12,7 @@
 @import "../components/form/form.styles.css";
 @import "../components/input/input.styles.css";
 @import "../components/item/item.styles.css";
+@import "../components/otp-field/otp-field.styles.css";
 @import "../components/pagination/pagination.styles.css";
 @import "../components/popover/popover.styles.css";
 @import "../components/scroll-area/scroll-area.styles.css";
