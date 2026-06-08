@@ -20,7 +20,7 @@ import { usePaginationRootContext, usePaginationSync } from "./pagination.hooks"
 
 import { createChangeEventDetails, toClassNames, clamp, toDataAttrs } from "../../utils"
 
-import { PAGINATION_REASONS } from "./pagination.constants"
+import { REASONS } from "../../constants"
 
 import { Button } from "@base-ui/react/button"
 import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react"
@@ -125,7 +125,7 @@ export const PaginationPrev = (props: PaginationPrevProps) => {
 		) {
 			onPageChange?.(
 				page - 1,
-				createChangeEventDetails(PAGINATION_REASONS.prev, ev.nativeEvent),
+				createChangeEventDetails(REASONS.prevPress, ev.nativeEvent),
 			)
 		}
 	}
@@ -166,7 +166,7 @@ export const PaginationNext = (props: PaginationNextProps) => {
 		) {
 			onPageChange?.(
 				page + 1,
-				createChangeEventDetails(PAGINATION_REASONS.next, ev.nativeEvent),
+				createChangeEventDetails(REASONS.nextPress, ev.nativeEvent),
 			)
 		}
 	}
@@ -208,7 +208,7 @@ export const PaginationPage = (props: PaginationPageProps) => {
 		) {
 			onPageChange?.(
 				pageProp,
-				createChangeEventDetails(PAGINATION_REASONS.button, ev.nativeEvent),
+				createChangeEventDetails(REASONS.pagePress, ev.nativeEvent),
 			)
 		}
 	}

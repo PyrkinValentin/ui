@@ -29,7 +29,7 @@
 
 .dialog__popup {
   @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 w-[calc(100%-2rem)] max-h-[calc(100%-2rem)]
-  flex flex-col rounded-lg bg-background border border-border shadow-lg transition motion-reduce:transition-none
+  flex flex-col rounded-lg shadow-lg bg-overlay border border-border transition motion-reduce:transition-none
   transform-gpu;
 
   &[data-size="xs"] {
@@ -59,7 +59,7 @@
   }
 
   &[data-nested-dialog-open] {
-    @apply pointer-events-none;
+    @apply -translate-x-full pointer-events-none;
   }
 
   &:focus-visible {
@@ -67,36 +67,8 @@
   }
 }
 
-.dialog__indicator {
-  @apply shrink-0 mb-4 size-10 flex items-center justify-center rounded-md;
-
-  & > svg {
-    @apply size-6;
-  }
-
-  &[data-status="neutral"] {
-    @apply bg-neutral-soft text-foreground;
-  }
-
-  &[data-status="info"] {
-    @apply bg-info-soft text-info;
-  }
-
-  &[data-status="success"] {
-    @apply bg-success-soft text-success;
-  }
-
-  &[data-status="warning"] {
-    @apply bg-warning-soft text-warning;
-  }
-
-  &[data-status="error"] {
-    @apply bg-error-soft text-error;
-  }
-}
-
 .dialog__title {
-  @apply text-base font-medium text-pretty text-foreground;
+  @apply text-base font-medium text-pretty text-foreground leading-snug;
 }
 
 .dialog__description {
@@ -108,7 +80,7 @@
 }
 
 .dialog__actions {
-  @apply mt-auto pt-4 flex items-center justify-end gap-2;
+  @apply mt-auto pt-6 flex items-center justify-end gap-2;
 }
 
 .dialog__close {
@@ -123,7 +95,7 @@
     }
 
     &:hover {
-      @apply bg-neutral-soft-hover;
+      @apply bg-neutral-hover;
     }
   }
 

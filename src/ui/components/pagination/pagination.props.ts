@@ -1,8 +1,14 @@
 import type { ButtonProps, ButtonState } from "@base-ui/react/button"
 import type { UIChangeEventDetails, UIComponentProps } from "../../types"
+import type { REASONS } from "../../constants"
 
 export type PaginationRootState = { page: number }
-export type PaginationRootChangeEventReason = "prev" | "next" | "button" | "sync"
+export type PaginationRootChangeEventReason =
+	| typeof REASONS.prevPress
+	| typeof REASONS.nextPress
+	| typeof REASONS.pagePress
+	| typeof REASONS.sync
+
 export type PaginationRootChangeEventDetails = UIChangeEventDetails<PaginationRootChangeEventReason>
 export type PaginationRootProps = UIComponentProps<"nav", PaginationRootState> & {
 	/**

@@ -1,0 +1,50 @@
+.collapsible {
+  @apply w-full;
+}
+
+.collapsible__trigger {
+  @apply relative px-4 py-3 w-full flex items-center gap-2 rounded-md text-left text-sm font-medium transition
+  motion-reduce:transition-none;
+
+  & > svg {
+    @apply size-4.5 text-muted;
+  }
+
+  &:hover:not([data-panel-open]) {
+    @apply bg-surface;
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.collapsible__indicator {
+  @apply shrink-0 ms-auto flex items-center justify-center text-muted select-none transition-transform
+  motion-reduce:transition-none;
+  
+  & > svg {
+    @apply size-4.5;
+  }
+
+  .collapsible__trigger[data-panel-open] & {
+    @apply rotate-180;
+  }
+}
+
+.collapsible__panel {
+  @apply h-(--collapsible-panel-height) overflow-hidden transition-[height] motion-reduce:transition-none;
+
+  &[data-ending-style],
+  &[data-starting-style] {
+    @apply h-0 will-change-[height];
+  }
+}
+
+.collapsible__content {
+  @apply px-4;
+}

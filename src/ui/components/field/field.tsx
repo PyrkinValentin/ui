@@ -3,6 +3,7 @@
 import type {
 	FieldRootProps,
 	FieldLabelProps,
+	FieldControlProps,
 	FieldDescriptionProps,
 	FieldItemProps,
 	FieldErrorProps,
@@ -44,6 +45,20 @@ export const FieldLabel = (props: FieldLabelProps) => {
 		>
 			{children}
 		</Field.Label>
+	)
+}
+
+export const FieldControl = (props: FieldControlProps) => {
+	const {
+		className,
+		...restProps
+	} = props
+
+	return (
+		<Field.Control
+			{...restProps}
+			className={toClassNames("field__control", className)}
+		/>
 	)
 }
 
@@ -106,6 +121,7 @@ export const FieldValidity = (props: FieldValidityProps) => {
 
 FieldRoot.displayName = "Field.Root"
 FieldLabel.displayName = "Field.Label"
+FieldControl.displayName = "Field.Control"
 FieldDescription.displayName = "Field.Description"
 FieldItem.displayName = "Field.Item"
 FieldError.displayName = "Field.Error"

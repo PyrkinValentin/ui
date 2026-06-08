@@ -1,25 +1,38 @@
 .field {
   @apply w-full flex flex-col gap-1;
-}
-
-.field__label {
-  @apply text-sm font-medium text-foreground text-pretty transition motion-reduce:transition-none;
 
   &[data-disabled] {
     @apply status-disable;
   }
+}
+
+.field__label {
+  @apply text-sm font-medium text-pretty text-foreground transition motion-reduce:transition-none;
 
   &[data-invalid] {
     @apply text-error;
   }
 }
 
+.field__control {
+  @apply relative px-4 w-full h-10 block rounded-md outline-none bg-surface text-surface-foreground text-sm
+  placeholder:text-muted appearance-none transition motion-reduce:transition-none;
+
+  &:hover {
+    @apply bg-surface-hover;
+  }
+
+  &:focus {
+    @apply z-10 status-focus bg-surface;
+  }
+
+  &[data-invalid] {
+    @apply status-invalid;
+  }
+}
+
 .field__description {
   @apply text-muted transition motion-reduce:transition-none;
-
-  &[data-disabled] {
-    @apply status-disable;
-  }
 }
 
 .field__error {

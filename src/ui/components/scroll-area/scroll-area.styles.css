@@ -1,5 +1,5 @@
 .scroll-area {
-  @apply h-full min-h-0 flex overflow-hidden transition motion-reduce:transition-none;
+  @apply relative h-full min-h-0 flex overflow-hidden transition motion-reduce:transition-none;
 
   &:has(.scroll-area__viewport:focus-visible) {
     @apply z-10 status-focus;

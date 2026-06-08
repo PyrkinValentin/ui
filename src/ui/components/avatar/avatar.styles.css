@@ -1,0 +1,56 @@
+.avatar {
+  @apply overflow-hidden shrink-0 inline-flex items-center justify-center rounded-full bg-neutral font-medium
+  select-none;
+
+  &[data-size="sm"] {
+    @apply size-8 text-xs;
+
+    & svg {
+      @apply size-4;
+    }
+  }
+
+  &[data-size="md"] {
+    @apply size-10 text-sm;
+
+    & svg {
+      @apply size-4.5;
+    }
+  }
+
+  &[data-size="lg"] {
+    @apply size-12 text-base;
+
+    & svg {
+      @apply size-5;
+    }
+  }
+
+  &[data-color="neutral"] {
+    @apply text-foreground;
+  }
+
+  &[data-color="info"] {
+    @apply text-info;
+  }
+
+  &[data-color="success"] {
+    @apply text-success;
+  }
+
+  &[data-color="warning"] {
+    @apply text-warning;
+  }
+
+  &[data-color="error"] {
+    @apply text-error;
+  }
+}
+
+.avatar__image {
+  @apply size-full object-cover;
+}
+
+.avatar__fallback {
+  @apply size-full flex items-center justify-center;
+}

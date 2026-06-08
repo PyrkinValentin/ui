@@ -1,5 +1,5 @@
 .button {
-  @apply w-fit inline-flex items-center justify-center font-medium whitespace-nowrap select-none transition
+  @apply relative w-fit inline-flex items-center justify-center font-medium whitespace-nowrap select-none transition
   motion-reduce:transition-none;
 
   &[data-variant="primary"] {

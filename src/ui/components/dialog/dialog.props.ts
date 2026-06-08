@@ -30,18 +30,9 @@ export type {
 export type DialogPopupProps = BaseDialogPopupProps & {
 	/**
 	 * The size of the component.
-	 * @default "md"
+	 * @default "sm"
 	 */
 	size?: "xs" | "sm" | "md" | "lg" | "full"
-}
-
-export type DialogIndicatorState = object
-export type DialogIndicatorProps = UIComponentProps<"span", DialogIndicatorState> & {
-	/**
-	 * The visual status of the component.
-	 * @default "neutral"
-	 */
-	status?: "neutral" | "info" | "success" | "warning" | "error"
 }
 
 export type DialogActionsState = object

@@ -1,6 +1,6 @@
 import { useToastManager } from "./toast.hooks"
 
-import { toastCreateManager } from "./toast.utils"
+import { createToastManager } from "./toast.utils"
 
 import {
 	ToastProvider,
@@ -33,5 +33,5 @@ export const Toast = {
 	Action: ToastAction,
 	Close: ToastClose,
 	useManager: useToastManager,
-	createManager: toastCreateManager,
-}
+	createManager: createToastManager,
+} as const

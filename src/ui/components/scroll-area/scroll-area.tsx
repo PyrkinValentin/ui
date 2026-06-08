@@ -102,12 +102,16 @@ export const ScrollAreaThumb = (props: ScrollAreaThumbProps) => {
 
 export const ScrollAreaCorner = (props: ScrollAreaCornerProps) => {
 	const {
+		className,
 		children,
 		...restProps
 	} = props
 
 	return (
-		<ScrollArea.Corner {...restProps}>
+		<ScrollArea.Corner
+			{...restProps}
+			className={toClassNames("scroll-area__corner", className)}
+		>
 			{children}
 		</ScrollArea.Corner>
 	)

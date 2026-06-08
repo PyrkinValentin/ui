@@ -51,12 +51,16 @@ export const PopoverTrigger = <Payload = unknown>(props: PopoverTriggerProps<Pay
 
 export const PopoverPortal = (props: PopoverPortalProps) => {
 	const {
+		className,
 		children,
 		...restProps
 	} = props
 
 	return (
-		<Popover.Portal {...restProps}>
+		<Popover.Portal
+			{...restProps}
+			className={toClassNames("popover__portal", className)}
+		>
 			{children}
 		</Popover.Portal>
 	)

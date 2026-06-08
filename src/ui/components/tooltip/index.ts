@@ -1,4 +1,4 @@
-import { TooltipHandle, tooltipCreateHandle } from "./tooltip.utils"
+import { TooltipHandle, createTooltipHandle } from "./tooltip.utils"
 
 import {
 	TooltipProvider,
@@ -21,5 +21,5 @@ export const Tooltip = {
 	Arrow: TooltipArrow,
 	Viewport: TooltipViewport,
 	Handle: TooltipHandle,
-	createHandle: tooltipCreateHandle,
-}
+	createHandle: createTooltipHandle,
+} as const

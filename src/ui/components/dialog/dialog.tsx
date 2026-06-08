@@ -7,7 +7,6 @@ import type {
 	DialogBackdropProps,
 	DialogViewportProps,
 	DialogPopupProps,
-	DialogIndicatorProps,
 	DialogTitleProps,
 	DialogDescriptionProps,
 	DialogActionsProps,
@@ -15,8 +14,6 @@ import type {
 } from "./dialog.props"
 
 import { toClassNames, toDataAttrs } from "../../utils"
-
-import { STATUS_INDICATORS } from "../../constants"
 
 import { Dialog } from "@base-ui/react/dialog"
 import { X } from "lucide-react"
@@ -54,12 +51,16 @@ export const DialogTrigger = <Payload = unknown>(props: DialogTriggerProps<Paylo
 
 export const DialogPortal = (props: DialogPortalProps) => {
 	const {
+		className,
 		children,
 		...restProps
 	} = props
 
 	return (
-		<Dialog.Portal {...restProps}>
+		<Dialog.Portal
+			{...restProps}
+			className={toClassNames("dialog__portal", className)}
+		>
 			{children}
 		</Dialog.Portal>
 	)
@@ -101,7 +102,7 @@ export const DialogViewport = (props: DialogViewportProps) => {
 
 export const DialogPopup = (props: DialogPopupProps) => {
 	const {
-		size = "md",
+		size = "sm",
 		className,
 		children,
 		...restProps
@@ -115,28 +116,6 @@ export const DialogPopup = (props: DialogPopupProps) => {
 		>
 			{children}
 		</Dialog.Popup>
-	)
-}
-
-export const DialogIndicator = (props: DialogIndicatorProps) => {
-	const {
-		status = "neutral",
-		className,
-		children,
-		...restProps
-	} = props
-
-	const Indicator = STATUS_INDICATORS[status]
-
-	return (
-		<Render
-			{...restProps}
-			{...toDataAttrs({ status })}
-			defaultTagName="span"
-			className={toClassNames("dialog__indicator", className)}
-		>
-			{children ?? <Indicator/>}
-		</Render>
 	)
 }
 
@@ -222,7 +201,6 @@ DialogPortal.displayName = "Dialog.Portal"
 DialogBackdrop.displayName = "Dialog.Backdrop"
 DialogViewport.displayName = "Dialog.Viewport"
 DialogPopup.displayName = "Dialog.Popup"
-DialogIndicator.displayName = "Dialog.Indicator"
 DialogTitle.displayName = "Dialog.Title"
 DialogDescription.displayName = "Dialog.Description"
 DialogClose.displayName = "Dialog.Close"

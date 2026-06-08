@@ -7,4 +7,4 @@ export const Alert = {
 	Title: AlertTitle,
 	Description: AlertDescription,
 	Close: AlertClose,
-}
+} as const

@@ -1,5 +1,5 @@
 .toast__viewport {
-  @apply z-1 fixed w-[calc(100%-2rem)] sm:w-110;
+  @apply z-1 fixed w-[calc(100%-2rem)] sm:w-90;
 
   &[data-side="top"] {
     @apply top-4 sm:top-8;
@@ -110,8 +110,8 @@
 }
 
 .toast {
-  @apply px-4 py-3 w-full rounded-lg shadow-lg border border-border bg-background motion-reduce:transition-none
-  transform-gpu;
+  @apply relative px-4 py-3 w-full rounded-lg shadow-lg border border-border bg-overlay
+  motion-reduce:transition-none transform-gpu;
 
   &:focus-visible {
     @apply z-10 status-focus;
@@ -146,7 +146,7 @@
   }
 
   &[data-status="neutral"] {
-    @apply bg-neutral-soft text-foreground;
+    @apply bg-neutral-soft text-neutral-foreground;
   }
 
   &[data-status="info"] {
@@ -167,11 +167,11 @@
 }
 
 .toast__group {
-  @apply flex-1 min-w-0;
+  @apply grow min-w-0;
 }
 
 .toast__title {
-  @apply text-sm font-medium text-pretty text-foreground;
+  @apply text-sm font-medium text-pretty text-foreground leading-snug;
 }
 
 .toast__description {
@@ -209,7 +209,7 @@
     }
 
     &:hover {
-      @apply bg-neutral-soft-hover;
+      @apply bg-neutral-hover;
     }
 
     .toast:hover &,

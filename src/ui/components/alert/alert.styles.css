@@ -1,5 +1,5 @@
 .alert {
-  @apply relative px-4 py-3 w-full flex items-center gap-3 rounded-lg border border-border bg-background;
+  @apply relative px-4 py-3 w-full flex items-center gap-3 rounded-md bg-surface;
 
   &:has(.alert__description) {
     @apply items-start;
@@ -14,7 +14,7 @@
   }
 
   &[data-status="neutral"] {
-    @apply bg-neutral-soft text-foreground;
+    @apply bg-neutral-soft text-neutral-foreground;
   }
 
   &[data-status="info"] {
@@ -35,11 +35,11 @@
 }
 
 .alert__content {
-  @apply grow;
+  @apply grow min-w-0;
 }
 
 .alert__title {
-  @apply text-sm font-medium text-pretty text-foreground;
+  @apply text-sm font-medium text-pretty text-foreground leading-snug;
 }
 
 .alert__description {
@@ -51,18 +51,18 @@
 }
 
 .alert__close {
-  @apply opacity-0 transition motion-reduce:transition-none;
+  @apply transition motion-reduce:transition-none;
 
   &[data-native-close] {
-    @apply z-1 absolute top-2.5 right-2.5 size-6 flex items-center justify-center rounded-sm bg-neutral-soft
-    text-muted select-none;
+    @apply relative -mr-1 size-6 shrink-0 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
+    select-none;
 
     & > svg {
       @apply size-4;
     }
 
     &:hover {
-      @apply bg-neutral-soft-hover;
+      @apply bg-neutral-hover;
     }
   }
 

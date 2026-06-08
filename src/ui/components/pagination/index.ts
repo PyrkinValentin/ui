@@ -19,4 +19,4 @@ export const Pagination = {
 	Page: PaginationPage,
 	Ellipsis: PaginationEllipsis,
 	useManager: usePaginationManager,
-}
+} as const

@@ -14,4 +14,4 @@ export const ScrollArea = {
 	Scrollbar: ScrollAreaScrollbar,
 	Thumb: ScrollAreaThumb,
 	Corner: ScrollAreaCorner,
-}
+} as const

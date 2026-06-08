@@ -1,0 +1,50 @@
+.accordion {
+  @apply w-full divide-y divide-border;
+}
+
+.accordion__trigger {
+  @apply relative px-4 py-3 w-full flex items-center gap-2 text-left text-sm font-medium transition
+  motion-reduce:transition-none;
+
+  & > svg {
+    @apply size-4.5 text-muted;
+  }
+
+  &:hover:not([data-panel-open]) {
+    @apply bg-surface;
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.accordion__indicator {
+  @apply shrink-0 ms-auto flex items-center justify-center text-muted select-none transition-transform
+  motion-reduce:transition-none;
+
+  & > svg {
+    @apply size-4.5;
+  }
+
+  .accordion__trigger[data-panel-open] & {
+    @apply rotate-180;
+  }
+}
+
+.accordion__panel {
+  @apply h-(--accordion-panel-height) overflow-hidden transition-[height] motion-reduce:transition-none;
+
+  &[data-ending-style],
+  &[data-starting-style] {
+    @apply h-0 will-change-[height];
+  }
+}
+
+.accordion__content {
+  @apply px-4 pb-3;
+}

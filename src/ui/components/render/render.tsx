@@ -1,5 +1,3 @@
-"use client"
-
 import type { JSX } from "react"
 import type { RenderProps } from "./render.props"
 

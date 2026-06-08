@@ -38,10 +38,9 @@ const createDataAttr = (value?: string): DataAttribute | undefined => {
 		const firstKey = cache
 			.keys()
 			.next()
-			.value
 
-		if (firstKey !== undefined) {
-			cache.delete(firstKey)
+		if (!firstKey.done) {
+			cache.delete(firstKey.value)
 		}
 	}
 

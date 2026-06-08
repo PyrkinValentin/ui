@@ -11,7 +11,6 @@ export const Spinner = (props: SpinnerProps) => {
 		size = "md",
 		color = "current",
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -21,9 +20,7 @@ export const Spinner = (props: SpinnerProps) => {
 			{...toDataAttrs({ size, color })}
 			defaultTagName="span"
 			className={toClassNames("spinner", className)}
-		>
-			{children}
-		</Render>
+		/>
 	)
 }
 

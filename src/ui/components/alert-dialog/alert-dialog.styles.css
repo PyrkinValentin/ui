@@ -1,0 +1,137 @@
+.alert-dialog__trigger {
+  @apply transition motion-reduce:transition-none;
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.alert-dialog__backdrop {
+  @apply fixed inset-0 bg-backdrop transition-opacity motion-reduce:transition-none;
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    @apply opacity-0;
+  }
+}
+
+.alert-dialog__viewport {
+  @apply fixed inset-0;
+
+  & .alert-dialog__popup {
+    @apply relative left-auto top-auto translate-0 mx-auto my-4;
+  }
+}
+
+.alert-dialog__popup {
+  @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 w-[calc(100%-2rem)] max-h-[calc(100%-2rem)]
+  flex flex-col rounded-lg shadow-lg bg-overlay border border-border transition motion-reduce:transition-none
+  transform-gpu;
+
+  &[data-size="xs"] {
+    @apply max-w-xs;
+  }
+
+  &[data-size="sm"] {
+    @apply max-w-sm;
+  }
+
+  &[data-size="md"] {
+    @apply max-w-md;
+  }
+
+  &[data-size="lg"] {
+    @apply max-w-lg;
+  }
+
+  &[data-size="full"] {
+    @apply h-full;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style],
+  &[data-nested-dialog-open] {
+    @apply opacity-0 scale-90;
+  }
+
+  &[data-nested-dialog-open] {
+    @apply -translate-x-full pointer-events-none;
+  }
+
+  &:focus-visible {
+    @apply status-focus;
+  }
+}
+
+.alert-dialog__indicator {
+  @apply shrink-0 mb-4 size-10 flex items-center justify-center rounded-md;
+
+  & > svg {
+    @apply size-6;
+  }
+
+  &[data-status="neutral"] {
+    @apply bg-neutral-soft text-neutral-foreground;
+  }
+
+  &[data-status="info"] {
+    @apply bg-info-soft text-info;
+  }
+
+  &[data-status="success"] {
+    @apply bg-success-soft text-success;
+  }
+
+  &[data-status="warning"] {
+    @apply bg-warning-soft text-warning;
+  }
+
+  &[data-status="error"] {
+    @apply bg-error-soft text-error;
+  }
+}
+
+.alert-dialog__title {
+  @apply text-base font-medium text-pretty text-foreground leading-snug;
+}
+
+.alert-dialog__description {
+  @apply text-base text-pretty text-muted;
+
+  .alert-dialog__title + & {
+    @apply mt-1;
+  }
+}
+
+.alert-dialog__actions {
+  @apply mt-auto pt-6 flex items-center justify-end gap-2;
+}
+
+.alert-dialog__close {
+  @apply transition motion-reduce:transition-none;
+
+  &[data-native-close] {
+    @apply z-1 absolute top-4 right-4 size-6 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
+    select-none;
+
+    & > svg {
+      @apply size-4;
+    }
+
+    &:hover {
+      @apply bg-neutral-hover;
+    }
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}

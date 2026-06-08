@@ -1,0 +1,35 @@
+.item {
+  @apply relative px-4 py-3 flex items-center gap-3 rounded-md bg-surface;
+
+  &:has(.item__description) {
+    @apply items-start;
+  }
+}
+
+.item__media {
+  @apply flex;
+
+  & > svg {
+    @apply size-4.5 text-muted;
+  }
+}
+
+.item__content {
+  @apply grow min-w-0;
+}
+
+.item__title {
+  @apply text-sm font-medium text-pretty text-foreground leading-snug;
+}
+
+.item__description {
+  @apply text-sm text-pretty text-muted;
+
+  .item__title + & {
+    @apply mt-0.5;
+  }
+}
+
+.item__actions {
+  @apply shrink-0 self-center flex items-center gap-2;
+}

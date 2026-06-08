@@ -1,4 +1,4 @@
-import { PopoverHandle, popoverCreateHandle } from "./popover.utils"
+import { PopoverHandle, createPopoverHandle } from "./popover.utils"
 
 import {
 	PopoverRoot,
@@ -27,5 +27,5 @@ export const Popover = {
 	Description: PopoverDescription,
 	Close: PopoverClose,
 	Handle: PopoverHandle,
-	createHandle: popoverCreateHandle,
-}
+	createHandle: createPopoverHandle,
+} as const

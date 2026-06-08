@@ -11,7 +11,8 @@ import { use, useEffect, useMemo } from "react"
 import { clamp, createChangeEventDetails } from "../../utils"
 import { range } from "./pagination.utils"
 
-import { PAGINATION_ELLIPSIS, PAGINATION_REASONS } from "./pagination.constants"
+import { REASONS } from "../../constants"
+import { PAGINATION_ELLIPSIS } from "./pagination.constants"
 
 import { PaginationRootContext } from "./pagination.context"
 
@@ -32,7 +33,7 @@ export const usePaginationSync = (options: UsePaginationSyncOptions) => {
 		if (page !== validPage) {
 			onPageChange(
 				validPage,
-				createChangeEventDetails(PAGINATION_REASONS.sync),
+				createChangeEventDetails(REASONS.sync),
 			)
 		}
 	}, [total, page, onPageChange])

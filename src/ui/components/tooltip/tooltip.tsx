@@ -60,12 +60,16 @@ export const TooltipTrigger = <Payload = unknown>(props: TooltipTriggerProps<Pay
 
 export const TooltipPortal = (props: TooltipPortalProps) => {
 	const {
+		className,
 		children,
 		...restProps
 	} = props
 
 	return (
-		<Tooltip.Portal {...restProps}>
+		<Tooltip.Portal
+			{...restProps}
+			className={toClassNames("tooltip__portal", className)}
+		>
 			{children}
 		</Tooltip.Portal>
 	)

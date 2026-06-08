@@ -55,12 +55,16 @@ export const ToastProvider = (props: ToastProviderProps) => {
 
 export const ToastPortal = (props: ToastPortalProps) => {
 	const {
+		className,
 		children,
 		...restProps
 	} = props
 
 	return (
-		<Toast.Portal {...restProps}>
+		<Toast.Portal
+			{...restProps}
+			className={toClassNames("toast__portal", className)}
+		>
 			{children}
 		</Toast.Portal>
 	)
@@ -197,7 +201,7 @@ export const ToastIndicator = (props: ToastIndicatorProps) => {
 	return (
 		<Render
 			{...restProps}
-			{...toDataAttrs({ status })}
+			{...toDataAttrs({ type, status })}
 			defaultTagName="span"
 			className={toClassNames("toast__indicator", className)}
 		>

@@ -1,12 +1,7 @@
-import type {
-	PaginationRootChangeEventReason,
-	PaginationRootChangeEventDetails,
-	PaginationRootProps,
-} from "./pagination.props"
+import type { PaginationRootChangeEventDetails, PaginationRootProps } from "./pagination.props"
 
 export type PaginationEllipsisType = "ellipsis-start" | "ellipsis-end"
 export type PaginationEllipsis = Record<"ellipsisStart" | "ellipsisEnd", PaginationEllipsisType>
-export type PaginationReasons = Record<PaginationRootChangeEventReason, PaginationRootChangeEventReason>
 
 type PaginationSize = PaginationRootProps["size"]
 

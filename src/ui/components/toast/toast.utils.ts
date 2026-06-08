@@ -5,6 +5,6 @@ import { Toast } from "@base-ui/react/toast"
 /**
  * Creates a new toast manager.
  */
-export const toastCreateManager = <Data extends ToastData = ToastData>(): ToastManager<Data> => {
+export const createToastManager = <Data extends ToastData = ToastData>(): ToastManager<Data> => {
 	return Toast.createToastManager<Data>()
 }
