@@ -27,7 +27,6 @@ export const OTPFieldRoot = (props: OTPFieldRootProps) => {
 export const OTPFieldInput = (props: OTPFieldInputProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -35,9 +34,7 @@ export const OTPFieldInput = (props: OTPFieldInputProps) => {
 		<OTPField.Input
 			{...restProps}
 			className={toClassNames("otp-field__input", className)}
-		>
-			{children}
-		</OTPField.Input>
+		/>
 	)
 }
 

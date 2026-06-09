@@ -28,11 +28,11 @@
 
   --color-overlay: var(--color-white);
 
-  --color-surface: oklch(97% 0.001 286.375);
+  --color-surface: oklch(98% 0.001 286.375);
   --color-surface-foreground: var(--color-foreground);
   --color-surface-hover: color-mix(in oklab, var(--color-surface) 96%, var(--color-surface-foreground) 4%);
 
-  --color-neutral: oklch(93% 0.001 286.375);
+  --color-neutral: oklch(94% 0.001 286.375);
   --color-neutral-foreground: var(--color-foreground);
   --color-neutral-hover: color-mix(in oklab, var(--color-neutral) 96%, var(--color-neutral-foreground) 4%);
   --color-neutral-soft: color-mix(in oklab, var(--color-neutral) 80%, transparent);

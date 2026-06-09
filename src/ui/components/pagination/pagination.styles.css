@@ -40,7 +40,7 @@
 .pagination__prev,
 .pagination__next,
 .pagination__page {
-  @apply relative bg-surface text-surface-foreground transition motion-reduce:transition-none;
+  @apply relative bg-neutral text-neutral-foreground transition motion-reduce:transition-none;
 
   &[data-size="sm"] {
     @apply text-xs;
@@ -55,7 +55,7 @@
   }
 
   &:hover {
-    @apply bg-surface-hover;
+    @apply bg-neutral-hover;
   }
 
   &:focus-visible {

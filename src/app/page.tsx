@@ -1,8 +1,8 @@
-import {} from "@/ui/components"
+import {  } from "@/ui/components"
 
 export default function Home() {
 	return (
-		<div className="w-sm mt-75 flex flex-col gap-2 mx-auto">
+		<div className="w-lg mt-75 flex flex-col gap-2 mx-auto">
 
 		</div>
 	)
