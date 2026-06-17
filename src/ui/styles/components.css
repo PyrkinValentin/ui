@@ -20,6 +20,7 @@
 @import "../components/scroll-area/scroll-area.styles.css";
 @import "../components/separator/separator.styles.css";
 @import "../components/spinner/spinner.styles.css";
+@import "../components/switch/switch.styles.css";
 @import "../components/tabs/tabs.styles.css";
 @import "../components/toast/toast.styles.css";
 @import "../components/tooltip/tooltip.styles.css";

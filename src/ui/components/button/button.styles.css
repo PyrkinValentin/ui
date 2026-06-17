@@ -2,6 +2,10 @@
   @apply relative w-fit inline-flex items-center justify-center font-medium whitespace-nowrap select-none transition
   motion-reduce:transition-none;
 
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
   &[data-variant="primary"] {
     @apply bg-info text-info-foreground;
 
@@ -76,10 +80,6 @@
     &[data-icon-only] {
       @apply w-12;
     }
-  }
-
-  &:focus-visible {
-    @apply z-10 status-focus;
   }
 
   &[data-icon-only] {

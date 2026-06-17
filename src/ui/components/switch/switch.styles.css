@@ -1,0 +1,37 @@
+.switch {
+  @apply relative p-0.5 w-10 h-6 shrink-0 flex rounded-full bg-neutral cursor-pointer transition
+  motion-reduce:transition-none;
+
+  &:hover {
+    @apply bg-neutral-hover;
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-checked] {
+    @apply bg-info;
+
+    &:hover {
+      @apply bg-info-hover;
+    }
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.switch__thumb {
+  @apply size-5 flex items-center justify-center rounded-full shadow-sm bg-white transition-transform
+  motion-reduce:transition-none transform-gpu;
+
+  & > svg {
+    @apply size-4 text-black;
+  }
+
+  &[data-checked] {
+    @apply translate-x-4;
+  }
+}

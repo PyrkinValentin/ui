@@ -67,10 +67,6 @@
   --bleed: -1rem;
   --peek: 1rem;
   --stack-step: 0.05;
-  --drawer-swipe-progress: 0;
-  --nested-drawers: 0;
-  --drawer-frontmost-height: 0;
-  --drawer-height: auto;
 
   @apply relative p-6 max-h-full flex flex-col rounded-lg shadow-lg bg-overlay border border-border touch-auto
   transition duration-450 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none transform-gpu;

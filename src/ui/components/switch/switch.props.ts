@@ -1,0 +1,1 @@
+export type { SwitchRootProps, SwitchThumbProps } from "@base-ui/react/switch"
