@@ -1,13 +1,8 @@
 "use client"
 
-import type { ToastContextValue, ToastRootContextValue } from "./toast.types"
+import type { ToastRootContextValue } from "./toast.types"
 
 import { createContext } from "react"
-
-export const ToastContext = createContext<ToastContextValue>({
-	side: "bottom",
-	align: "end",
-})
 
 export const ToastRootContext = createContext<ToastRootContextValue>({
 	status: "neutral",

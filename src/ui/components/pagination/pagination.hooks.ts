@@ -8,7 +8,8 @@ import type {
 
 import { use, useEffect, useMemo } from "react"
 
-import { clamp, createChangeEventDetails } from "../../utils"
+import { createChangeEventDetails } from "@base-ui/react/internals/createBaseUIEventDetails"
+import { clamp } from "../../utils"
 import { range } from "./pagination.utils"
 
 import { REASONS } from "../../constants"
@@ -33,7 +34,7 @@ export const usePaginationSync = (options: UsePaginationSyncOptions) => {
 		if (page !== validPage) {
 			onPageChange(
 				validPage,
-				createChangeEventDetails(REASONS.sync),
+				createChangeEventDetails(REASONS.pageSync),
 			)
 		}
 	}, [total, page, onPageChange])

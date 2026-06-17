@@ -1,25 +1,15 @@
-import type { UIComponentProps } from "../../types"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
+
+type AccordionIndicatorState = object
+type AccordionContentState = object
 
 export type {
 	AccordionRootProps,
-	AccordionRootState,
-	AccordionRootChangeEventReason,
-	AccordionRootChangeEventDetails,
 	AccordionItemProps,
-	AccordionItemState,
-	AccordionItemChangeEventReason,
-	AccordionItemChangeEventDetails,
 	AccordionHeaderProps,
-	AccordionHeaderState,
 	AccordionTriggerProps,
-	AccordionTriggerState,
 	AccordionPanelProps,
-	AccordionPanelState,
-	AccordionValue,
 } from "@base-ui/react/accordion"
 
-export type AccordionIndicatorState = object
-export type AccordionIndicatorProps = UIComponentProps<"span", AccordionIndicatorState>
-
-export type AccordionContentState = object
-export type AccordionContentProps = UIComponentProps<"div", AccordionContentState>
+export type AccordionIndicatorProps = BaseUIComponentProps<"span", AccordionIndicatorState>
+export type AccordionContentProps = BaseUIComponentProps<"div", AccordionContentState>

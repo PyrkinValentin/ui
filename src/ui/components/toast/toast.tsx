@@ -16,10 +16,10 @@ import type {
 	ToastCloseProps,
 } from "./toast.props"
 
-import type { ToastData, ToastContextValue, ToastRootContextValue } from "./toast.types"
+import type { ToastData, ToastRootContextValue } from "./toast.types"
 
 import { useMemo } from "react"
-import { useToastContext, useToastRootContext, useToastSwipeDirection } from "./toast.hooks"
+import { useToastRootContext } from "./toast.hooks"
 
 import { toClassNames, toDataAttrs } from "../../utils"
 
@@ -29,27 +29,18 @@ import { Toast } from "@base-ui/react/toast"
 import { X } from "lucide-react"
 import { Render } from "../render"
 import { Spinner } from "../spinner"
-import { ToastContext, ToastRootContext } from "./toast.context"
+import { ToastRootContext } from "./toast.context"
 
 export const ToastProvider = (props: ToastProviderProps) => {
 	const {
-		side = "bottom",
-		align = "end",
 		children,
 		...restProps
 	} = props
 
-	const contextValue = useMemo<ToastContextValue>(() => ({
-		side,
-		align,
-	}), [side, align])
-
 	return (
-		<ToastContext value={contextValue}>
-			<Toast.Provider {...restProps}>
-				{children}
-			</Toast.Provider>
-		</ToastContext>
+		<Toast.Provider {...restProps}>
+			{children}
+		</Toast.Provider>
 	)
 }
 
@@ -71,9 +62,8 @@ export const ToastPortal = (props: ToastPortalProps) => {
 }
 
 export const ToastViewport = (props: ToastViewportProps) => {
-	const { side, align } = useToastContext()
-
 	const {
+		position = "bottom-right",
 		className,
 		children,
 		...restProps
@@ -82,7 +72,7 @@ export const ToastViewport = (props: ToastViewportProps) => {
 	return (
 		<Toast.Viewport
 			{...restProps}
-			{...toDataAttrs({ side, align })}
+			{...toDataAttrs({ position })}
 			className={toClassNames("toast__viewport", className)}
 		>
 			{children}
@@ -110,17 +100,12 @@ export const ToastPositioner = (props: ToastPositionerProps) => {
 }
 
 export const ToastRoot = <Data extends ToastData>(props: ToastRootProps<Data>) => {
-	const { side, align } = useToastContext()
-
 	const {
-		swipeDirection,
 		toast,
 		className,
 		children,
 		...restProps
 	} = props
-
-	const swipeDirectionProp = useToastSwipeDirection({ side, align, swipeDirection })
 
 	const status = toast.type === "success" || toast.type === "error"
 		? toast.type
@@ -142,8 +127,6 @@ export const ToastRoot = <Data extends ToastData>(props: ToastRootProps<Data>) =
 		<ToastRootContext value={contextValue}>
 			<Toast.Root
 				{...restProps}
-				{...toDataAttrs({ side, align })}
-				swipeDirection={swipeDirectionProp}
 				toast={toast}
 				className={toClassNames(["toast", updateAnimation], className)}
 			>
@@ -192,7 +175,7 @@ export const ToastIndicator = (props: ToastIndicatorProps) => {
 
 	const {
 		className,
-		children = indicator,
+		children,
 		...restProps
 	} = props
 
@@ -207,7 +190,7 @@ export const ToastIndicator = (props: ToastIndicatorProps) => {
 		>
 			{type === "loading"
 				? <Spinner size="lg"/>
-				: (children ?? <Indicator/>)
+				: (children ?? indicator ?? <Indicator/>)
 			}
 		</Render>
 	)

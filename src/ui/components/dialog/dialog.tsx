@@ -5,7 +5,6 @@ import type {
 	DialogTriggerProps,
 	DialogPortalProps,
 	DialogBackdropProps,
-	DialogViewportProps,
 	DialogPopupProps,
 	DialogTitleProps,
 	DialogDescriptionProps,
@@ -83,26 +82,8 @@ export const DialogBackdrop = (props: DialogBackdropProps) => {
 	)
 }
 
-export const DialogViewport = (props: DialogViewportProps) => {
-	const {
-		className,
-		children,
-		...restProps
-	} = props
-
-	return (
-		<Dialog.Viewport
-			{...restProps}
-			className={toClassNames("dialog__viewport", className)}
-		>
-			{children}
-		</Dialog.Viewport>
-	)
-}
-
 export const DialogPopup = (props: DialogPopupProps) => {
 	const {
-		size = "sm",
 		className,
 		children,
 		...restProps
@@ -111,7 +92,6 @@ export const DialogPopup = (props: DialogPopupProps) => {
 	return (
 		<Dialog.Popup
 			{...restProps}
-			{...toDataAttrs({ size })}
 			className={toClassNames("dialog__popup", className)}
 		>
 			{children}
@@ -199,7 +179,6 @@ DialogRoot.displayName = "Dialog.Root"
 DialogTrigger.displayName = "Dialog.Trigger"
 DialogPortal.displayName = "Dialog.Portal"
 DialogBackdrop.displayName = "Dialog.Backdrop"
-DialogViewport.displayName = "Dialog.Viewport"
 DialogPopup.displayName = "Dialog.Popup"
 DialogTitle.displayName = "Dialog.Title"
 DialogDescription.displayName = "Dialog.Description"

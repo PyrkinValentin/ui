@@ -1,5 +1,5 @@
 .scroll-area {
-  @apply relative h-full min-h-0 flex overflow-hidden transition motion-reduce:transition-none;
+  @apply flex flex-col overflow-hidden transition motion-reduce:transition-none;
 
   &:has(.scroll-area__viewport:focus-visible) {
     @apply z-10 status-focus;
@@ -7,7 +7,7 @@
 }
 
 .scroll-area__viewport {
-  @apply w-full min-h-0 overflow-y-auto overscroll-contain outline-none;
+  @apply h-full outline-none;
 
   &[data-scroll-fade] {
     mask-image: linear-gradient(

@@ -1,5 +1,5 @@
 .popover__trigger {
-  @apply transition motion-reduce:transition-none;
+  @apply relative transition motion-reduce:transition-none;
 
   &:focus-visible {
     @apply z-10 status-focus;
@@ -65,7 +65,9 @@
 }
 
 .popover__viewport {
-  @apply overflow-clip relative size-full [--viewport-inline-padding:0.75rem];
+  --viewport-inline-padding: 0.75rem;
+
+  @apply overflow-clip relative size-full;
 
   [data-previous],
   [data-current] {
@@ -101,7 +103,7 @@
 }
 
 .popover__close {
-  @apply transition motion-reduce:transition-none;
+  @apply relative transition motion-reduce:transition-none;
 
   &[data-native-close] {
     @apply z-1 absolute top-2.5 right-2.5 size-6 flex items-center justify-center rounded-sm bg-neutral-soft

@@ -2,28 +2,14 @@ import type { Popover, PopoverCloseProps as BasePopoverCloseProps } from "@base-
 
 export type {
 	PopoverRootProps,
-	PopoverRootState,
-	PopoverRootActions,
-	PopoverRootChangeEventReason,
-	PopoverRootChangeEventDetails,
 	PopoverTriggerProps,
-	PopoverTriggerState,
 	PopoverPortalProps,
-	PopoverPortalState,
 	PopoverBackdropProps,
-	PopoverBackdropState,
 	PopoverPositionerProps,
-	PopoverPositionerState,
 	PopoverPopupProps,
-	PopoverPopupState,
 	PopoverArrowProps,
-	PopoverArrowState,
-	PopoverViewportState,
 	PopoverTitleProps,
-	PopoverTitleState,
 	PopoverDescriptionProps,
-	PopoverDescriptionState,
-	PopoverCloseState,
 } from "@base-ui/react/popover"
 
 export type PopoverViewportProps = Popover.Viewport.Props

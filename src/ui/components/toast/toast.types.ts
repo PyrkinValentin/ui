@@ -7,30 +7,13 @@ import type {
 	ToastManagerUpdateOptions as BaseToastManagerUpdateOptions,
 } from "@base-ui/react/toast"
 
-import type { ToastProviderProps, ToastRootProps } from "./toast.props"
-
-type ToastSide = NonNullable<ToastProviderProps["side"]>
-type ToastAlign = NonNullable<ToastProviderProps["align"]>
 type ToastStatus = NonNullable<ToastOptions["status"]>
-
-export type ToastContextValue = {
-	side: ToastSide
-	align: ToastAlign
-}
 
 export type ToastRootContextValue = {
 	type?: string
 	status: ToastStatus
 	indicator?: ReactNode
 }
-
-export type UseToastSwipeDirectionOptions = {
-	side: ToastSide
-	align: ToastAlign
-	swipeDirection?: ToastSwipeDirection
-}
-
-export type ToastSwipeDirection = NonNullable<ToastRootProps["swipeDirection"]>
 
 export type ToastOptions = {
 	/**

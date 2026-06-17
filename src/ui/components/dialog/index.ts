@@ -1,11 +1,10 @@
-import { DialogHandle, createDialogHandle } from "./dialog.utils"
+import { createDialogHandle } from "./dialog.utils"
 
 import {
 	DialogRoot,
 	DialogTrigger,
 	DialogPortal,
 	DialogBackdrop,
-	DialogViewport,
 	DialogPopup,
 	DialogTitle,
 	DialogDescription,
@@ -18,12 +17,10 @@ export const Dialog = {
 	Trigger: DialogTrigger,
 	Portal: DialogPortal,
 	Backdrop: DialogBackdrop,
-	Viewport: DialogViewport,
 	Popup: DialogPopup,
 	Title: DialogTitle,
 	Description: DialogDescription,
 	Actions: DialogActions,
 	Close: DialogClose,
-	Handle: DialogHandle,
 	createHandle: createDialogHandle,
 } as const

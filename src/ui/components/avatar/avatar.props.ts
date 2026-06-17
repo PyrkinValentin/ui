@@ -1,13 +1,6 @@
 import type { AvatarRootProps as BaseAvatarRootProps } from "@base-ui/react/avatar"
 
-export type {
-	AvatarRootState,
-	AvatarImageProps,
-	AvatarImageState,
-	ImageLoadingStatus,
-	AvatarFallbackProps,
-	AvatarFallbackState,
-} from "@base-ui/react/avatar"
+export type { AvatarImageProps, AvatarFallbackProps } from "@base-ui/react/avatar"
 
 export type AvatarRootProps = BaseAvatarRootProps & {
 	/**

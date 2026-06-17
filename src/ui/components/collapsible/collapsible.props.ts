@@ -1,18 +1,9 @@
-import type { UIComponentProps } from "../../types"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
-export type {
-	CollapsibleRootProps,
-	CollapsibleRootState,
-	CollapsibleRootChangeEventReason,
-	CollapsibleRootChangeEventDetails,
-	CollapsibleTriggerProps,
-	CollapsibleTriggerState,
-	CollapsiblePanelProps,
-	CollapsiblePanelState,
-} from "@base-ui/react/collapsible"
+type CollapsibleIndicatorState = object
+type CollapsibleContentState = object
 
-export type CollapsibleIndicatorState = object
-export type CollapsibleIndicatorProps = UIComponentProps<"span", CollapsibleIndicatorState>
+export type { CollapsibleRootProps, CollapsibleTriggerProps, CollapsiblePanelProps } from "@base-ui/react/collapsible"
 
-export type CollapsibleContentState = object
-export type CollapsibleContentProps = UIComponentProps<"div", CollapsibleContentState>
+export type CollapsibleIndicatorProps = BaseUIComponentProps<"span", CollapsibleIndicatorState>
+export type CollapsibleContentProps = BaseUIComponentProps<"div", CollapsibleContentState>

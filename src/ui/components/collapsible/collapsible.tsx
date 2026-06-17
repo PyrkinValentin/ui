@@ -103,5 +103,6 @@ export const CollapsibleContent = (props: CollapsibleContentProps) => {
 
 CollapsibleRoot.displayName = "Collapsible.Root"
 CollapsibleTrigger.displayName = "Collapsible.Trigger"
+CollapsibleIndicator.displayName = "Collapsible.Indicator"
 CollapsiblePanel.displayName = "Collapsible.Panel"
 CollapsibleContent.displayName = "Collapsible.Content"

@@ -1,13 +1,11 @@
-import type { UIComponentProps } from "../../types"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
-export type CardRootState = object
-export type CardRootProps = UIComponentProps<"div", CardRootState>
+type CardRootState = object
+type CardContentState = object
+type CardTitleState = object
+type CardDescriptionState = object
 
-export type CardContentState = object
-export type CardContentProps = UIComponentProps<"div", CardContentState>
-
-export type CardTitleState = object
-export type CardTitleProps = UIComponentProps<"h2", CardTitleState>
-
-export type CardDescriptionState = object
-export type CardDescriptionProps = UIComponentProps<"p", CardDescriptionState>
+export type CardRootProps = BaseUIComponentProps<"div", CardRootState>
+export type CardContentProps = BaseUIComponentProps<"div", CardContentState>
+export type CardTitleProps = BaseUIComponentProps<"h2", CardTitleState>
+export type CardDescriptionProps = BaseUIComponentProps<"p", CardDescriptionState>

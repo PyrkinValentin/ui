@@ -5,5 +5,5 @@ export const REASONS = {
 	prevPress: "prev-press",
 	nextPress: "next-press",
 	pagePress: "page-press",
-	sync: "sync",
+	pageSync: "page-sync",
 } as const

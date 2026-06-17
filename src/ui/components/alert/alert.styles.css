@@ -51,10 +51,10 @@
 }
 
 .alert__close {
-  @apply transition motion-reduce:transition-none;
+  @apply relative transition motion-reduce:transition-none;
 
   &[data-native-close] {
-    @apply relative -mr-1 size-6 shrink-0 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
+    @apply -mr-1 size-6 shrink-0 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
     select-none;
 
     & > svg {

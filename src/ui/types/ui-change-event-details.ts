@@ -1,1 +1,0 @@
-export type { BaseUIChangeEventDetails as UIChangeEventDetails } from "@base-ui/react"

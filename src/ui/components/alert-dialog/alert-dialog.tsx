@@ -5,7 +5,6 @@ import type {
 	AlertDialogTriggerProps,
 	AlertDialogPortalProps,
 	AlertDialogBackdropProps,
-	AlertDialogViewportProps,
 	AlertDialogPopupProps,
 	AlertDialogIndicatorProps,
 	AlertDialogTitleProps,
@@ -86,26 +85,8 @@ export const AlertDialogBackdrop = (props: AlertDialogBackdropProps) => {
 	)
 }
 
-export const AlertDialogViewport = (props: AlertDialogViewportProps) => {
-	const {
-		className,
-		children,
-		...restProps
-	} = props
-
-	return (
-		<AlertDialog.Viewport
-			{...restProps}
-			className={toClassNames("alert-dialog__viewport", className)}
-		>
-			{children}
-		</AlertDialog.Viewport>
-	)
-}
-
 export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	const {
-		size = "sm",
 		className,
 		children,
 		...restProps
@@ -114,7 +95,6 @@ export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	return (
 		<AlertDialog.Popup
 			{...restProps}
-			{...toDataAttrs({ size })}
 			className={toClassNames("alert-dialog__popup", className)}
 		>
 			{children}
@@ -224,7 +204,6 @@ AlertDialogRoot.displayName = "AlertDialog.Root"
 AlertDialogTrigger.displayName = "AlertDialog.Trigger"
 AlertDialogPortal.displayName = "AlertDialog.Portal"
 AlertDialogBackdrop.displayName = "AlertDialog.Backdrop"
-AlertDialogViewport.displayName = "AlertDialog.Viewport"
 AlertDialogPopup.displayName = "AlertDialog.Popup"
 AlertDialogIndicator.displayName = "AlertDialog.Indicator"
 AlertDialogTitle.displayName = "AlertDialog.Title"

@@ -1,1 +1,0 @@
-export type { BaseUIEvent as UIEvent } from "@base-ui/react"

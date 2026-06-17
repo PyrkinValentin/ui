@@ -1,22 +1,17 @@
-import type { UIComponentProps } from "../../types"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
-export type BreadcrumbsRootState = object
-export type BreadcrumbsRootProps = UIComponentProps<"nav", BreadcrumbsRootState>
+type BreadcrumbsRootState = object
+type BreadcrumbsListState = object
+type BreadcrumbsItemState = object
+type BreadcrumbsSeparatorState = object
+type BreadcrumbsLinkState = object
+type BreadcrumbsPageState = object
+type BreadcrumbsEllipsisState = object
 
-export type BreadcrumbsListState = object
-export type BreadcrumbsListProps = UIComponentProps<"ol", BreadcrumbsListState>
-
-export type BreadcrumbsItemState = object
-export type BreadcrumbsItemProps = UIComponentProps<"li", BreadcrumbsItemState>
-
-export type BreadcrumbsSeparatorState = object
-export type BreadcrumbsSeparatorProps = UIComponentProps<"li", BreadcrumbsSeparatorState>
-
-export type BreadcrumbsLinkState = object
-export type BreadcrumbsLinkProps = UIComponentProps<"a", BreadcrumbsLinkState>
-
-export type BreadcrumbsPageState = object
-export type BreadcrumbsPageProps = UIComponentProps<"span", BreadcrumbsPageState>
-
-export type BreadcrumbsEllipsisState = object
-export type BreadcrumbsEllipsisProps = UIComponentProps<"span", BreadcrumbsEllipsisState>
+export type BreadcrumbsRootProps = BaseUIComponentProps<"nav", BreadcrumbsRootState>
+export type BreadcrumbsListProps = BaseUIComponentProps<"ol", BreadcrumbsListState>
+export type BreadcrumbsItemProps = BaseUIComponentProps<"li", BreadcrumbsItemState>
+export type BreadcrumbsSeparatorProps = BaseUIComponentProps<"li", BreadcrumbsSeparatorState>
+export type BreadcrumbsLinkProps = BaseUIComponentProps<"a", BreadcrumbsLinkState>
+export type BreadcrumbsPageProps = BaseUIComponentProps<"span", BreadcrumbsPageState>
+export type BreadcrumbsEllipsisProps = BaseUIComponentProps<"span", BreadcrumbsEllipsisState>

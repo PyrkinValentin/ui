@@ -1,42 +1,20 @@
-import type {
-	AlertDialogPopupProps as BaseAlertDialogPopupProps,
-	AlertDialogCloseProps as BaseAlertDialogCloseProps,
-} from "@base-ui/react/alert-dialog"
+import type { AlertDialogCloseProps as BaseAlertDialogCloseProps } from "@base-ui/react/alert-dialog"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
-import type { UIComponentProps } from "../../types"
+type AlertDialogIndicatorState = object
+type AlertDialogActionsState = object
 
 export type {
 	AlertDialogRootProps,
-	AlertDialogRootState,
-	AlertDialogRootActions,
-	AlertDialogRootChangeEventReason,
-	AlertDialogRootChangeEventDetails,
 	AlertDialogTriggerProps,
-	AlertDialogTriggerState,
 	AlertDialogPortalProps,
-	AlertDialogPortalState,
 	AlertDialogBackdropProps,
-	AlertDialogBackdropState,
-	AlertDialogViewportProps,
-	AlertDialogViewportState,
-	AlertDialogPopupState,
+	AlertDialogPopupProps,
 	AlertDialogTitleProps,
-	AlertDialogTitleState,
 	AlertDialogDescriptionProps,
-	AlertDialogDescriptionState,
-	AlertDialogCloseState,
 } from "@base-ui/react/alert-dialog"
 
-export type AlertDialogPopupProps = BaseAlertDialogPopupProps & {
-	/**
-	 * The size of the component.
-	 * @default "sm"
-	 */
-	size?: "xs" | "sm" | "md" | "lg" | "full"
-}
-
-export type AlertDialogIndicatorState = object
-export type AlertDialogIndicatorProps = UIComponentProps<"span", AlertDialogIndicatorState> & {
+export type AlertDialogIndicatorProps = BaseUIComponentProps<"span", AlertDialogIndicatorState> & {
 	/**
 	 * The visual status of the component.
 	 * @default "neutral"
@@ -44,8 +22,7 @@ export type AlertDialogIndicatorProps = UIComponentProps<"span", AlertDialogIndi
 	status?: "neutral" | "info" | "success" | "warning" | "error"
 }
 
-export type AlertDialogActionsState = object
-export type AlertDialogActionsProps = UIComponentProps<"div", AlertDialogActionsState>
+export type AlertDialogActionsProps = BaseUIComponentProps<"div", AlertDialogActionsState>
 
 export type AlertDialogCloseProps = BaseAlertDialogCloseProps & {
 	/**

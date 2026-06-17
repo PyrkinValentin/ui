@@ -11,14 +11,15 @@ import type {
 } from "./pagination.props"
 
 import type { MouseEvent } from "react"
-import type { UIEvent } from "../../types"
+import type { BaseUIEvent } from "@base-ui/react"
 import type { PaginationRootContextValue } from "./pagination.types"
 
 import { useMemo } from "react"
 import { useStableCallback } from "../../hooks"
 import { usePaginationRootContext, usePaginationSync } from "./pagination.hooks"
 
-import { createChangeEventDetails, toClassNames, clamp, toDataAttrs } from "../../utils"
+import { createChangeEventDetails } from "@base-ui/react/internals/createBaseUIEventDetails"
+import { toClassNames, clamp, toDataAttrs } from "../../utils"
 
 import { REASONS } from "../../constants"
 
@@ -115,7 +116,7 @@ export const PaginationPrev = (props: PaginationPrevProps) => {
 
 	const disabled = disabledProp || page === 1
 
-	const handleClick = (ev: UIEvent<MouseEvent<HTMLButtonElement>>) => {
+	const handleClick = (ev: BaseUIEvent<MouseEvent<HTMLButtonElement>>) => {
 		onClick?.(ev)
 
 		if (
@@ -156,7 +157,7 @@ export const PaginationNext = (props: PaginationNextProps) => {
 
 	const disabled = disabledProp || page === total
 
-	const handleClick = (ev: UIEvent<MouseEvent<HTMLButtonElement>>) => {
+	const handleClick = (ev: BaseUIEvent<MouseEvent<HTMLButtonElement>>) => {
 		onClick?.(ev)
 
 		if (
@@ -198,7 +199,7 @@ export const PaginationPage = (props: PaginationPageProps) => {
 	const current = pageProp === page
 	const disabled = disabledProp || current
 
-	const handleClick = (ev: UIEvent<MouseEvent<HTMLButtonElement>>) => {
+	const handleClick = (ev: BaseUIEvent<MouseEvent<HTMLButtonElement>>) => {
 		onClick?.(ev)
 
 		if (

@@ -1,19 +1,15 @@
-import { UIComponentProps } from "../../types"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
-export type ItemRootState = object
-export type ItemRootProps = UIComponentProps<"div", ItemRootState>
+type ItemRootState = object
+type ItemMediaState = object
+type ItemContentState = object
+type ItemTitleState = object
+type ItemDescriptionState = object
+type ItemActionsState = object
 
-export type ItemMediaState = object
-export type ItemMediaProps = UIComponentProps<"span", ItemMediaState>
-
-export type ItemContentState = object
-export type ItemContentProps = UIComponentProps<"div", ItemContentState>
-
-export type ItemTitleState = object
-export type ItemTitleProps = UIComponentProps<"h2", ItemTitleState>
-
-export type ItemDescriptionState = object
-export type ItemDescriptionProps = UIComponentProps<"p", ItemDescriptionState>
-
-export type ItemActionsState = object
-export type ItemActionsProps = UIComponentProps<"div", ItemActionsState>
+export type ItemRootProps = BaseUIComponentProps<"div", ItemRootState>
+export type ItemMediaProps = BaseUIComponentProps<"span", ItemMediaState>
+export type ItemContentProps = BaseUIComponentProps<"div", ItemContentState>
+export type ItemTitleProps = BaseUIComponentProps<"h2", ItemTitleState>
+export type ItemDescriptionProps = BaseUIComponentProps<"p", ItemDescriptionState>
+export type ItemActionsProps = BaseUIComponentProps<"div", ItemActionsState>

@@ -12,4 +12,4 @@ export const Collapsible = {
 	Indicator: CollapsibleIndicator,
 	Panel: CollapsiblePanel,
 	Content: CollapsibleContent,
-}
+} as const

@@ -1,16 +1,22 @@
-import type { ButtonProps, ButtonState } from "@base-ui/react/button"
-import type { UIChangeEventDetails, UIComponentProps } from "../../types"
+import type { ButtonProps } from "@base-ui/react/button"
+import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
+import type { BaseUIChangeEventDetails } from "@base-ui/react"
 import type { REASONS } from "../../constants"
 
-export type PaginationRootState = { page: number }
-export type PaginationRootChangeEventReason =
+type PaginationRootState = { page: number }
+type PaginationListState = object
+type PaginationItemState = object
+type PaginationEllipsisState = object
+
+type PaginationRootChangeEventReason =
 	| typeof REASONS.prevPress
 	| typeof REASONS.nextPress
 	| typeof REASONS.pagePress
-	| typeof REASONS.sync
+	| typeof REASONS.pageSync
 
-export type PaginationRootChangeEventDetails = UIChangeEventDetails<PaginationRootChangeEventReason>
-export type PaginationRootProps = UIComponentProps<"nav", PaginationRootState> & {
+export type PaginationRootChangeEventDetails = BaseUIChangeEventDetails<PaginationRootChangeEventReason>
+
+export type PaginationRootProps = BaseUIComponentProps<"nav", PaginationRootState> & {
 	/**
 	 * Whether the component is disabled
 	 */
@@ -34,19 +40,10 @@ export type PaginationRootProps = UIComponentProps<"nav", PaginationRootState> &
 	onPageChange?: (page: number, eventDetails: PaginationRootChangeEventDetails) => void
 }
 
-export type PaginationListState = object
-export type PaginationListProps = UIComponentProps<"ul", PaginationListState>
-
-export type PaginationItemState = object
-export type PaginationItemProps = UIComponentProps<"li", PaginationItemState>
-
-export type PaginationPrevState = ButtonState
+export type PaginationListProps = BaseUIComponentProps<"ul", PaginationListState>
+export type PaginationItemProps = BaseUIComponentProps<"li", PaginationItemState>
 export type PaginationPrevProps = ButtonProps
-
-export type PaginationNextState = ButtonState
 export type PaginationNextProps = ButtonProps
-
-export type PaginationPageState = ButtonState
 export type PaginationPageProps = ButtonProps & {
 	/**
 	 * Current active page number
@@ -54,5 +51,4 @@ export type PaginationPageProps = ButtonProps & {
 	page: number
 }
 
-export type PaginationEllipsisState = object
-export type PaginationEllipsisProps = UIComponentProps<"span", PaginationEllipsisState>
+export type PaginationEllipsisProps = BaseUIComponentProps<"span", PaginationEllipsisState>

@@ -1,5 +1,5 @@
 .tooltip__trigger {
-  @apply transition motion-reduce:transition-none;
+  @apply relative transition motion-reduce:transition-none;
 
   &:focus-visible {
     @apply z-10 status-focus;
@@ -56,7 +56,9 @@
 }
 
 .tooltip__viewport {
-  @apply overflow-clip relative size-full [--viewport-inline-padding:0.75rem];
+  --viewport-inline-padding: 0.75rem;
+
+  @apply overflow-clip relative size-full;
 
   [data-previous],
   [data-current] {

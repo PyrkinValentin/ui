@@ -1,5 +1,5 @@
 .alert-dialog__trigger {
-  @apply transition motion-reduce:transition-none;
+  @apply relative transition motion-reduce:transition-none;
 
   &:focus-visible {
     @apply z-10 status-focus;
@@ -19,37 +19,13 @@
   }
 }
 
-.alert-dialog__viewport {
-  @apply fixed inset-0;
-
-  & .alert-dialog__popup {
-    @apply relative left-auto top-auto translate-0 mx-auto my-4;
-  }
-}
-
 .alert-dialog__popup {
-  @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 w-[calc(100%-2rem)] max-h-[calc(100%-2rem)]
-  flex flex-col rounded-lg shadow-lg bg-overlay border border-border transition motion-reduce:transition-none
-  transform-gpu;
+  @apply fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 p-6 w-sm max-w-[calc(100%-2rem)]
+  max-h-[calc(100%-2rem)] flex flex-col rounded-lg shadow-lg bg-overlay border border-border transition
+  motion-reduce:transition-none transform-gpu;
 
-  &[data-size="xs"] {
-    @apply max-w-xs;
-  }
-
-  &[data-size="sm"] {
-    @apply max-w-sm;
-  }
-
-  &[data-size="md"] {
-    @apply max-w-md;
-  }
-
-  &[data-size="lg"] {
-    @apply max-w-lg;
-  }
-
-  &[data-size="full"] {
-    @apply h-full;
+  &:focus-visible {
+    @apply status-focus;
   }
 
   &[data-starting-style],
@@ -59,11 +35,7 @@
   }
 
   &[data-nested-dialog-open] {
-    @apply -translate-x-full pointer-events-none;
-  }
-
-  &:focus-visible {
-    @apply status-focus;
+    @apply pointer-events-none;
   }
 }
 
@@ -108,11 +80,11 @@
 }
 
 .alert-dialog__actions {
-  @apply mt-auto pt-6 flex items-center justify-end gap-2;
+  @apply mt-auto pt-4 flex items-center justify-end gap-2;
 }
 
 .alert-dialog__close {
-  @apply transition motion-reduce:transition-none;
+  @apply relative transition motion-reduce:transition-none;
 
   &[data-native-close] {
     @apply z-1 absolute top-4 right-4 size-6 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
