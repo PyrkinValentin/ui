@@ -252,11 +252,3 @@ export const PaginationEllipsis = (props: PaginationEllipsisProps) => {
 		</Render>
 	)
 }
-
-PaginationRoot.displayName = "Pagination.Root"
-PaginationList.displayName = "Pagination.List"
-PaginationItem.displayName = "Pagination.Item"
-PaginationPrev.displayName = "Pagination.Prev"
-PaginationNext.displayName = "Pagination.Next"
-PaginationPage.displayName = "Pagination.Page"
-PaginationEllipsis.displayName = "Pagination.Ellipsis"

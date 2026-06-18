@@ -118,11 +118,3 @@ export const FieldValidity = (props: FieldValidityProps) => {
 		<Field.Validity {...props}/>
 	)
 }
-
-FieldRoot.displayName = "Field.Root"
-FieldLabel.displayName = "Field.Label"
-FieldControl.displayName = "Field.Control"
-FieldDescription.displayName = "Field.Description"
-FieldItem.displayName = "Field.Item"
-FieldError.displayName = "Field.Error"
-FieldValidity.displayName = "Field.Validity"

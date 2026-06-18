@@ -21,5 +21,3 @@ export const Skeleton = (props: SkeletonProps) => {
 		/>
 	)
 }
-
-Skeleton.displayName = "Skeleton"

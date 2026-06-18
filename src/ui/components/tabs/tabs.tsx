@@ -92,9 +92,3 @@ export const TabsPanel = (props: TabsPanelProps) => {
 		</Tabs.Panel>
 	)
 }
-
-TabsRoot.displayName = "Tabs.Root"
-TabsList.displayName = "Tabs.List"
-TabsTab.displayName = "Tabs.Tab"
-TabsIndicator.displayName = "Tabs.Indicator"
-TabsPanel.displayName = "Tabs.Panel"

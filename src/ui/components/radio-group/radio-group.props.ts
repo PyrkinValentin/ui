@@ -1,0 +1,1 @@
+export type { RadioGroupProps } from "@base-ui/react/radio-group"

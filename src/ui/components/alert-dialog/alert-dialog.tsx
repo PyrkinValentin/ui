@@ -199,13 +199,3 @@ export const AlertDialogClose = (props: AlertDialogCloseProps) => {
 		</AlertDialog.Close>
 	)
 }
-
-AlertDialogRoot.displayName = "AlertDialog.Root"
-AlertDialogTrigger.displayName = "AlertDialog.Trigger"
-AlertDialogPortal.displayName = "AlertDialog.Portal"
-AlertDialogBackdrop.displayName = "AlertDialog.Backdrop"
-AlertDialogPopup.displayName = "AlertDialog.Popup"
-AlertDialogIndicator.displayName = "AlertDialog.Indicator"
-AlertDialogTitle.displayName = "AlertDialog.Title"
-AlertDialogDescription.displayName = "AlertDialog.Description"
-AlertDialogClose.displayName = "AlertDialog.Close"

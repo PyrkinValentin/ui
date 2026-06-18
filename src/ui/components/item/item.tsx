@@ -120,10 +120,3 @@ export const ItemActions = (props: ItemActionsProps) => {
 		</Render>
 	)
 }
-
-ItemRoot.displayName = "Item.Root"
-ItemMedia.displayName = "Item.Media"
-ItemContent.displayName = "Item.Content"
-ItemTitle.displayName = "Item.Title"
-ItemDescription.displayName = "Item.Description"
-ItemActions.displayName = "Item.Actions"

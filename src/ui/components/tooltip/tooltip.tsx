@@ -144,12 +144,3 @@ export const TooltipViewport = (props: TooltipViewportProps) => {
 		</Tooltip.Viewport>
 	)
 }
-
-TooltipProvider.displayName = "Tooltip.Provider"
-TooltipRoot.displayName = "Tooltip.Root"
-TooltipTrigger.displayName = "Tooltip.Trigger"
-TooltipPortal.displayName = "Tooltip.Portal"
-TooltipPositioner.displayName = "Tooltip.Positioner"
-TooltipPopup.displayName = "Tooltip.Popup"
-TooltipArrow.displayName = "Tooltip.Arrow"
-TooltipViewport.displayName = "Tooltip.Viewport"

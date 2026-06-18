@@ -290,17 +290,3 @@ export const ToastClose = (props: ToastCloseProps) => {
 		</Toast.Close>
 	)
 }
-
-ToastProvider.displayName = "Toast.Provider"
-ToastPortal.displayName = "Toast.Portal"
-ToastViewport.displayName = "Toast.Viewport"
-ToastPositioner.displayName = "Toast.Positioner"
-ToastRoot.displayName = "Toast.Root"
-ToastArrow.displayName = "Toast.Arrow"
-ToastContent.displayName = "Toast.Content"
-ToastIndicator.displayName = "Toast.Indicator"
-ToastGroup.displayName = "Toast.Group"
-ToastTitle.displayName = "Toast.Title"
-ToastDescription.displayName = "Toast.Description"
-ToastAction.displayName = "Toast.Action"
-ToastClose.displayName = "Toast.Close"

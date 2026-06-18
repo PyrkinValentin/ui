@@ -22,5 +22,3 @@ export const Form = <FormValues extends Record<string, unknown> = Record<string,
 		</BaseForm>
 	)
 }
-
-Form.displayName = "Form"

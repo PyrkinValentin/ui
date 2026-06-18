@@ -134,11 +134,3 @@ export const SliderThumb = (props: SliderThumbProps) => {
 		</Slider.Thumb>
 	)
 }
-
-SliderRoot.displayName = "Slider.Root"
-SliderLabel.displayName = "Slider.Label"
-SliderValue.displayName = "Slider.Value"
-SliderControl.displayName = "Slider.Control"
-SliderTrack.displayName = "Slider.Track"
-SliderIndicator.displayName = "Slider.Indicator"
-SliderThumb.displayName = "Slider.Thumb"

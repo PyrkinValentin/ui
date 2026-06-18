@@ -174,12 +174,3 @@ export const DialogClose = (props: DialogCloseProps) => {
 		</Dialog.Close>
 	)
 }
-
-DialogRoot.displayName = "Dialog.Root"
-DialogTrigger.displayName = "Dialog.Trigger"
-DialogPortal.displayName = "Dialog.Portal"
-DialogBackdrop.displayName = "Dialog.Backdrop"
-DialogPopup.displayName = "Dialog.Popup"
-DialogTitle.displayName = "Dialog.Title"
-DialogDescription.displayName = "Dialog.Description"
-DialogClose.displayName = "Dialog.Close"

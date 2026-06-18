@@ -26,5 +26,3 @@ export const Button = (props: ButtonProps) => {
 		</BaseButton>
 	)
 }
-
-Button.displayName = "Button"

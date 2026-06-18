@@ -147,11 +147,3 @@ export const BreadcrumbsEllipsis = (props: BreadcrumbsEllipsisProps) => {
 		</Render>
 	)
 }
-
-BreadcrumbsRoot.displayName = "Breadcrumbs.Root"
-BreadcrumbsList.displayName = "Breadcrumbs.List"
-BreadcrumbsItem.displayName = "Breadcrumbs.Item"
-BreadcrumbsSeparator.displayName = "Breadcrumbs.Separator"
-BreadcrumbsLink.displayName = "Breadcrumbs.Link"
-BreadcrumbsPage.displayName = "Breadcrumbs.Page"
-BreadcrumbsEllipsis.displayName = "Breadcrumbs.Ellipsis"

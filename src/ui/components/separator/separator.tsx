@@ -19,5 +19,3 @@ export const Separator = (props: SeparatorProps) => {
 		/>
 	)
 }
-
-Separator.displayName = "Separator"

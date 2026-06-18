@@ -58,7 +58,3 @@ export const AvatarFallback = (props: AvatarFallbackProps) => {
 		</Avatar.Fallback>
 	)
 }
-
-AvatarRoot.displayName = "Avatar.Root"
-AvatarImage.displayName = "Avatar.Image"
-AvatarFallback.displayName = "Avatar.Fallback"

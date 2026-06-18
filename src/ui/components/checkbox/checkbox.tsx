@@ -42,6 +42,3 @@ export const CheckboxIndicator = (props: CheckboxIndicatorProps) => {
 		</Checkbox.Indicator>
 	)
 }
-
-CheckboxRoot.displayName = "Checkbox.Root"
-CheckboxIndicator.displayName = "Checkbox.Indicator"

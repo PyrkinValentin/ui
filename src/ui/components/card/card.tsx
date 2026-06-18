@@ -77,8 +77,3 @@ export const CardDescription = (props: CardDescriptionProps) => {
 		</Render>
 	)
 }
-
-CardRoot.displayName = "Card.Root"
-CardContent.displayName = "Card.Content"
-CardTitle.displayName = "Card.Title"
-CardDescription.displayName = "Card.Description"

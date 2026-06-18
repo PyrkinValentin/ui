@@ -139,11 +139,3 @@ export const AccordionContent = (props: AccordionContentProps) => {
 		</Render>
 	)
 }
-
-AccordionRoot.displayName = "Accordion.Root"
-AccordionItem.displayName = "Accordion.Item"
-AccordionHeader.displayName = "Accordion.Header"
-AccordionTrigger.displayName = "Accordion.Trigger"
-AccordionIndicator.displayName = "Accordion.Indicator"
-AccordionPanel.displayName = "Accordion.Panel"
-AccordionContent.displayName = "Accordion.Content"

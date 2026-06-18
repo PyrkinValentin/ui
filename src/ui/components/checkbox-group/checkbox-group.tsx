@@ -22,5 +22,3 @@ export const CheckboxGroup = (props: CheckboxGroupProps) => {
 		</BaseCheckboxGroup>
 	)
 }
-
-CheckboxGroup.displayName = "CheckboxGroup"

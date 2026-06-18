@@ -268,17 +268,3 @@ export const DrawerClose = (props: DrawerCloseProps) => {
 		</Drawer.Close>
 	)
 }
-
-DrawerRoot.displayName = "Drawer.Root"
-DrawerTrigger.displayName = "Drawer.Trigger"
-DrawerSwipeArea.displayName = "Drawer.SwipeArea"
-DrawerPortal.displayName = "Drawer.Portal"
-DrawerBackdrop.displayName = "Drawer.Backdrop"
-DrawerViewport.displayName = "Drawer.Viewport"
-DrawerPopup.displayName = "Drawer.Popup"
-DrawerHandle.displayName = "Drawer.Handle"
-DrawerContent.displayName = "Drawer.Content"
-DrawerTitle.displayName = "Drawer.Title"
-DrawerDescription.displayName = "Drawer.Description"
-DrawerActions.displayName = "Drawer.Actions"
-DrawerClose.displayName = "Drawer.Close"

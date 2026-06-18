@@ -116,10 +116,3 @@ export const ScrollAreaCorner = (props: ScrollAreaCornerProps) => {
 		</ScrollArea.Corner>
 	)
 }
-
-ScrollAreaRoot.displayName = "ScrollArea.Root"
-ScrollAreaViewport.displayName = "ScrollArea.Viewport"
-ScrollAreaContent.displayName = "ScrollArea.Content"
-ScrollAreaScrollbar.displayName = "ScrollArea.Scrollbar"
-ScrollAreaThumb.displayName = "ScrollArea.Thumb"
-ScrollAreaCorner.displayName = "ScrollArea.Corner"

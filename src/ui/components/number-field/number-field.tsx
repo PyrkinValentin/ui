@@ -130,11 +130,3 @@ export const NumberFieldIncrement = (props: NumberFieldIncrementProps) => {
 		</NumberField.Increment>
 	)
 }
-
-NumberFieldRoot.displayName = "NumberField.Root"
-NumberFieldScrubArea.displayName = "NumberField.ScrubArea"
-NumberFieldScrubAreaCursor.displayName = "NumberField.ScrubAreaCursor"
-NumberFieldGroup.displayName = "NumberField.Group"
-NumberFieldDecrement.displayName = "NumberField.Decrement"
-NumberFieldInput.displayName = "NumberField.Input"
-NumberFieldIncrement.displayName = "NumberField.Increment"

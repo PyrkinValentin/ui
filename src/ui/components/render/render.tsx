@@ -34,5 +34,3 @@ export const Render = <DefaultTagName extends keyof JSX.IntrinsicElements, State
 		},
 	})
 }
-
-Render.displayName = "Render"

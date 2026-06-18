@@ -50,6 +50,3 @@ export const BadgeIndicator = (props: BadgeIndicatorProps) => {
 		</Render>
 	)
 }
-
-BadgeRoot.displayName = "Badge.Root"
-BadgeIndicator.displayName = "Badge.Indicator"

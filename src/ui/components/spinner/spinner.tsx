@@ -23,5 +23,3 @@ export const Spinner = (props: SpinnerProps) => {
 		/>
 	)
 }
-
-Spinner.displayName = "Spinner"

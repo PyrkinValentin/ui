@@ -26,5 +26,3 @@ export const Chip = (props: ChipProps) => {
 		</Render>
 	)
 }
-
-Chip.displayName = "Chip"

@@ -54,7 +54,3 @@ export const OTPFieldSeparator = (props: OTPFieldSeparatorProps) => {
 		</OTPField.Separator>
 	)
 }
-
-OTPFieldRoot.displayName = "OTPField.Root"
-OTPFieldInput.displayName = "OTPField.Input"
-OTPFieldSeparator.displayName = "OTPField.Separator"

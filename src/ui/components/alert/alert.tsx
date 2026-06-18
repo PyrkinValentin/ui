@@ -133,10 +133,3 @@ export const AlertClose = (props: AlertCloseProps) => {
 		</Button>
 	)
 }
-
-AlertRoot.displayName = "Alert.Root"
-AlertIndicator.displayName = "Alert.Indicator"
-AlertContent.displayName = "Alert.Content"
-AlertTitle.displayName = "Alert.Title"
-AlertDescription.displayName = "Alert.Description"
-AlertClose.displayName = "Alert.Close"

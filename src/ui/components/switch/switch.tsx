@@ -39,6 +39,3 @@ export const SwitchThumb = (props: SwitchThumbProps) => {
 		</Switch.Thumb>
 	)
 }
-
-SwitchRoot.displayName = "Switch.Root"
-SwitchThumb.displayName = "Switch.Thumb"

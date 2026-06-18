@@ -209,15 +209,3 @@ export const PopoverClose = (props: PopoverCloseProps) => {
 		</Popover.Close>
 	)
 }
-
-PopoverRoot.displayName = "Popover.Root"
-PopoverTrigger.displayName = "Popover.Trigger"
-PopoverPortal.displayName = "Popover.Portal"
-PopoverBackdrop.displayName = "Popover.Backdrop"
-PopoverPositioner.displayName = "Popover.Positioner"
-PopoverPopup.displayName = "Popover.Popup"
-PopoverArrow.displayName = "Popover.Arrow"
-PopoverViewport.displayName = "Popover.Viewport"
-PopoverTitle.displayName = "Popover.Title"
-PopoverDescription.displayName = "Popover.Description"
-PopoverClose.displayName = "Popover.Close"
