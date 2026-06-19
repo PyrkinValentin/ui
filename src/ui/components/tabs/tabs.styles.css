@@ -53,7 +53,7 @@
 }
 
 .tabs__indicator {
-  @apply absolute h-9 rounded-sm bg-neutral ease-in-out transition-all motion-reduce:transition-none
+  @apply absolute h-9 rounded-sm bg-neutral ease-in-out transition-[translate,width] motion-reduce:transition-none
   transform-gpu;
 
   &[data-orientation="horizontal"] {
