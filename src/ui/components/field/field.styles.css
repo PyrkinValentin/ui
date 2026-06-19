@@ -1,13 +1,13 @@
 .field {
-  @apply w-full flex flex-col gap-1 transition-opacity motion-reduce:transition-none;
+  @apply w-full flex flex-col gap-1;
+}
+
+.field__label {
+  @apply text-sm font-medium text-pretty text-foreground transition motion-reduce:transition-none;
 
   &[data-disabled] {
     @apply status-disable;
   }
-}
-
-.field__label {
-  @apply text-sm font-medium text-pretty text-foreground;
 
   &[data-invalid] {
     @apply text-error;
@@ -29,13 +29,21 @@
     @apply z-10 status-focus;
   }
 
+  &[data-disabled] {
+    @apply status-disable;
+  }
+
   &[data-invalid] {
-    @apply status-invalid;
+    @apply z-10 status-invalid;
   }
 }
 
 .field__description {
-  @apply text-muted transition motion-reduce:transition-none;
+  @apply text-muted transition-opacity motion-reduce:transition-none;
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
 }
 
 .field__error {

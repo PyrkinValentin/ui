@@ -114,7 +114,6 @@ export const TooltipPopup = (props: TooltipPopupProps) => {
 export const TooltipArrow = (props: TooltipArrowProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -122,9 +121,7 @@ export const TooltipArrow = (props: TooltipArrowProps) => {
 		<Tooltip.Arrow
 			{...restProps}
 			className={toClassNames("tooltip__arrow", className)}
-		>
-			{children}
-		</Tooltip.Arrow>
+		/>
 	)
 }
 

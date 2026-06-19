@@ -131,7 +131,6 @@ export const MenuPopup = (props: MenuPopupProps) => {
 export const MenuArrow = (props: MenuArrowProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -139,9 +138,7 @@ export const MenuArrow = (props: MenuArrowProps) => {
 		<Menu.Arrow
 			{...restProps}
 			className={toClassNames("menu__arrow", className)}
-		>
-			{children}
-		</Menu.Arrow>
+		/>
 	)
 }
 
@@ -201,7 +198,6 @@ export const MenuLinkItem = (props: MenuLinkItemProps) => {
 export const MenuSeparator = (props: MenuSeparatorProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -209,9 +205,7 @@ export const MenuSeparator = (props: MenuSeparatorProps) => {
 		<Menu.Separator
 			{...restProps}
 			className={toClassNames("menu__separator", className)}
-		>
-			{children}
-		</Menu.Separator>
+		/>
 	)
 }
 

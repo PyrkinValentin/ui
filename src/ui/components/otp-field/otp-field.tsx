@@ -40,7 +40,6 @@ export const OTPFieldInput = (props: OTPFieldInputProps) => {
 export const OTPFieldSeparator = (props: OTPFieldSeparatorProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -48,8 +47,6 @@ export const OTPFieldSeparator = (props: OTPFieldSeparatorProps) => {
 		<OTPField.Separator
 			{...restProps}
 			className={toClassNames("otp-field__separator", className)}
-		>
-			{children}
-		</OTPField.Separator>
+		/>
 	)
 }

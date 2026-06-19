@@ -21,9 +21,8 @@
 
 .menu__positioner {
   &:has(.menu__viewport) {
-    @apply w-(--positioner-width) max-w-(--available-width) h-(--positioner-height)
-    transition-[top,left,right,bottom,transform] duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]
-    motion-reduce:transition-none;
+    @apply w-(--positioner-width) h-(--positioner-height) transition-[top,left,right,bottom,transform] duration-350
+    ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none;
 
     &[data-instant] {
       @apply transition-none;
@@ -32,8 +31,9 @@
 }
 
 .menu__popup {
-  @apply relative p-1 min-w-40 rounded-lg shadow-lg border border-border bg-overlay origin-(--transform-origin)
-  transition motion-reduce:transition-none transform-gpu;
+  @apply relative p-1 min-w-40 max-w-(--available-width) max-h-(--available-height) flex flex-col rounded-md shadow-lg
+  border border-border bg-overlay origin-(--transform-origin) transition motion-reduce:transition-none
+  transform-gpu;
 
   &:focus-visible {
     @apply status-focus;
@@ -87,7 +87,7 @@
 .menu__submenu-trigger,
 .menu__radio-item,
 .menu__checkbox-item {
-  @apply px-3 py-2 min-h-9 flex items-center gap-2 rounded-md text-sm font-medium text-foreground select-none
+  @apply px-3 py-2 min-h-9 flex items-center gap-2 rounded-sm text-sm font-medium text-foreground select-none
   outline-none cursor-pointer transition-colors motion-reduce:transition-none;
 
   & > svg {
@@ -126,7 +126,7 @@
 }
 
 .menu__separator {
-  @apply mx-3 my-2 h-px rounded-sm bg-separator;
+  @apply mx-3 my-2 h-px shrink-0 rounded-sm bg-separator;
 }
 
 .menu__group,
@@ -139,36 +139,30 @@
 }
 
 .menu__radio-item-indicator {
-  @apply size-4 shrink-0 flex items-center justify-center;
+  @apply size-4 shrink-0 flex items-center justify-center opacity-0;
 
   & > svg {
     @apply size-full text-muted;
-  }
-
-  & > svg,
-  &[data-native-indicator]:after {
-    @apply opacity-0 scale-90 transition motion-reduce:transition-none transform-gpu;
   }
 
   &[data-native-indicator]:after {
     @apply content-[""] size-2 rounded-full bg-muted;
   }
 
-  &[data-checked] > svg,
-  &[data-checked][data-native-indicator]:after {
-    @apply opacity-100 scale-100;
+  &[data-checked] {
+    @apply opacity-100;
   }
 }
 
 .menu__checkbox-item-indicator {
-  @apply size-4 shrink-0 flex items-center justify-center;
+  @apply size-4 shrink-0 flex items-center justify-center opacity-0;
 
   & > svg {
-    @apply size-full text-muted opacity-0 scale-90 transition motion-reduce:transition-none transform-gpu;
+    @apply size-full text-muted;
   }
 
-  &[data-checked] > svg {
-    @apply opacity-100 scale-100;
+  &[data-checked] {
+    @apply opacity-100;
   }
 }
 

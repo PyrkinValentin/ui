@@ -138,7 +138,6 @@ export const ToastRoot = <Data extends ToastData>(props: ToastRootProps<Data>) =
 export const ToastArrow = (props: ToastArrowProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -146,9 +145,7 @@ export const ToastArrow = (props: ToastArrowProps) => {
 		<Toast.Arrow
 			{...restProps}
 			className={toClassNames("toast__arrow", className)}
-		>
-			{children}
-		</Toast.Arrow>
+		/>
 	)
 }
 

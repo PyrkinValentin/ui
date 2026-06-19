@@ -159,7 +159,6 @@ export const DrawerHandle = (props: DrawerHandleProps) => {
 
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -170,9 +169,7 @@ export const DrawerHandle = (props: DrawerHandleProps) => {
 			defaultTagName="span"
 			aria-hidden="true"
 			className={toClassNames("drawer__handle", className)}
-		>
-			{children}
-		</Render>
+		/>
 	)
 }
 

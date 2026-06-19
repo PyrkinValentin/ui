@@ -9,10 +9,6 @@
 
   &:focus-visible {
     @apply z-10 status-focus;
-
-    &[data-invalid] {
-      @apply status-invalid;
-    }
   }
 
   &[data-checked] {
@@ -26,6 +22,10 @@
 
   &[data-disabled] {
     @apply status-disable;
+  }
+
+  &[data-invalid] {
+    @apply z-10 status-invalid;
   }
 }
 

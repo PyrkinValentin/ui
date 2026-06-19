@@ -26,6 +26,7 @@
 @import "../components/radio/radio.styles.css";
 @import "../components/radio-group/radio-group.styles.css";
 @import "../components/scroll-area/scroll-area.styles.css";
+@import "../components/select/select.styles.css";
 @import "../components/separator/separator.styles.css";
 @import "../components/skeleton/skeleton.styles.css";
 @import "../components/slider/slider.styles.css";

@@ -73,13 +73,13 @@
 
   &:has(:focus-visible) {
     @apply status-focus;
-
-    &[data-invalid] {
-      @apply status-invalid;
-    }
   }
 
   &[data-dragging] {
     @apply cursor-grabbing;
+  }
+
+  &[data-invalid] {
+    @apply status-invalid;
   }
 }

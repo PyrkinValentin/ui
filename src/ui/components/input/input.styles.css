@@ -18,6 +18,6 @@
   }
 
   &[data-invalid] {
-    @apply status-invalid;
+    @apply z-10 status-invalid;
   }
 }

@@ -21,9 +21,8 @@
 
 .popover__positioner {
   &:has(.popover__viewport) {
-    @apply w-(--positioner-width) max-w-(--available-width) h-(--positioner-height)
-    transition-[top,left,right,bottom,transform] duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]
-    motion-reduce:transition-none;
+    @apply w-(--positioner-width) h-(--positioner-height) transition-[top,left,right,bottom,transform] duration-350
+    ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none;
 
     &[data-instant] {
       @apply transition-none;
@@ -32,8 +31,9 @@
 }
 
 .popover__popup {
-  @apply relative px-4 py-3 rounded-lg shadow-lg border border-border bg-overlay origin-(--transform-origin)
-  transition motion-reduce:transition-none transform-gpu;
+  @apply relative px-4 py-3 max-w-(--available-width) max-h-(--available-height) flex flex-col rounded-md shadow-lg
+  border border-border bg-overlay origin-(--transform-origin) transition motion-reduce:transition-none
+  transform-gpu;
 
   &:focus-visible {
     @apply status-focus;

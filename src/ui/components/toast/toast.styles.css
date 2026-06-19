@@ -5,30 +5,30 @@
     --gap: 0;
     --toast-swipe-movement-y: 0;
 
-    @apply z-1 fixed w-[calc(100%-2rem)] sm:w-90;
+    @apply z-1 fixed w-[calc(100%-1rem)] sm:w-90;
 
     &[data-position="top-left"] {
-      @apply top-4 left-4;
+      @apply top-2 left-2;
     }
 
     &[data-position="top-center"] {
-      @apply top-4 left-1/2 -translate-x-1/2;
+      @apply top-2 left-1/2 -translate-x-1/2;
     }
 
     &[data-position="top-right"] {
-      @apply top-4 right-4;
+      @apply top-2 right-2;
     }
 
     &[data-position="bottom-left"] {
-      @apply bottom-4 left-4;
+      @apply bottom-2 left-2;
     }
 
     &[data-position="bottom-center"] {
-      @apply bottom-4 left-1/2 -translate-x-1/2;
+      @apply bottom-2 left-1/2 -translate-x-1/2;
     }
 
     &[data-position="bottom-right"] {
-      @apply bottom-4 right-4;
+      @apply bottom-2 right-2;
     }
 
     &[data-position="top-left"],
@@ -135,7 +135,7 @@
 }
 
 .toast {
-  @apply relative px-4 py-3 w-full flex items-center gap-3 rounded-lg shadow-lg border border-border bg-overlay
+  @apply relative px-4 py-3 w-full flex items-center gap-3 rounded-md shadow-lg border border-border bg-overlay
   motion-reduce:transition-none transform-gpu;
 
   &:has(.toast__description) {

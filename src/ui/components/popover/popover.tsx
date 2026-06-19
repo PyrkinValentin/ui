@@ -122,7 +122,6 @@ export const PopoverPopup = (props: PopoverPopupProps) => {
 export const PopoverArrow = (props: PopoverArrowProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -130,9 +129,7 @@ export const PopoverArrow = (props: PopoverArrowProps) => {
 		<Popover.Arrow
 			{...restProps}
 			className={toClassNames("popover__arrow", className)}
-		>
-			{children}
-		</Popover.Arrow>
+		/>
 	)
 }
 
