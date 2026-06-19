@@ -2,7 +2,8 @@
   @apply relative size-5 shrink-0 flex items-center justify-center rounded-full bg-neutral cursor-pointer transition
   motion-reduce:transition-none;
 
-  &:hover {
+  &:hover,
+  &:active {
     @apply bg-neutral-hover;
   }
 
@@ -17,7 +18,8 @@
   &[data-checked] {
     @apply bg-info text-info-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-info-hover;
     }
   }
@@ -39,7 +41,7 @@
     @apply opacity-100 scale-100;
   }
 
-  &[data-dot]:after {
+  &[data-native-indicator]:after {
     @apply content-[""] size-2 rounded-full bg-white;
   }
 }

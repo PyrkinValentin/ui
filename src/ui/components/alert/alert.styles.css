@@ -39,7 +39,7 @@
 }
 
 .alert__title {
-  @apply text-sm font-medium text-pretty text-foreground leading-snug;
+  @apply text-sm font-medium text-pretty text-foreground leading-snug line-clamp-2;
 }
 
 .alert__description {
@@ -61,7 +61,8 @@
       @apply size-4;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral-hover;
     }
   }

@@ -1,21 +1,28 @@
 .collapsible {
-  @apply w-full;
+  @apply w-full rounded-md bg-surface;
 }
 
 .collapsible__trigger {
-  @apply relative px-4 py-3 w-full flex items-center gap-2 rounded-md text-left text-sm font-medium transition
-  motion-reduce:transition-none;
+  @apply relative px-4 py-3 w-full flex items-center gap-2 rounded-md text-left text-sm font-medium
+  transition-all motion-reduce:transition-none;
 
   & > svg {
-    @apply size-4.5 text-muted;
+    @apply size-4 text-muted;
   }
 
-  &:hover:not([data-panel-open]) {
-    @apply bg-surface;
+  &:hover,
+  &:active {
+    &:not([data-panel-open]) {
+      @apply bg-neutral;
+    }
   }
 
   &:focus-visible {
     @apply z-10 status-focus;
+  }
+
+  &[data-panel-open] {
+    @apply rounded-b-none;
   }
 
   &[data-disabled] {
@@ -26,9 +33,9 @@
 .collapsible__indicator {
   @apply shrink-0 ms-auto flex items-center justify-center text-muted select-none transition-transform
   motion-reduce:transition-none;
-  
+
   & > svg {
-    @apply size-4.5;
+    @apply size-4;
   }
 
   .collapsible__trigger[data-panel-open] & {
@@ -46,5 +53,5 @@
 }
 
 .collapsible__content {
-  @apply px-4;
+  @apply px-4 pb-3 text-sm text-muted;
 }

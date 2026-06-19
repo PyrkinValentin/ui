@@ -8,7 +8,7 @@ import { Render } from "../render"
 
 export const Chip = (props: ChipProps) => {
 	const {
-		variant = "secondary",
+		variant = "primary",
 		color = "neutral",
 		className,
 		children,

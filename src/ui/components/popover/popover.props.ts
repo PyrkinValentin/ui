@@ -1,4 +1,4 @@
-import type { Popover, PopoverCloseProps as BasePopoverCloseProps } from "@base-ui/react/popover"
+import type { PopoverCloseProps as BasePopoverCloseProps } from "@base-ui/react/popover"
 
 export type {
 	PopoverRootProps,
@@ -8,11 +8,10 @@ export type {
 	PopoverPositionerProps,
 	PopoverPopupProps,
 	PopoverArrowProps,
+	PopoverViewportProps,
 	PopoverTitleProps,
 	PopoverDescriptionProps,
 } from "@base-ui/react/popover"
-
-export type PopoverViewportProps = Popover.Viewport.Props
 
 export type PopoverCloseProps = BasePopoverCloseProps & {
 	/**

@@ -5,6 +5,7 @@ import type {
 	DialogTriggerProps,
 	DialogPortalProps,
 	DialogBackdropProps,
+	DialogViewportProps,
 	DialogPopupProps,
 	DialogTitleProps,
 	DialogDescriptionProps,
@@ -79,6 +80,25 @@ export const DialogBackdrop = (props: DialogBackdropProps) => {
 		>
 			{children}
 		</Dialog.Backdrop>
+	)
+}
+
+export const DialogViewport = (props: DialogViewportProps) => {
+	const {
+		position = "center",
+		className,
+		children,
+		...restProps
+	} = props
+
+	return (
+		<Dialog.Viewport
+			{...restProps}
+			{...toDataAttrs({ position })}
+			className={toClassNames("dialog__viewport", className)}
+		>
+			{children}
+		</Dialog.Viewport>
 	)
 }
 

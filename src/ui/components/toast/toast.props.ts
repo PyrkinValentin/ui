@@ -10,7 +10,6 @@ import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 import type { ToastData, ToastOptions } from "./toast.types"
 
 type ToastIndicatorState = object
-type ToastGroupState = object
 
 export type {
 	ToastProviderProps,
@@ -35,7 +34,6 @@ export type ToastRootProps<Data extends ToastData = ToastData> = Omit<BaseToastR
 }
 
 export type ToastIndicatorProps = BaseUIComponentProps<"span", ToastIndicatorState>
-export type ToastGroupProps = BaseUIComponentProps<"div", ToastGroupState>
 
 export type ToastActionProps = BaseToastActionProps & {
 	/**

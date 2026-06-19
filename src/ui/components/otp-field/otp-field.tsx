@@ -2,10 +2,9 @@
 
 import type { OTPFieldRootProps, OTPFieldInputProps, OTPFieldSeparatorProps } from "./otp-field.props"
 
-import { toClassNames } from "../../utils"
+import { toClassNames, toDataAttrs } from "../../utils"
 
 import { OTPField } from "@base-ui/react/otp-field"
-import { Minus } from "lucide-react"
 
 export const OTPFieldRoot = (props: OTPFieldRootProps) => {
 	const {
@@ -45,12 +44,15 @@ export const OTPFieldSeparator = (props: OTPFieldSeparatorProps) => {
 		...restProps
 	} = props
 
+	const minus = !children
+
 	return (
 		<OTPField.Separator
 			{...restProps}
+			{...toDataAttrs({ minus })}
 			className={toClassNames("otp-field__separator", className)}
 		>
-			{children ?? <Minus/>}
+			{children}
 		</OTPField.Separator>
 	)
 }

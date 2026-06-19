@@ -18,7 +18,8 @@
 .breadcrumbs__link {
   @apply relative text-muted transition motion-reduce:transition-none;
 
-  &:hover {
+  &:hover,
+  &:active {
     @apply text-foreground;
   }
 
@@ -38,6 +39,6 @@
 .breadcrumbs__page,
 .breadcrumbs__ellipsis {
   & > svg {
-    @apply size-4.5;
+    @apply size-4;
   }
 }

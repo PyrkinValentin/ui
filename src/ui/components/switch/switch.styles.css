@@ -2,7 +2,8 @@
   @apply relative p-0.5 w-10 h-6 shrink-0 flex rounded-full bg-neutral cursor-pointer transition
   motion-reduce:transition-none;
 
-  &:hover {
+  &:hover,
+  &:active {
     @apply bg-neutral-hover;
   }
 
@@ -17,7 +18,8 @@
   &[data-checked] {
     @apply bg-info text-info-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-info-hover;
     }
   }

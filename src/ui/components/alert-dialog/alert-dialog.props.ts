@@ -1,4 +1,8 @@
-import type { AlertDialogCloseProps as BaseAlertDialogCloseProps } from "@base-ui/react/alert-dialog"
+import type {
+	AlertDialogViewportProps as BaseAlertDialogViewportProps,
+	AlertDialogCloseProps as BaseAlertDialogCloseProps,
+} from "@base-ui/react/alert-dialog"
+
 import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
 type AlertDialogIndicatorState = object
@@ -13,6 +17,14 @@ export type {
 	AlertDialogTitleProps,
 	AlertDialogDescriptionProps,
 } from "@base-ui/react/alert-dialog"
+
+export type AlertDialogViewportProps = BaseAlertDialogViewportProps & {
+	/**
+	 * The positioning of the component on the screen.
+	 * @default "center"
+	 */
+	position?: "top" | "center" | "bottom"
+}
 
 export type AlertDialogIndicatorProps = BaseUIComponentProps<"span", AlertDialogIndicatorState> & {
 	/**

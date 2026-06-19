@@ -1,5 +1,3 @@
-import type { Tooltip } from "@base-ui/react/tooltip"
-
 export type {
 	TooltipProviderProps,
 	TooltipRootProps,
@@ -8,6 +6,5 @@ export type {
 	TooltipPositionerProps,
 	TooltipPopupProps,
 	TooltipArrowProps,
+	TooltipViewportProps,
 } from "@base-ui/react/tooltip"
-
-export type TooltipViewportProps = Tooltip.Viewport.Props

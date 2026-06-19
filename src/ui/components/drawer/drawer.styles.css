@@ -190,7 +190,8 @@
       @apply size-4;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral-hover;
     }
   }

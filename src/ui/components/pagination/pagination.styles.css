@@ -10,29 +10,29 @@
 .pagination__next,
 .pagination__page,
 .pagination__ellipsis {
-  @apply flex items-center justify-center;
+  @apply flex items-center justify-center rounded-md;
 
   &[data-size="sm"] {
-    @apply size-6 rounded-xs;
+    @apply size-8;
+
+    & > svg {
+      @apply size-3.5;
+    }
+  }
+
+  &[data-size="md"] {
+    @apply size-9;
 
     & > svg {
       @apply size-4;
     }
   }
 
-  &[data-size="md"] {
-    @apply size-8 rounded-sm;
+  &[data-size="lg"] {
+    @apply size-10;
 
     & > svg {
       @apply size-4.5;
-    }
-  }
-
-  &[data-size="lg"] {
-    @apply size-10 rounded-md;
-
-    & > svg {
-      @apply size-5;
     }
   }
 }
@@ -54,7 +54,8 @@
     @apply text-base;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     @apply bg-neutral-hover;
   }
 

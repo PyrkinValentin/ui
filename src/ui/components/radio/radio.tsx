@@ -31,12 +31,12 @@ export const RadioIndicator = (props: RadioIndicatorProps) => {
 		...restProps
 	} = props
 
-	const dot = !children
+	const nativeIndicator = !children
 
 	return (
 		<Radio.Indicator
 			{...restProps}
-			{...toDataAttrs({ dot })}
+			{...toDataAttrs({ nativeIndicator })}
 			keepMounted={keepMounted}
 			className={toClassNames("radio__indicator", className)}
 		>

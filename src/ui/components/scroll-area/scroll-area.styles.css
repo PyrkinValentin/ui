@@ -55,7 +55,8 @@
     @apply h-full;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     @apply bg-scrollbar-thumb-hover;
   }
 }

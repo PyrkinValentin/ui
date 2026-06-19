@@ -5,7 +5,7 @@ type ChipState = object
 export type ChipProps = BaseUIComponentProps<"span", ChipState> & {
 	/**
 	 * The visual style of the component.
-	 * @default "secondary"
+	 * @default "primary"
 	 */
 	variant?: "primary" | "secondary"
 	/**

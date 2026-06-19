@@ -5,6 +5,7 @@ import type {
 	AlertDialogTriggerProps,
 	AlertDialogPortalProps,
 	AlertDialogBackdropProps,
+	AlertDialogViewportProps,
 	AlertDialogPopupProps,
 	AlertDialogIndicatorProps,
 	AlertDialogTitleProps,
@@ -82,6 +83,25 @@ export const AlertDialogBackdrop = (props: AlertDialogBackdropProps) => {
 		>
 			{children}
 		</AlertDialog.Backdrop>
+	)
+}
+
+export const AlertDialogViewport = (props: AlertDialogViewportProps) => {
+	const {
+		position = "center",
+		className,
+		children,
+		...restProps
+	} = props
+
+	return (
+		<AlertDialog.Viewport
+			{...restProps}
+			{...toDataAttrs({ position })}
+			className={toClassNames("alert-dialog__viewport", className)}
+		>
+			{children}
+		</AlertDialog.Viewport>
 	)
 }
 

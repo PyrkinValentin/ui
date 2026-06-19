@@ -1,17 +1,28 @@
 .accordion {
-  @apply w-full divide-y divide-border;
+  @apply w-full rounded-md divide-y divide-separator bg-surface;
 }
 
 .accordion__trigger {
-  @apply relative px-4 py-3 w-full flex items-center gap-2 text-left text-sm font-medium transition
+  @apply relative px-4 py-3 w-full flex items-center gap-2 text-left text-sm font-medium transition-all
   motion-reduce:transition-none;
 
-  & > svg {
-    @apply size-4.5 text-muted;
+  .accordion__item:first-child & {
+    @apply rounded-t-md;
   }
 
-  &:hover:not([data-panel-open]) {
-    @apply bg-surface;
+  .accordion__item:last-child &:not([data-panel-open]) {
+    @apply rounded-b-md;
+  }
+
+  & > svg {
+    @apply size-4 text-muted;
+  }
+
+  &:hover,
+  &:active {
+    &:not([data-panel-open]) {
+      @apply bg-neutral;
+    }
   }
 
   &:focus-visible {
@@ -28,7 +39,7 @@
   motion-reduce:transition-none;
 
   & > svg {
-    @apply size-4.5;
+    @apply size-4;
   }
 
   .accordion__trigger[data-panel-open] & {
@@ -46,5 +57,5 @@
 }
 
 .accordion__content {
-  @apply px-4 pb-3;
+  @apply px-4 pb-3 text-sm text-muted;
 }

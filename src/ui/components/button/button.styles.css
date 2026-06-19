@@ -1,6 +1,6 @@
 .button {
-  @apply relative w-fit inline-flex items-center justify-center font-medium whitespace-nowrap select-none transition
-  motion-reduce:transition-none;
+  @apply relative w-fit inline-flex items-center justify-center rounded-md font-medium whitespace-nowrap select-none
+  transition motion-reduce:transition-none transform-gpu;
 
   &:focus-visible {
     @apply z-10 status-focus;
@@ -9,7 +9,8 @@
   &[data-variant="primary"] {
     @apply bg-info text-info-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-info-hover;
     }
   }
@@ -17,7 +18,8 @@
   &[data-variant="secondary"] {
     @apply bg-neutral text-neutral-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral-hover;
     }
   }
@@ -25,7 +27,8 @@
   &[data-variant="outline"] {
     @apply border border-border text-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral-soft;
     }
   }
@@ -33,7 +36,8 @@
   &[data-variant="ghost"] {
     @apply text-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral text-neutral-foreground;
     }
   }
@@ -41,16 +45,17 @@
   &[data-variant="error"] {
     @apply bg-error text-error-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-error-hover;
     }
   }
 
   &[data-size="sm"] {
-    @apply px-3 h-8 gap-1 rounded-sm text-xs;
+    @apply px-3 h-8 gap-1.5 text-xs;
 
     & > svg {
-      @apply size-4;
+      @apply size-3.5;
     }
 
     &[data-icon-only] {
@@ -59,7 +64,19 @@
   }
 
   &[data-size="md"] {
-    @apply px-4 h-10 gap-1.5 rounded-md text-sm;
+    @apply px-4 h-9 gap-2 text-sm;
+
+    & > svg {
+      @apply size-4;
+    }
+
+    &[data-icon-only] {
+      @apply w-9;
+    }
+  }
+
+  &[data-size="lg"] {
+    @apply px-4 h-10 gap-2 text-base;
 
     & > svg {
       @apply size-4.5;
@@ -67,18 +84,6 @@
 
     &[data-icon-only] {
       @apply w-10;
-    }
-  }
-
-  &[data-size="lg"] {
-    @apply px-5 h-12 gap-2 rounded-lg text-base;
-
-    & > svg {
-      @apply size-5;
-    }
-
-    &[data-icon-only] {
-      @apply w-12;
     }
   }
 

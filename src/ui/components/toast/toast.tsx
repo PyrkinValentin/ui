@@ -9,7 +9,6 @@ import type {
 	ToastArrowProps,
 	ToastContentProps,
 	ToastIndicatorProps,
-	ToastGroupProps,
 	ToastTitleProps,
 	ToastDescriptionProps,
 	ToastActionProps,
@@ -192,25 +191,6 @@ export const ToastIndicator = (props: ToastIndicatorProps) => {
 				? <Spinner size="lg"/>
 				: (children ?? indicator ?? <Indicator/>)
 			}
-		</Render>
-	)
-}
-
-export const ToastGroup = (props: ToastGroupProps) => {
-	const {
-		className,
-		children,
-		...restProps
-	} = props
-
-	return (
-		<Render
-			{...restProps}
-			defaultTagName="div"
-			role="group"
-			className={toClassNames("toast__group", className)}
-		>
-			{children}
 		</Render>
 	)
 }

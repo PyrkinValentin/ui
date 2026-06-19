@@ -2,7 +2,8 @@
   @apply relative size-5 shrink-0 flex items-center justify-center rounded-xs bg-neutral cursor-pointer transition
   motion-reduce:transition-none;
 
-  &:hover {
+  &:hover,
+  &:active {
     @apply bg-neutral-hover;
   }
 
@@ -18,7 +19,8 @@
   &[data-indeterminate] {
     @apply bg-info text-info-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-info-hover;
     }
   }

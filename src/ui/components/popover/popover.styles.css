@@ -34,6 +34,10 @@
   @apply relative px-4 py-3 rounded-lg shadow-lg border border-border bg-overlay origin-(--transform-origin)
   transition motion-reduce:transition-none transform-gpu;
 
+  &:focus-visible {
+    @apply status-focus;
+  }
+
   &[data-starting-style],
   &[data-ending-style] {
     @apply opacity-0 scale-90;
@@ -54,10 +58,6 @@
   &[data-instant] {
     @apply transition-none;
   }
-
-  &:focus-visible {
-    @apply status-focus;
-  }
 }
 
 .popover__arrow {
@@ -65,14 +65,12 @@
 }
 
 .popover__viewport {
-  --viewport-inline-padding: 0.75rem;
-
   @apply overflow-clip relative size-full;
 
   [data-previous],
   [data-current] {
-    @apply w-[calc(var(--popup-width)-2*var(--viewport-inline-padding))] translate-x-0 opacity-100 transition
-    duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none transform-gpu;
+    @apply w-[calc(var(--popup-width)*1rem)] translate-x-0 opacity-100 transition duration-350
+    ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none transform-gpu;
 
     [data-instant] & {
       @apply transition-none;
@@ -113,7 +111,8 @@
       @apply size-4;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral-hover;
     }
   }
