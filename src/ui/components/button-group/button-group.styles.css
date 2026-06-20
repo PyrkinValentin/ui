@@ -30,4 +30,14 @@
       }
     }
   }
+
+  &[data-variant="outline"] {
+    &[data-orientation="horizontal"] > .button:not(:last-child) {
+      @apply -me-px;
+    }
+
+    &[data-orientation="vertical"] > .button:not(:last-child) {
+      @apply -mb-px;
+    }
+  }
 }
