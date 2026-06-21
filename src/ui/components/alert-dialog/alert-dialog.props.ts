@@ -1,5 +1,6 @@
 import type {
 	AlertDialogViewportProps as BaseAlertDialogViewportProps,
+	AlertDialogPopupProps as BaseAlertDialogPopupProps,
 	AlertDialogCloseProps as BaseAlertDialogCloseProps,
 } from "@base-ui/react/alert-dialog"
 
@@ -13,7 +14,6 @@ export type {
 	AlertDialogTriggerProps,
 	AlertDialogPortalProps,
 	AlertDialogBackdropProps,
-	AlertDialogPopupProps,
 	AlertDialogTitleProps,
 	AlertDialogDescriptionProps,
 } from "@base-ui/react/alert-dialog"
@@ -24,6 +24,14 @@ export type AlertDialogViewportProps = BaseAlertDialogViewportProps & {
 	 * @default "center"
 	 */
 	position?: "top" | "center" | "bottom"
+}
+
+export type AlertDialogPopupProps = BaseAlertDialogPopupProps & {
+	/**
+	 * The size of the component.
+	 * @default "sm"
+	 */
+	size?: "sm" | "md" | "lg" | "full"
 }
 
 export type AlertDialogIndicatorProps = BaseUIComponentProps<"span", AlertDialogIndicatorState> & {

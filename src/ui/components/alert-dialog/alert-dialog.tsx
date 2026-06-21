@@ -107,6 +107,7 @@ export const AlertDialogViewport = (props: AlertDialogViewportProps) => {
 
 export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	const {
+		size = "sm",
 		className,
 		children,
 		...restProps
@@ -115,6 +116,7 @@ export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	return (
 		<AlertDialog.Popup
 			{...restProps}
+			{...toDataAttrs({ size })}
 			className={toClassNames("alert-dialog__popup", className)}
 		>
 			{children}

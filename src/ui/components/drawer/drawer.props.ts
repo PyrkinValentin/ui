@@ -1,5 +1,6 @@
 import type {
 	DrawerViewportProps as BaseDrawerViewportProps,
+	DrawerPopupProps as BaseDrawerPopupProps,
 	DrawerCloseProps as BaseDrawerCloseProps,
 } from "@base-ui/react/drawer"
 
@@ -14,7 +15,6 @@ export type {
 	DrawerSwipeAreaProps,
 	DrawerPortalProps,
 	DrawerBackdropProps,
-	DrawerPopupProps,
 	DrawerContentProps,
 	DrawerTitleProps,
 	DrawerDescriptionProps,
@@ -26,6 +26,15 @@ export type DrawerViewportProps = BaseDrawerViewportProps & {
 	 * @default "bottom"
 	 */
 	position?: "top" | "bottom" | "left" | "right"
+}
+
+export type DrawerPopupProps = BaseDrawerPopupProps & {
+	/**
+	 * The size of the component.
+	 * @note Only applies when `position` is `"left"` or `"right"`.
+	 * @default "sm"
+	 */
+	size?: "sm" | "md" | "lg" | "full"
 }
 
 export type DrawerHandleProps = BaseUIComponentProps<"span", DrawerHandleState>

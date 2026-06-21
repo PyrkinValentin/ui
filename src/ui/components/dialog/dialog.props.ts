@@ -1,5 +1,6 @@
 import type {
 	DialogViewportProps as BaseDialogViewportProps,
+	DialogPopupProps as BaseDialogPopupProps,
 	DialogCloseProps as BaseDialogCloseProps,
 } from "@base-ui/react/dialog"
 
@@ -12,7 +13,6 @@ export type {
 	DialogTriggerProps,
 	DialogPortalProps,
 	DialogBackdropProps,
-	DialogPopupProps,
 	DialogTitleProps,
 	DialogDescriptionProps,
 } from "@base-ui/react/dialog"
@@ -23,6 +23,14 @@ export type DialogViewportProps = BaseDialogViewportProps & {
 	 * @default "center"
 	 */
 	position?: "top" | "center" | "bottom"
+}
+
+export type DialogPopupProps = BaseDialogPopupProps & {
+	/**
+	 * The size of the component.
+	 * @default "sm"
+	 */
+	size?: "sm" | "md" | "lg" | "full"
 }
 
 export type DialogActionsProps = BaseUIComponentProps<"div", DialogActionsState>

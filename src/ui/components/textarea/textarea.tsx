@@ -9,7 +9,7 @@ import { Input } from "@base-ui/react/input"
 
 export const Textarea = (props: TextareaProps) => {
 	const {
-		autoResize = true,
+		autoResize,
 		render,
 		className,
 		...restProps
@@ -19,8 +19,8 @@ export const Textarea = (props: TextareaProps) => {
 		<Input
 			{...restProps as InputProps}
 			{...toDataAttrs({ autoResize })}
-			className={toClassNames("textarea", className)}
 			render={render ?? <textarea/>}
+			className={toClassNames("textarea", className)}
 		/>
 	)
 }

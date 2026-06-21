@@ -104,6 +104,7 @@ export const DialogViewport = (props: DialogViewportProps) => {
 
 export const DialogPopup = (props: DialogPopupProps) => {
 	const {
+		size = "sm",
 		className,
 		children,
 		...restProps
@@ -112,6 +113,7 @@ export const DialogPopup = (props: DialogPopupProps) => {
 	return (
 		<Dialog.Popup
 			{...restProps}
+			{...toDataAttrs({ size })}
 			className={toClassNames("dialog__popup", className)}
 		>
 			{children}

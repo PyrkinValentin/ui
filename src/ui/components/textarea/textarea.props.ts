@@ -9,7 +9,7 @@ type TextareaChangeEventDetails = BaseUIChangeEventDetails<typeof REASONS.none>
 export type TextareaProps = BaseUIComponentProps<"textarea", TextareaState> & Pick<InputProps, "defaultValue"> & {
 	/**
 	 * Automatically grows the height to fit the content.
-	 * @default true
+	 * @default false
 	 */
 	autoResize?: boolean
 	/**

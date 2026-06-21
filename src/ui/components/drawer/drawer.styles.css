@@ -44,7 +44,7 @@
 
 .drawer__viewport {
   @apply fixed inset-0 p-2 flex;
-
+  
   &[data-position="top"] {
     @apply items-start justify-center;
   }
@@ -63,12 +63,12 @@
 }
 
 .drawer__popup {
-  --bleed: -0.5rem;
-  --peek: 0.75rem;
+  --bleed: --spacing(-2);
+  --peek: --spacing(3);
   --stack-step: 0.05;
 
-  @apply relative p-6 max-h-full flex flex-col rounded-lg shadow-lg border border-border bg-overlay touch-auto
-  transition duration-450 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none transform-gpu;
+  @apply relative p-6 w-full max-h-full flex flex-col rounded-lg shadow-lg border border-border bg-overlay
+  touch-auto transition duration-450 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none transform-gpu;
 
   &:focus-visible {
     @apply status-focus;
@@ -86,8 +86,27 @@
     @apply h-(--drawer-height) transition-[transform,height,opacity];
   }
 
+  &[data-position="left"],
+  &[data-position="right"] {
+    &[data-size="sm"] {
+      @apply max-w-xs;
+    }
+
+    &[data-size="md"] {
+      @apply max-w-sm;
+    }
+
+    &[data-size="lg"] {
+      @apply max-w-md;
+    }
+
+    &[data-size="full"] {
+      @apply max-w-full;
+    }
+  }
+
   &[data-position="top"] {
-    @apply w-full origin-[50%_var(--bleed)] transform-[translateY(calc(-1*(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height)))))_scale(var(--scale))];
+    @apply origin-[50%_var(--bleed)] transform-[translateY(calc(-1*(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height)))))_scale(var(--scale))];
 
     &[data-starting-style],
     &[data-ending-style] {
@@ -96,7 +115,7 @@
   }
 
   &[data-position="bottom"] {
-    @apply w-full origin-[50%_calc(100%-var(--bleed))] transform-[translateY(calc(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height))))_scale(var(--scale))];
+    @apply origin-[50%_calc(100%-var(--bleed))] transform-[translateY(calc(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height))))_scale(var(--scale))];
 
     &[data-starting-style],
     &[data-ending-style] {
@@ -105,7 +124,7 @@
   }
 
   &[data-position="left"] {
-    @apply w-xs transform-[translateX(calc(-1*var(--drawer-swipe-movement-x)))];
+    @apply transform-[translateX(calc(-1*var(--drawer-swipe-movement-x)))];
 
     &[data-starting-style],
     &[data-ending-style] {
@@ -114,7 +133,7 @@
   }
 
   &[data-position="right"] {
-    @apply w-xs transform-[translateX(calc(var(--drawer-swipe-movement-x)))];
+    @apply transform-[translateX(calc(var(--drawer-swipe-movement-x)))];
 
     &[data-starting-style],
     &[data-ending-style] {

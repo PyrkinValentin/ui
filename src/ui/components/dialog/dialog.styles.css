@@ -52,8 +52,8 @@
 }
 
 .dialog__popup {
-  @apply fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 p-6 w-sm max-w-[calc(100%-1rem)]
-  max-h-[calc(100%-1rem)] flex flex-col rounded-lg shadow-lg border border-border bg-overlay transition
+  @apply fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 p-6 max-w-[calc(100%-(--spacing(4)))]
+  max-h-[calc(100%-(--spacing(4)))] flex flex-col rounded-lg shadow-lg border border-border bg-overlay transition
   motion-reduce:transition-none transform-gpu;
 
   &:focus-visible {
@@ -68,6 +68,22 @@
 
   &[data-nested-dialog-open] {
     @apply pointer-events-none;
+  }
+
+  &[data-size="sm"] {
+    @apply w-xs;
+  }
+
+  &[data-size="md"] {
+    @apply w-sm;
+  }
+
+  &[data-size="lg"] {
+    @apply w-md;
+  }
+
+  &[data-size="full"] {
+    @apply size-full;
   }
 }
 

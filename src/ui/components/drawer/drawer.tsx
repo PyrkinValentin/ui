@@ -138,6 +138,7 @@ export const DrawerPopup = (props: DrawerPopupProps) => {
 	const { position } = useDrawerViewportContext()
 
 	const {
+		size = "sm",
 		className,
 		children,
 		...restProps
@@ -146,7 +147,7 @@ export const DrawerPopup = (props: DrawerPopupProps) => {
 	return (
 		<Drawer.Popup
 			{...restProps}
-			{...toDataAttrs({ position })}
+			{...toDataAttrs({ position, size })}
 			className={toClassNames("drawer__popup", className)}
 		>
 			{children}

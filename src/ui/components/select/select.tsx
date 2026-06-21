@@ -142,7 +142,6 @@ export const SelectBackdrop = (props: SelectBackdropProps) => {
 
 export const SelectPositioner = (props: SelectPositionerProps) => {
 	const {
-		alignItemWithTrigger = false,
 		sideOffset = 8,
 		className,
 		children,
@@ -152,7 +151,6 @@ export const SelectPositioner = (props: SelectPositionerProps) => {
 	return (
 		<Select.Positioner
 			{...restProps}
-			alignItemWithTrigger={alignItemWithTrigger}
 			sideOffset={sideOffset}
 			className={toClassNames("select__positioner", className)}
 		>

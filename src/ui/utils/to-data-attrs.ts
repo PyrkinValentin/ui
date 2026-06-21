@@ -2,7 +2,7 @@ type DataAttrs = Record<DataAttribute, string>
 type DataObject = Record<string, string | number | boolean | null | undefined>
 type DataAttribute = `data-${string}`
 
-const MAX_CACHE_SIZE = 1000
+const MAX_CACHE_SIZE = 500
 const cache = new Map<string, DataAttribute>()
 
 const createDataAttr = (value?: string): DataAttribute | undefined => {
@@ -72,9 +72,7 @@ export const toDataAttrs = <Data extends DataObject>(object?: Data) => {
 
 		const dataAttr = createDataAttr(key)
 
-		if (!dataAttr) {
-			continue
-		}
+		if (!dataAttr) continue
 
 		dataAttrs[dataAttr] = value === true
 			? ""
