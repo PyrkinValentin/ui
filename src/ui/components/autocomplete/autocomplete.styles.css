@@ -23,6 +23,11 @@
     }
   }
 
+  & .autocomplete__icon,
+  & .autocomplete__clear {
+    @apply -mr-2;
+  }
+
   & > svg {
     @apply size-4 text-muted;
   }
@@ -75,15 +80,6 @@
 .autocomplete__trigger {
   @apply relative transition motion-reduce:transition-none;
 
-  & .autocomplete__icon {
-    @apply transition motion-reduce:transition-none;
-
-    &:hover,
-    &:active {
-      @apply text-neutral-foreground;
-    }
-  }
-
   &:focus-visible {
     @apply z-10 status-focus;
   }
@@ -94,6 +90,10 @@
     }
   }
 
+  &[data-placeholder] {
+    @apply text-muted;
+  }
+
   &[data-disabled] {
     @apply status-disable;
   }
@@ -101,15 +101,12 @@
 
 .autocomplete__clear,
 .autocomplete__icon {
-  @apply -mr-2 size-6 shrink-0 flex items-center justify-center rounded-sm text-muted select-none;
+  @apply size-6 shrink-0 flex items-center justify-center rounded-sm text-muted select-none transition
+  motion-reduce:transition-none;
 
   & > svg {
     @apply size-4;
   }
-}
-
-.autocomplete__clear {
-  @apply transition-colors motion-reduce:transition-none;
 
   &:hover,
   &:active {
@@ -181,8 +178,8 @@
 }
 
 .autocomplete__item {
-  @apply px-3 py-2 min-h-9 flex items-center gap-2 rounded-sm text-sm text-foreground select-none outline-none
-  cursor-pointer transition-opacity motion-reduce:transition-none;
+  @apply px-3 py-2 min-h-9 shrink-0 flex items-center gap-2 rounded-sm text-sm text-foreground select-none
+  outline-none cursor-pointer transition-opacity motion-reduce:transition-none;
 
   & > svg {
     @apply size-4 text-muted;

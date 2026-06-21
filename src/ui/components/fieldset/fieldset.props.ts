@@ -1,0 +1,1 @@
+export type { FieldsetRootProps, FieldsetLegendProps } from "@base-ui/react/fieldset"

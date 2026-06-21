@@ -1,0 +1,7 @@
+.fieldset {
+  @apply w-full flex flex-col gap-2;
+}
+
+.fieldset__legend {
+  @apply text-base font-medium text-pretty text-foreground;
+}

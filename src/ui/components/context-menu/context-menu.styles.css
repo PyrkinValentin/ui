@@ -60,7 +60,7 @@
 .context-menu__submenu-trigger,
 .context-menu__radio-item,
 .context-menu__checkbox-item {
-  @apply transition-opacity motion-reduce:transition-none;
+  @apply shrink-0 transition-opacity motion-reduce:transition-none;
 
   &[data-disabled] {
     @apply status-disable;
@@ -97,10 +97,10 @@
 }
 
 .context-menu__radio-item-indicator {
-  @apply size-4 shrink-0 flex items-center justify-center opacity-0;
+  @apply size-4 shrink-0 flex items-center justify-center text-muted opacity-0;
 
   & > svg {
-    @apply size-full text-muted;
+    @apply size-full;
   }
 
   &[data-native-indicator]:after {
@@ -113,10 +113,10 @@
 }
 
 .context-menu__checkbox-item-indicator {
-  @apply size-4 shrink-0 flex items-center justify-center opacity-0;
+  @apply size-4 shrink-0 flex items-center justify-center text-muted opacity-0;
 
   & > svg {
-    @apply size-full text-muted;
+    @apply size-full;
   }
 
   &[data-checked] {
