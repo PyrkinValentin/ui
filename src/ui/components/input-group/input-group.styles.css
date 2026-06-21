@@ -3,7 +3,7 @@
   text-sm cursor-text transition motion-reduce:transition-none;
 
   & input {
-    @apply px-0 flex-1 w-auto h-full rounded-none bg-transparent transition-none;
+    @apply px-0 w-auto h-full flex-1 rounded-none bg-transparent transition-none;
 
     &:hover,
     &:active {

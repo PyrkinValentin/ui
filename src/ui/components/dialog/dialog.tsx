@@ -104,7 +104,7 @@ export const DialogViewport = (props: DialogViewportProps) => {
 
 export const DialogPopup = (props: DialogPopupProps) => {
 	const {
-		size = "sm",
+		size = "md",
 		className,
 		children,
 		...restProps

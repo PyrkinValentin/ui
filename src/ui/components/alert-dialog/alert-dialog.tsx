@@ -107,7 +107,7 @@ export const AlertDialogViewport = (props: AlertDialogViewportProps) => {
 
 export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	const {
-		size = "sm",
+		size = "md",
 		className,
 		children,
 		...restProps

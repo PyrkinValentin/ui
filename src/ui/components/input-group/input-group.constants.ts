@@ -1,1 +1,0 @@
-export const INPUT_GROUP_SELECTABLE_TYPES = ["text", "search", "tel", "url", "password"]

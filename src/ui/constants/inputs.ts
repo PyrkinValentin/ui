@@ -1,0 +1,1 @@
+export const SELECTABLE_INPUTS = ["text", "search", "tel", "url", "password"]

@@ -1,7 +1,7 @@
 import type { MouseEvent } from "react"
 import type { BaseUIEvent } from "@base-ui/react"
 
-import { INPUT_GROUP_SELECTABLE_TYPES } from "./input-group.constants"
+import { SELECTABLE_INPUTS } from "../../constants"
 
 export const focusInputSlot = (ev: BaseUIEvent<MouseEvent<HTMLDivElement>>) => {
 	const target = ev.target as HTMLElement
@@ -20,11 +20,10 @@ export const focusInputSlot = (ev: BaseUIEvent<MouseEvent<HTMLDivElement>>) => {
 		ev.preventDefault()
 		input.focus({ preventScroll: true })
 
-		const selectable = INPUT_GROUP_SELECTABLE_TYPES.includes(input.type)
+		const selectable = SELECTABLE_INPUTS.includes(input.type)
+		const length = input.value.length
 
-		if (selectable) {
-			const length = input.value.length
-
+		if (selectable && length > 0) {
 			input.setSelectionRange(length, length)
 		}
 	}

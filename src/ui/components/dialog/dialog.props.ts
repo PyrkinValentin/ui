@@ -28,7 +28,7 @@ export type DialogViewportProps = BaseDialogViewportProps & {
 export type DialogPopupProps = BaseDialogPopupProps & {
 	/**
 	 * The size of the component.
-	 * @default "sm"
+	 * @default "md"
 	 */
 	size?: "sm" | "md" | "lg" | "full"
 }

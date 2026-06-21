@@ -29,7 +29,7 @@ export type AlertDialogViewportProps = BaseAlertDialogViewportProps & {
 export type AlertDialogPopupProps = BaseAlertDialogPopupProps & {
 	/**
 	 * The size of the component.
-	 * @default "sm"
+	 * @default "md"
 	 */
 	size?: "sm" | "md" | "lg" | "full"
 }
