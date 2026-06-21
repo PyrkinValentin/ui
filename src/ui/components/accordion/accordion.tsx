@@ -4,7 +4,7 @@ import type {
 	AccordionRootProps,
 	AccordionItemProps,
 	AccordionHeaderProps,
-	AccordionIndicatorProps,
+	AccordionIconProps,
 	AccordionTriggerProps,
 	AccordionPanelProps,
 	AccordionContentProps,
@@ -87,7 +87,7 @@ export const AccordionTrigger = (props: AccordionTriggerProps) => {
 	)
 }
 
-export const AccordionIndicator = (props: AccordionIndicatorProps) => {
+export const AccordionIcon = (props: AccordionIconProps) => {
 	const {
 		className,
 		children,
@@ -98,7 +98,7 @@ export const AccordionIndicator = (props: AccordionIndicatorProps) => {
 		<Render
 			{...restProps}
 			defaultTagName="span"
-			className={toClassNames("accordion__indicator", className)}
+			className={toClassNames("accordion__icon", className)}
 		>
 			{children ?? <ChevronDown/>}
 		</Render>

@@ -40,7 +40,7 @@
   }
 }
 
-.select__indicator {
+.select__icon {
   @apply shrink-0 ms-auto flex items-center justify-center text-muted select-none transition-transform
   motion-reduce:transition-none;
 

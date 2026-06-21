@@ -1,4 +1,4 @@
-import {} from "@/ui/components"
+import { ContextMenu, Menu } from "@/ui/components"
 
 export default function Home() {
 	return (

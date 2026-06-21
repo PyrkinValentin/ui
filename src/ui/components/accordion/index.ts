@@ -3,7 +3,7 @@ import {
 	AccordionItem,
 	AccordionHeader,
 	AccordionTrigger,
-	AccordionIndicator,
+	AccordionIcon,
 	AccordionPanel,
 	AccordionContent,
 } from "./accordion"
@@ -13,7 +13,7 @@ export const Accordion = {
 	Item: AccordionItem,
 	Header: AccordionHeader,
 	Trigger: AccordionTrigger,
-	Indicator: AccordionIndicator,
+	Icon: AccordionIcon,
 	Panel: AccordionPanel,
 	Content: AccordionContent,
 } as const

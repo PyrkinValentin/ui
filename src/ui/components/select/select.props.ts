@@ -5,7 +5,7 @@ export type {
 	SelectLabelProps,
 	SelectTriggerProps,
 	SelectValueProps,
-	SelectIconProps as SelectIndicatorProps,
+	SelectIconProps,
 	SelectPortalProps,
 	SelectBackdropProps,
 	SelectPositionerProps,

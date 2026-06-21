@@ -1,6 +1,6 @@
 import type { BaseUIComponentProps } from "@base-ui/react/internals/types"
 
-type AccordionIndicatorState = object
+type AccordionIconState = object
 type AccordionContentState = object
 
 export type {
@@ -11,5 +11,5 @@ export type {
 	AccordionPanelProps,
 } from "@base-ui/react/accordion"
 
-export type AccordionIndicatorProps = BaseUIComponentProps<"span", AccordionIndicatorState>
+export type AccordionIconProps = BaseUIComponentProps<"span", AccordionIconState>
 export type AccordionContentProps = BaseUIComponentProps<"div", AccordionContentState>

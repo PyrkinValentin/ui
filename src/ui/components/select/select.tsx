@@ -5,7 +5,7 @@ import type {
 	SelectLabelProps,
 	SelectTriggerProps,
 	SelectValueProps,
-	SelectIndicatorProps,
+	SelectIconProps,
 	SelectPortalProps,
 	SelectBackdropProps,
 	SelectPositionerProps,
@@ -89,7 +89,7 @@ export const SelectValue = (props: SelectValueProps) => {
 	)
 }
 
-export const SelectIndicator = (props: SelectIndicatorProps) => {
+export const SelectIcon = (props: SelectIconProps) => {
 	const {
 		className,
 		children,
@@ -99,7 +99,7 @@ export const SelectIndicator = (props: SelectIndicatorProps) => {
 	return (
 		<Select.Icon
 			{...restProps}
-			className={toClassNames("select__indicator", className)}
+			className={toClassNames("select__icon", className)}
 		>
 			{children ?? <ChevronDown/>}
 		</Select.Icon>

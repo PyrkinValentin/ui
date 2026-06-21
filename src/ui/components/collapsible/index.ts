@@ -1,7 +1,7 @@
 import {
 	CollapsibleRoot,
 	CollapsibleTrigger,
-	CollapsibleIndicator,
+	CollapsibleIcon,
 	CollapsiblePanel,
 	CollapsibleContent,
 } from "./collapsible"
@@ -9,7 +9,7 @@ import {
 export const Collapsible = {
 	Root: CollapsibleRoot,
 	Trigger: CollapsibleTrigger,
-	Indicator: CollapsibleIndicator,
+	Icon: CollapsibleIcon,
 	Panel: CollapsiblePanel,
 	Content: CollapsibleContent,
 } as const

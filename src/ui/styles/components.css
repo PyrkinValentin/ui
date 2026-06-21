@@ -12,6 +12,7 @@
 @import "../components/checkbox-group/checkbox-group.styles.css";
 @import "../components/chip/chip.styles.css";
 @import "../components/collapsible/collapsible.styles.css";
+@import "../components/context-menu/context-menu.styles.css";
 @import "../components/dialog/dialog.styles.css";
 @import "../components/drawer/drawer.styles.css";
 @import "../components/field/field.styles.css";

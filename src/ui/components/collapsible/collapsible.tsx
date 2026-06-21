@@ -3,7 +3,7 @@
 import type {
 	CollapsibleRootProps,
 	CollapsibleTriggerProps,
-	CollapsibleIndicatorProps,
+	CollapsibleIconProps,
 	CollapsiblePanelProps,
 	CollapsibleContentProps,
 } from "./collapsible.props"
@@ -48,7 +48,7 @@ export const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {
 	)
 }
 
-export const CollapsibleIndicator = (props: CollapsibleIndicatorProps) => {
+export const CollapsibleIcon = (props: CollapsibleIconProps) => {
 	const {
 		className,
 		children,
@@ -59,7 +59,7 @@ export const CollapsibleIndicator = (props: CollapsibleIndicatorProps) => {
 		<Render
 			{...restProps}
 			defaultTagName="span"
-			className={toClassNames("collapsible__indicator", className)}
+			className={toClassNames("collapsible__icon", className)}
 		>
 			{children ?? <ChevronDown/>}
 		</Render>
