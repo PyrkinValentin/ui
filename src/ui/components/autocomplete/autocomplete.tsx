@@ -29,7 +29,7 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Autocomplete } from "@base-ui/react/autocomplete"
 import { ChevronDown, X } from "lucide-react"
 
-export const AutocompleteRoot = <ItemValue = unknown>(props: AutocompleteRootProps<ItemValue>) => {
+export const AutocompleteRoot = <Value = unknown>(props: AutocompleteRootProps<Value>) => {
 	const {
 		items = undefined,
 		children,
@@ -66,7 +66,6 @@ export const AutocompleteInputGroup = (props: AutocompleteInputGroupProps) => {
 export const AutocompleteInput = (props: AutocompleteInputProps) => {
 	const {
 		className,
-		children,
 		...restProps
 	} = props
 
@@ -74,9 +73,7 @@ export const AutocompleteInput = (props: AutocompleteInputProps) => {
 		<Autocomplete.Input
 			{...restProps}
 			className={toClassNames("autocomplete__input", className)}
-		>
-			{children}
-		</Autocomplete.Input>
+		/>
 	)
 }
 
@@ -365,13 +362,10 @@ export const AutocompleteGroupLabel = (props: AutocompleteGroupLabelProps) => {
 }
 
 export const AutocompleteCollection = (props: AutocompleteCollectionProps) => {
-	const {
-		children,
-		...restProps
-	} = props
+	const { children } = props
 
 	return (
-		<Autocomplete.Collection {...restProps}>
+		<Autocomplete.Collection>
 			{children}
 		</Autocomplete.Collection>
 	)

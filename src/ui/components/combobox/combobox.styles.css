@@ -1,6 +1,6 @@
-.autocomplete__input-group {
-  @apply relative px-4 w-full h-9 inline-flex items-center gap-2 rounded-md bg-neutral text-neutral-foreground
-  text-sm cursor-text transition motion-reduce:transition-none;
+.combobox__input-group {
+  @apply relative px-4 py-1.5 w-full min-h-9 inline-flex items-center gap-2 rounded-md bg-neutral
+  text-neutral-foreground text-sm cursor-text transition motion-reduce:transition-none;
 
   & input {
     @apply px-0 w-auto h-full flex-1 rounded-none bg-transparent transition-none;
@@ -47,8 +47,8 @@
   }
 }
 
-.autocomplete__input {
-  @apply relative px-4 w-full h-9 block rounded-md bg-neutral text-neutral-foreground text-sm
+.combobox__input {
+  @apply relative px-4 min-w-12 w-full h-9 block rounded-md bg-neutral text-neutral-foreground text-sm
   placeholder:text-muted appearance-none transition motion-reduce:transition-none;
 
   &:hover,
@@ -72,10 +72,10 @@
   }
 }
 
-.autocomplete__trigger {
+.combobox__trigger {
   @apply relative transition motion-reduce:transition-none;
 
-  & .autocomplete__icon {
+  & .combobox__icon {
     @apply transition motion-reduce:transition-none;
 
     &:hover,
@@ -89,7 +89,7 @@
   }
 
   &[data-popup-open] {
-    & .autocomplete__icon {
+    & .combobox__icon {
       @apply rotate-180;
     }
   }
@@ -99,8 +99,8 @@
   }
 }
 
-.autocomplete__clear,
-.autocomplete__icon {
+.combobox__clear,
+.combobox__icon {
   @apply -mr-2 size-6 shrink-0 flex items-center justify-center rounded-sm text-muted select-none;
 
   & > svg {
@@ -108,7 +108,7 @@
   }
 }
 
-.autocomplete__clear {
+.combobox__clear {
   @apply transition-colors motion-reduce:transition-none;
 
   &:hover,
@@ -117,7 +117,38 @@
   }
 }
 
-.autocomplete__backdrop {
+.combobox__chips {
+  @apply w-full flex flex-wrap items-center gap-1;
+}
+
+.combobox__chip {
+  @apply relative px-2 min-h-5.5 flex items-center gap-1 rounded-sm bg-surface text-sm cursor-default
+  transition-shadow motion-reduce:transition-none;
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+}
+
+.combobox__chip-remove {
+  @apply -mr-1 size-4 flex items-center justify-center rounded-xs bg-neutral select-none transition
+  motion-reduce:transition-none;
+
+  & > svg {
+    @apply size-3 text-muted;
+  }
+
+  &:hover,
+  &:active {
+    @apply bg-neutral-hover;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.combobox__backdrop {
   @apply fixed inset-0 bg-backdrop transition-opacity motion-reduce:transition-none;
 
   &[data-starting-style],
@@ -126,7 +157,7 @@
   }
 }
 
-.autocomplete__popup {
+.combobox__popup {
   @apply relative p-1 min-w-(--anchor-width) max-w-(--available-width) max-h-(--available-height) flex flex-col
   rounded-md shadow-lg border border-border bg-overlay origin-(--transform-origin) transition
   motion-reduce:transition-none transform-gpu;
@@ -137,28 +168,28 @@
   }
 
   &:not([data-empty]) {
-    & .autocomplete__empty {
+    & .combobox__empty {
       @apply hidden;
     }
   }
 
   &:has([data-status]) {
-    & .autocomplete__empty {
+    & .combobox__empty {
       @apply hidden;
     }
 
-    & .autocomplete__list {
+    & .combobox__list {
       @apply hidden;
     }
   }
 }
 
-.autocomplete__arrow {
+.combobox__arrow {
   @apply popup-arrow;
 }
 
-.autocomplete__status,
-.autocomplete__empty {
+.combobox__status,
+.combobox__empty {
   @apply px-3 py-2 flex items-center gap-2 text-sm text-muted;
 
   & > svg {
@@ -166,13 +197,13 @@
   }
 }
 
-.autocomplete__status {
+.combobox__status {
   &:not([data-status]) {
     @apply hidden;
   }
 }
 
-.autocomplete__list {
+.combobox__list {
   @apply max-h-[min(--spacing(90),calc(var(--available-height)-(--spacing(3))))] flex flex-col;
 
   &[data-empty] {
@@ -180,7 +211,7 @@
   }
 }
 
-.autocomplete__item {
+.combobox__item {
   @apply px-3 py-2 min-h-9 flex items-center gap-2 rounded-sm text-sm text-foreground select-none outline-none
   cursor-pointer transition-opacity motion-reduce:transition-none;
 
@@ -198,14 +229,14 @@
   }
 }
 
-.autocomplete__separator {
-  @apply mx-3 my-2 h-px shrink-0 rounded-sm bg-separator;
-}
+.combobox__item-indicator {
+  @apply ms-auto size-4 shrink-0 flex items-center justify-center opacity-0;
 
-.autocomplete__group {
-  @apply flex flex-col;
-}
+  & > svg {
+    @apply size-full text-muted;
+  }
 
-.autocomplete__group-label {
-  @apply mx-3 my-2 text-xs font-medium text-muted select-none;
+  &[data-selected] {
+    @apply opacity-100;
+  }
 }

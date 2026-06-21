@@ -1,9 +1,9 @@
 import type { MouseEvent } from "react"
 import type { BaseUIEvent } from "@base-ui/react"
 
-const SELECTABLE_INPUT_TYPES = ["text", "email", "search", "tel", "url", "password"]
 const DEFAULT_SELECTORS = "button, a, select, [role='button'], [tabindex]"
 const TARGET_SELECTORS = "input:not([type='hidden']), textarea"
+const SELECTABLE_INPUT_TYPES = ["text", "email", "search", "tel", "url", "password"]
 
 export const focusSlot = (ev: BaseUIEvent<MouseEvent<HTMLElement>>) => {
 	const target = ev.target as HTMLElement
