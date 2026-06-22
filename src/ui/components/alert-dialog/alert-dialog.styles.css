@@ -61,16 +61,20 @@
   }
 
   &[data-starting-style],
-  &[data-ending-style] {
+  &[data-ending-style],
+  &[data-nested-dialog-open] {
     @apply opacity-0 scale-90;
+  }
 
+  &[data-starting-style],
+  &[data-ending-style] {
     &[data-nested] {
-      @apply scale-100 transform-[translateY(-100%)];
+      @apply transform-[translateY(-100%)];
     }
   }
 
   &[data-nested-dialog-open] {
-    @apply transform-[translateY(100%)] opacity-0 pointer-events-none;
+    @apply transform-[translateY(100%)] pointer-events-none;
   }
 
   &[data-size="sm"] {

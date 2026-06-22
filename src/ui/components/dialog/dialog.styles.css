@@ -54,23 +54,27 @@
 .dialog__popup {
   @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 max-w-[calc(100%-(--spacing(4)))]
   max-h-[calc(100%-(--spacing(4)))] flex flex-col rounded-lg shadow-lg border border-border bg-overlay transition
-  motion-reduce:transition-none transform-gpu;
+  motion-reduce:transition-none transform-gpu duration-5000;
 
   &:focus-visible {
     @apply status-focus;
   }
 
   &[data-starting-style],
-  &[data-ending-style] {
+  &[data-ending-style],
+  &[data-nested-dialog-open] {
     @apply opacity-0 scale-90;
+  }
 
+  &[data-starting-style],
+  &[data-ending-style] {
     &[data-nested] {
-      @apply scale-100 transform-[translateY(-100%)];
+      @apply transform-[translateY(-100%)];
     }
   }
 
   &[data-nested-dialog-open] {
-    @apply transform-[translateY(100%)] opacity-0 pointer-events-none;
+    @apply transform-[translateY(100%)] pointer-events-none;
   }
 
   &[data-size="sm"] {
