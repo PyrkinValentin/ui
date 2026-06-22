@@ -30,8 +30,8 @@
 }
 
 .radio__indicator {
-  @apply size-full flex items-center justify-center opacity-0 scale-90 transition motion-reduce:transition-none
-  transform-gpu;
+  @apply size-full flex items-center justify-center text-info-foreground opacity-0 scale-90 transition
+  motion-reduce:transition-none transform-gpu;
 
   & > svg {
     @apply size-4;
@@ -42,6 +42,6 @@
   }
 
   &[data-native-indicator]:after {
-    @apply content-[""] size-2 rounded-full bg-white;
+    @apply content-[""] size-3 rounded-full bg-white;
   }
 }

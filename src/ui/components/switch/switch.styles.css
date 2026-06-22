@@ -30,11 +30,11 @@
 }
 
 .switch__thumb {
-  @apply size-5 flex items-center justify-center rounded-full shadow-md bg-white transition-transform
+  @apply size-5 flex items-center justify-center rounded-full shadow-md bg-white text-black transition-transform
   motion-reduce:transition-none transform-gpu;
 
   & > svg {
-    @apply size-4 text-black;
+    @apply size-4;
   }
 
   &[data-checked] {
