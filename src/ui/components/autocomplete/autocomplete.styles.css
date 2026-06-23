@@ -149,7 +149,7 @@
 }
 
 .autocomplete__arrow {
-  @apply popup-arrow;
+  @apply floating-arrow;
 }
 
 .autocomplete__status,

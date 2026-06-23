@@ -90,7 +90,7 @@
 }
 
 .select__arrow {
-  @apply popup-arrow;
+  @apply floating-arrow;
 }
 
 .select__list {

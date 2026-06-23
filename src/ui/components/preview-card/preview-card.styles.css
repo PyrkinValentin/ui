@@ -1,28 +1,20 @@
-.tooltip__trigger {
-  @apply relative transition motion-reduce:transition-none;
+.preview-card__trigger {
+  @apply relative transition-shadow motion-reduce:transition-none;
 
   &:focus-visible {
     @apply z-10 status-focus;
   }
-
-  &[data-disabled] {
-    @apply status-disable;
-  }
 }
 
-.tooltip__positioner {
-  &:has(.tooltip__viewport) {
+.preview-card__positioner {
+  &:has(.preview-card__viewport) {
     @apply w-(--positioner-width) h-(--positioner-height) transition-[top,left,right,bottom,transform] duration-350
     ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none;
-
-    &[data-instant] {
-      @apply transition-none;
-    }
   }
 }
 
-.tooltip__popup {
-  @apply relative px-3 py-1 max-w-(--available-width) max-h-(--available-height) flex flex-col rounded-lg shadow-lg
+.preview-card__popup {
+  @apply relative p-4 max-w-(--available-width) max-h-(--available-height) flex flex-col rounded-lg shadow-lg
   border border-border bg-overlay text-sm text-pretty text-foreground origin-(--transform-origin) transition
   motion-reduce:transition-none transform-gpu;
 
@@ -35,39 +27,27 @@
     @apply opacity-0 scale-90;
   }
 
-  &:has(.tooltip__viewport) {
+  &:has(.preview-card__viewport) {
     @apply w-(--popup-width) h-(--popup-height) transition-[width,height,opacity,scale] duration-350
     ease-[cubic-bezier(0.22,1,0.36,1)];
 
-    & .tooltip__arrow {
+    & .preview-card__arrow {
       @apply transition-[left,right] duration-350 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none;
-
-      &[data-instant] {
-        @apply transition-none;
-      }
     }
-  }
-
-  &[data-instant] {
-    @apply transition-none;
   }
 }
 
-.tooltip__arrow {
+.preview-card__arrow {
   @apply floating-arrow;
 }
 
-.tooltip__viewport {
+.preview-card__viewport {
   @apply overflow-clip relative size-full;
 
   [data-previous],
   [data-current] {
     @apply w-(--popup-width) translate-x-0 opacity-100 transition-[translate,opacity] duration-350
     ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none transform-gpu;
-
-    [data-instant] & {
-      @apply transition-none;
-    }
   }
 
   &[data-activation-direction~="left"] [data-current][data-starting-style],

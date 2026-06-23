@@ -130,7 +130,7 @@
 }
 
 .navigation-menu__arrow {
-  @apply popup-arrow transition-[left,right] duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]
+  @apply floating-arrow transition-[left,right] duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]
   motion-reduce:transition-none;
 }
 

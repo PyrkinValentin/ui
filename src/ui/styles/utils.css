@@ -10,7 +10,7 @@
   @apply ring-2 ring-error ring-offset-2 ring-offset-background outline-none;
 }
 
-@utility popup-arrow {
+@utility floating-arrow {
   @apply relative block w-3 h-1.5 overflow-clip;
 
   &:before {

@@ -192,7 +192,7 @@
 }
 
 .combobox__arrow {
-  @apply popup-arrow;
+  @apply floating-arrow;
 }
 
 .combobox__status,

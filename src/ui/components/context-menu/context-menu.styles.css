@@ -35,7 +35,7 @@
 }
 
 .context-menu__arrow {
-  @apply popup-arrow;
+  @apply floating-arrow;
 }
 
 .context-menu__item,
