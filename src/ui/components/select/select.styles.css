@@ -65,7 +65,7 @@
 .select__popup {
   @apply relative p-1 min-w-(--anchor-width) max-w-(--available-width) max-h-(--available-height) flex flex-col
   rounded-lg shadow-lg border border-border bg-overlay origin-(--transform-origin) transition
-  motion-reduce:transition-none transform-gpu;
+  motion-reduce:transition-none;
 
   &:focus-visible {
     @apply status-focus;

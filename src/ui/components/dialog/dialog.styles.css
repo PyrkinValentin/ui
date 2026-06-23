@@ -54,7 +54,7 @@
 .dialog__popup {
   @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 max-w-[calc(100%-(--spacing(4)))]
   max-h-[calc(100%-(--spacing(4)))] flex flex-col items-center rounded-lg shadow-lg border border-border bg-overlay
-  transition motion-reduce:transition-none transform-gpu;
+  transition motion-reduce:transition-none;
 
   &:focus-visible {
     @apply status-focus;

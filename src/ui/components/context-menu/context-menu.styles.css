@@ -21,8 +21,8 @@
 
 .context-menu__popup {
   @apply relative p-1 min-w-40 max-w-(--available-width) max-h-(--available-height) flex flex-col rounded-lg shadow-lg
-  outline-none border border-border bg-overlay origin-(--transform-origin) transition motion-reduce:transition-none
-  transform-gpu;
+  outline-none border border-border bg-overlay origin-(--transform-origin) transition
+  motion-reduce:transition-none;
 
   &[data-starting-style],
   &[data-ending-style] {

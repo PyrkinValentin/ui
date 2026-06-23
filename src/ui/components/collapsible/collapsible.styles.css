@@ -50,7 +50,7 @@
 
   &[data-ending-style],
   &[data-starting-style] {
-    @apply h-0 will-change-[height];
+    @apply h-0;
   }
 }
 

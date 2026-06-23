@@ -16,7 +16,7 @@
 .preview-card__popup {
   @apply relative p-4 max-w-(--available-width) max-h-(--available-height) flex flex-col rounded-lg shadow-lg
   border border-border bg-overlay text-sm text-pretty text-foreground origin-(--transform-origin) transition
-  motion-reduce:transition-none transform-gpu;
+  motion-reduce:transition-none;
 
   &:focus-visible {
     @apply status-focus;
@@ -47,7 +47,7 @@
   [data-previous],
   [data-current] {
     @apply w-(--popup-width) translate-x-0 opacity-100 transition-[translate,opacity] duration-350
-    ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none transform-gpu;
+    ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none;
   }
 
   &[data-activation-direction~="left"] [data-current][data-starting-style],

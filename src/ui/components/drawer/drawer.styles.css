@@ -68,7 +68,7 @@
   --stack-step: 0.05;
 
   @apply relative p-6 w-full max-h-full flex flex-col rounded-lg shadow-lg border border-border bg-overlay
-  touch-auto transition duration-450 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none transform-gpu;
+  touch-auto transition duration-450 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none;
 
   &:focus-visible {
     @apply status-focus;

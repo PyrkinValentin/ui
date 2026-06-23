@@ -1,17 +1,17 @@
 .tabs {
-  @apply w-fit flex gap-2;
+  @apply w-full flex gap-2;
 
   &[data-orientation="horizontal"] {
     @apply flex-col;
   }
 
   &[data-orientation="vertical"] {
-    @apply flex-row items-center;
+    @apply flex-row;
   }
 }
 
 .tabs__list {
-  @apply relative p-1 flex rounded-lg border border-border shadow-xs bg-surface;
+  @apply relative p-1 size-fit flex rounded-lg border border-border shadow-xs bg-surface;
 
   &[data-orientation="horizontal"] {
     @apply flex-row;
@@ -49,7 +49,8 @@
   &[data-active] {
     @apply text-foreground;
 
-    &:hover {
+    &:hover,
+    &:active {
       @apply bg-neutral-hover;
     }
   }
@@ -60,8 +61,7 @@
 }
 
 .tabs__indicator {
-  @apply absolute h-9 rounded-md bg-neutral ease-in-out transition-[translate,width] motion-reduce:transition-none
-  transform-gpu;
+  @apply absolute h-9 rounded-md bg-neutral ease-in-out transition-[translate,width] motion-reduce:transition-none;
 
   &[data-orientation="horizontal"] {
     @apply top-1/2 left-0 -translate-y-1/2 w-(--active-tab-width) translate-x-(--active-tab-left);
