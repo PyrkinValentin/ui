@@ -8,6 +8,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Button as BaseButton } from "@base-ui/react/button"
 
+/**
+ * A button component that can be used to trigger actions.
+ * Renders a `<button>` element.
+ */
 export const Button = (props: ButtonProps) => {
 	const contextValue = useButtonGroupContext()
 

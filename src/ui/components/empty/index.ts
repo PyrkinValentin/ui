@@ -1,8 +1,3 @@
-import { EmptyRoot, EmptyIcon, EmptyTitle, EmptyDescription } from "./empty"
+export type * from "./empty.props"
 
-export const Empty = {
-	Root: EmptyRoot,
-	Icon: EmptyIcon,
-	Title: EmptyTitle,
-	Description: EmptyDescription,
-} as const
+export * as Empty from "./empty.parts"

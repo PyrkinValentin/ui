@@ -17,6 +17,10 @@ import { Button } from "@base-ui/react/button"
 import { X } from "lucide-react"
 import { Render } from "../../primitives"
 
+/**
+ * The root container that provides context for the alert components.
+ * Renders a `<div>` element.
+ */
 export const AlertRoot = (props: AlertRootProps) => {
 	const {
 		className,
@@ -36,6 +40,10 @@ export const AlertRoot = (props: AlertRootProps) => {
 	)
 }
 
+/**
+ * A visual icon representing the status or severity of the alert.
+ * Renders a `<span>` element.
+ */
 export const AlertIndicator = (props: AlertIndicatorProps) => {
 	const {
 		status = "neutral",
@@ -58,6 +66,10 @@ export const AlertIndicator = (props: AlertIndicatorProps) => {
 	)
 }
 
+/**
+ * A wrapper container for the alert's textual elements like title and description.
+ * Renders a `<div>` element.
+ */
 export const AlertContent = (props: AlertContentProps) => {
 	const {
 		className,
@@ -76,6 +88,10 @@ export const AlertContent = (props: AlertContentProps) => {
 	)
 }
 
+/**
+ * The heading or primary message title of the alert.
+ * Renders an `<h2>` element.
+ */
 export const AlertTitle = (props: AlertTitleProps) => {
 	const {
 		className,
@@ -94,6 +110,10 @@ export const AlertTitle = (props: AlertTitleProps) => {
 	)
 }
 
+/**
+ * The detailed body text or secondary message explaining the alert.
+ * Renders a `<p>` element.
+ */
 export const AlertDescription = (props: AlertDescriptionProps) => {
 	const {
 		className,
@@ -112,6 +132,10 @@ export const AlertDescription = (props: AlertDescriptionProps) => {
 	)
 }
 
+/**
+ * A button that dismisses or closes the alert notification.
+ * Renders a `<button>` element.
+ */
 export const AlertClose = (props: AlertCloseProps) => {
 	const {
 		nativeClose = true,

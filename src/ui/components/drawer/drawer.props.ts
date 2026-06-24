@@ -18,6 +18,7 @@ export type {
 	DrawerContentProps,
 	DrawerTitleProps,
 	DrawerDescriptionProps,
+	DrawerVirtualKeyboardProviderProps,
 } from "@base-ui/react/drawer"
 
 export type DrawerViewportProps = BaseDrawerViewportProps & {

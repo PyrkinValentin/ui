@@ -8,6 +8,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Toggle as BaseToggle } from "@base-ui/react/toggle"
 
+/**
+ * A two-state button that can be on or off.
+ * Renders a `<button>` element.
+ */
 export const Toggle = <Value extends string>(props: ToggleProps<Value>) => {
 	const contextValue = useToggleGroupContext()
 

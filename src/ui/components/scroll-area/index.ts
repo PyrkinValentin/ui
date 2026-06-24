@@ -1,17 +1,3 @@
-import {
-	ScrollAreaRoot,
-	ScrollAreaViewport,
-	ScrollAreaContent,
-	ScrollAreaScrollbar,
-	ScrollAreaThumb,
-	ScrollAreaCorner,
-} from "./scroll-area"
+export type * from "./scroll-area.props"
 
-export const ScrollArea = {
-	Root: ScrollAreaRoot,
-	Viewport: ScrollAreaViewport,
-	Content: ScrollAreaContent,
-	Scrollbar: ScrollAreaScrollbar,
-	Thumb: ScrollAreaThumb,
-	Corner: ScrollAreaCorner,
-} as const
+export * as ScrollArea from "./scroll-area.parts"

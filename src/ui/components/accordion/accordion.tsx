@@ -16,6 +16,10 @@ import { Accordion } from "@base-ui/react/accordion"
 import { ChevronDown } from "lucide-react"
 import { Render } from "../../primitives"
 
+/**
+ * Groups all parts of the accordion.
+ * Renders a `<div>` element.
+ */
 export const AccordionRoot = <Value = unknown>(props: AccordionRootProps<Value>) => {
 	const {
 		className,
@@ -33,6 +37,10 @@ export const AccordionRoot = <Value = unknown>(props: AccordionRootProps<Value>)
 	)
 }
 
+/**
+ * Groups an accordion header with the corresponding panel.
+ * Renders a `<div>` element.
+ */
 export const AccordionItem = (props: AccordionItemProps) => {
 	const {
 		className,
@@ -50,6 +58,10 @@ export const AccordionItem = (props: AccordionItemProps) => {
 	)
 }
 
+/**
+ * A heading that labels the corresponding panel.
+ * Renders an `<h3>` element.
+ */
 export const AccordionHeader = (props: AccordionHeaderProps) => {
 	const {
 		className,
@@ -67,6 +79,10 @@ export const AccordionHeader = (props: AccordionHeaderProps) => {
 	)
 }
 
+/**
+ * A button that opens and closes the corresponding panel.
+ * Renders a `<button>` element.
+ */
 export const AccordionTrigger = (props: AccordionTriggerProps) => {
 	const {
 		disabled,
@@ -87,6 +103,10 @@ export const AccordionTrigger = (props: AccordionTriggerProps) => {
 	)
 }
 
+/**
+ * A visual indicator that changes state when the panel opens or closes.
+ * Renders a `<span>` element.
+ */
 export const AccordionIcon = (props: AccordionIconProps) => {
 	const {
 		className,
@@ -105,6 +125,10 @@ export const AccordionIcon = (props: AccordionIconProps) => {
 	)
 }
 
+/**
+ * A collapsible panel with the accordion item contents.
+ * Renders a `<div>` element.
+ */
 export const AccordionPanel = (props: AccordionPanelProps) => {
 	const {
 		className,
@@ -122,6 +146,10 @@ export const AccordionPanel = (props: AccordionPanelProps) => {
 	)
 }
 
+/**
+ * A panel that contains the collapsible content of an accordion item.
+ * Renders a `<div>` element.
+ */
 export const AccordionContent = (props: AccordionContentProps) => {
 	const {
 		className,

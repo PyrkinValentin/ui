@@ -29,6 +29,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Autocomplete } from "@base-ui/react/autocomplete"
 import { ChevronDown, X } from "lucide-react"
 
+/**
+ * Groups all parts of the autocomplete.
+ * Doesn't render its own HTML element.
+ */
 export const AutocompleteRoot = <Value = unknown>(props: AutocompleteRootProps<Value>) => {
 	const {
 		items = undefined,
@@ -46,6 +50,10 @@ export const AutocompleteRoot = <Value = unknown>(props: AutocompleteRootProps<V
 	)
 }
 
+/**
+ * A wrapper for the input and its associated controls.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteInputGroup = (props: AutocompleteInputGroupProps) => {
 	const {
 		className,
@@ -63,6 +71,10 @@ export const AutocompleteInputGroup = (props: AutocompleteInputGroupProps) => {
 	)
 }
 
+/**
+ * A text input to search for items in the list.
+ * Renders an `<input>` element.
+ */
 export const AutocompleteInput = (props: AutocompleteInputProps) => {
 	const {
 		className,
@@ -77,6 +89,10 @@ export const AutocompleteInput = (props: AutocompleteInputProps) => {
 	)
 }
 
+/**
+ * A button that opens the popup.
+ * Renders a `<button>` element.
+ */
 export const AutocompleteTrigger = (props: AutocompleteTriggerProps) => {
 	const {
 		className,
@@ -94,6 +110,10 @@ export const AutocompleteTrigger = (props: AutocompleteTriggerProps) => {
 	)
 }
 
+/**
+ * An icon that indicates that the trigger button opens the popup.
+ * Renders a `<span>` element.
+ */
 export const AutocompleteIcon = (props: AutocompleteIconProps) => {
 	const {
 		className,
@@ -111,6 +131,10 @@ export const AutocompleteIcon = (props: AutocompleteIconProps) => {
 	)
 }
 
+/**
+ * Clears the value when clicked.
+ * Renders a `<button>` element.
+ */
 export const AutocompleteClear = (props: AutocompleteClearProps) => {
 	const {
 		className,
@@ -128,6 +152,10 @@ export const AutocompleteClear = (props: AutocompleteClearProps) => {
 	)
 }
 
+/**
+ * The current value of the autocomplete.
+ * Doesn't render its own HTML element.
+ */
 export const AutocompleteValue = (props: AutocompleteValueProps) => {
 	const {
 		children,
@@ -141,6 +169,11 @@ export const AutocompleteValue = (props: AutocompleteValueProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const AutocompletePortal = (props: AutocompletePortalProps) => {
 	const {
 		className,
@@ -158,6 +191,10 @@ export const AutocompletePortal = (props: AutocompletePortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the popup.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteBackdrop = (props: AutocompleteBackdropProps) => {
 	const {
 		className,
@@ -175,6 +212,10 @@ export const AutocompleteBackdrop = (props: AutocompleteBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the popup against the trigger.
+ * Renders a `<div>` element.
+ */
 export const AutocompletePositioner = (props: AutocompletePositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -194,6 +235,10 @@ export const AutocompletePositioner = (props: AutocompletePositionerProps) => {
 	)
 }
 
+/**
+ * A container for the list.
+ * Renders a `<div>` element.
+ */
 export const AutocompletePopup = (props: AutocompletePopupProps) => {
 	const {
 		className,
@@ -211,6 +256,10 @@ export const AutocompletePopup = (props: AutocompletePopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the anchor.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteArrow = (props: AutocompleteArrowProps) => {
 	const {
 		className,
@@ -225,6 +274,15 @@ export const AutocompleteArrow = (props: AutocompleteArrowProps) => {
 	)
 }
 
+/**
+ * Displays a status message whose content changes are announced politely to screen readers.
+ * Useful for conveying the status of an asynchronously loaded list.
+ * This component's root element must remain mounted in the DOM to announce
+ * changes consistently across screen readers. Avoid hiding or removing the
+ * component itself with `display: none`, `hidden`, `aria-hidden`, or conditional
+ * rendering. Prefer updating or conditionally rendering its children instead.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteStatus = (props: AutocompleteStatusProps) => {
 	const {
 		className,
@@ -245,6 +303,16 @@ export const AutocompleteStatus = (props: AutocompleteStatusProps) => {
 	)
 }
 
+/**
+ * Renders its children only when the list is empty.
+ * Requires the `items` prop on the root component.
+ * Announces changes politely to screen readers.
+ * This component's root element must remain mounted in the DOM to announce
+ * changes consistently across screen readers. Avoid hiding or removing the
+ * component itself with `display: none`, `hidden`, `aria-hidden`, or conditional
+ * rendering. Prefer updating or conditionally rendering its children instead.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteEmpty = (props: AutocompleteEmptyProps) => {
 	const {
 		className,
@@ -262,6 +330,10 @@ export const AutocompleteEmpty = (props: AutocompleteEmptyProps) => {
 	)
 }
 
+/**
+ * A list container for the items.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteList = (props: AutocompleteListProps) => {
 	const {
 		className,
@@ -279,6 +351,11 @@ export const AutocompleteList = (props: AutocompleteListProps) => {
 	)
 }
 
+/**
+ * Displays a single row of items in a grid list.
+ * Enable `grid` on the root component to turn the listbox into a grid.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteRow = (props: AutocompleteRowProps) => {
 	const {
 		className,
@@ -296,6 +373,10 @@ export const AutocompleteRow = (props: AutocompleteRowProps) => {
 	)
 }
 
+/**
+ * An individual item in the list.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteItem = (props: AutocompleteItemProps) => {
 	const {
 		className,
@@ -313,6 +394,10 @@ export const AutocompleteItem = (props: AutocompleteItemProps) => {
 	)
 }
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteSeparator = (props: AutocompleteSeparatorProps) => {
 	const {
 		className,
@@ -327,6 +412,10 @@ export const AutocompleteSeparator = (props: AutocompleteSeparatorProps) => {
 	)
 }
 
+/**
+ * Groups related items with the corresponding label.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteGroup = (props: AutocompleteGroupProps) => {
 	const {
 		className,
@@ -344,6 +433,10 @@ export const AutocompleteGroup = (props: AutocompleteGroupProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with its parent group.
+ * Renders a `<div>` element.
+ */
 export const AutocompleteGroupLabel = (props: AutocompleteGroupLabelProps) => {
 	const {
 		className,
@@ -361,6 +454,12 @@ export const AutocompleteGroupLabel = (props: AutocompleteGroupLabelProps) => {
 	)
 }
 
+/**
+ * Renders filtered list items.
+ * Doesn't render its own HTML element.
+ *
+ * If rendering a flat list, pass a function child to the `List` component instead, which implicitly wraps it.
+ */
 export const AutocompleteCollection = (props: AutocompleteCollectionProps) => {
 	const { children } = props
 

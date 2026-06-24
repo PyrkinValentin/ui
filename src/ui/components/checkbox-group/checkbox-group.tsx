@@ -6,6 +6,9 @@ import { toClassNames } from "../../utils"
 
 import { CheckboxGroup as BaseCheckboxGroup } from "@base-ui/react/checkbox-group"
 
+/**
+ * Provides a shared state to a series of checkboxes.
+ */
 export const CheckboxGroup = (props: CheckboxGroupProps) => {
 	const {
 		className,

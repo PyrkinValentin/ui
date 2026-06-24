@@ -9,6 +9,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Avatar } from "@base-ui/react/avatar"
 import { UserRound } from "lucide-react"
 
+/**
+ * Displays a user's profile picture, initials, or fallback icon.
+ * Renders a `<span>` element.
+ */
 export const AvatarRoot = (props: AvatarRootProps) => {
 	const contextValue = useAvatarGroupContext()
 
@@ -31,6 +35,10 @@ export const AvatarRoot = (props: AvatarRootProps) => {
 	)
 }
 
+/**
+ * The image to be displayed in the avatar.
+ * Renders an `<img>` element.
+ */
 export const AvatarImage = (props: AvatarImageProps) => {
 	const {
 		className,
@@ -45,6 +53,10 @@ export const AvatarImage = (props: AvatarImageProps) => {
 	)
 }
 
+/**
+ * Rendered when the image fails to load or when no image is provided.
+ * Renders a `<span>` element.
+ */
 export const AvatarFallback = (props: AvatarFallbackProps) => {
 	const {
 		className,

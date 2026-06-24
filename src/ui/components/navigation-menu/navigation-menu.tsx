@@ -21,6 +21,10 @@ import { toClassNames } from "../../utils"
 import { NavigationMenu } from "@base-ui/react/navigation-menu"
 import { ChevronDown } from "lucide-react"
 
+/**
+ * Groups all parts of the navigation menu.
+ * Renders a `<nav>` element at the root, or `<div>` element when nested.
+ */
 export const NavigationMenuRoot = <Value = unknown>(props: NavigationMenuRootProps<Value>) => {
 	const {
 		className,
@@ -38,6 +42,10 @@ export const NavigationMenuRoot = <Value = unknown>(props: NavigationMenuRootPro
 	)
 }
 
+/**
+ * Contains a list of navigation menu items.
+ * Renders a `<ul>` element.
+ */
 export const NavigationMenuList = (props: NavigationMenuListProps) => {
 	const {
 		className,
@@ -55,6 +63,10 @@ export const NavigationMenuList = (props: NavigationMenuListProps) => {
 	)
 }
 
+/**
+ * An individual navigation menu item.
+ * Renders a `<li>` element.
+ */
 export const NavigationMenuItem = (props: NavigationMenuItemProps) => {
 	const {
 		className,
@@ -72,6 +84,11 @@ export const NavigationMenuItem = (props: NavigationMenuItemProps) => {
 	)
 }
 
+/**
+ * Opens the navigation menu popup when hovered or clicked, revealing the
+ * associated content.
+ * Renders a `<button>` element.
+ */
 export const NavigationMenuTrigger = (props: NavigationMenuTriggerProps) => {
 	const {
 		className,
@@ -89,6 +106,10 @@ export const NavigationMenuTrigger = (props: NavigationMenuTriggerProps) => {
 	)
 }
 
+/**
+ * An icon that indicates that the trigger button opens a menu.
+ * Renders a `<span>` element.
+ */
 export const NavigationMenuIcon = (props: NavigationMenuIconProps) => {
 	const {
 		className,
@@ -106,6 +127,11 @@ export const NavigationMenuIcon = (props: NavigationMenuIconProps) => {
 	)
 }
 
+/**
+ * A container for the content of the navigation menu item that is moved into the popup
+ * when the item is active.
+ * Renders a `<div>` element.
+ */
 export const NavigationMenuContent = (props: NavigationMenuContentProps) => {
 	const {
 		className,
@@ -123,6 +149,10 @@ export const NavigationMenuContent = (props: NavigationMenuContentProps) => {
 	)
 }
 
+/**
+ * A link in the navigation menu that can be used to navigate to a different page or section.
+ * Renders an `<a>` element.
+ */
 export const NavigationMenuLink = (props: NavigationMenuLinkProps) => {
 	const {
 		className,
@@ -140,6 +170,11 @@ export const NavigationMenuLink = (props: NavigationMenuLinkProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const NavigationMenuPortal = (props: NavigationMenuPortalProps) => {
 	const {
 		className,
@@ -157,6 +192,10 @@ export const NavigationMenuPortal = (props: NavigationMenuPortalProps) => {
 	)
 }
 
+/**
+ * A backdrop for the navigation menu popup.
+ * Renders a `<div>` element.
+ */
 export const NavigationMenuBackdrop = (props: NavigationMenuBackdropProps) => {
 	const {
 		className,
@@ -174,6 +213,10 @@ export const NavigationMenuBackdrop = (props: NavigationMenuBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the navigation menu against the currently active trigger.
+ * Renders a `<div>` element.
+ */
 export const NavigationMenuPositioner = (props: NavigationMenuPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -193,6 +236,10 @@ export const NavigationMenuPositioner = (props: NavigationMenuPositionerProps) =
 	)
 }
 
+/**
+ * A container for the navigation menu contents.
+ * Renders a `<nav>` element.
+ */
 export const NavigationMenuPopup = (props: NavigationMenuPopupProps) => {
 	const {
 		className,
@@ -210,6 +257,10 @@ export const NavigationMenuPopup = (props: NavigationMenuPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element pointing toward the navigation menu's current anchor.
+ * Renders a `<div>` element.
+ */
 export const NavigationMenuArrow = (props: NavigationMenuArrowProps) => {
 	const {
 		className,
@@ -224,6 +275,10 @@ export const NavigationMenuArrow = (props: NavigationMenuArrowProps) => {
 	)
 }
 
+/**
+ * The clipping viewport of the navigation menu's current content.
+ * Renders a `<div>` element.
+ */
 export const NavigationMenuViewport = (props: NavigationMenuViewportProps) => {
 	const {
 		className,

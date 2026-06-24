@@ -1,6 +1,3 @@
-import { BadgeRoot, BadgeIndicator } from "./badge"
+export type * from "./badge.props"
 
-export const Badge = {
-	Root: BadgeRoot,
-	Indicator: BadgeIndicator,
-} as const
+export * as Badge from "./badge.parts"

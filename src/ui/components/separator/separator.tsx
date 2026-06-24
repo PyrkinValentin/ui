@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { Separator as BaseSeparator } from "@base-ui/react/separator"
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const Separator = (props: SeparatorProps) => {
 	const {
 		className,

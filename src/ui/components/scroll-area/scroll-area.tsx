@@ -13,6 +13,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { ScrollArea } from "@base-ui/react/scroll-area"
 
+/**
+ * Groups all parts of the scroll area.
+ * Renders a `<div>` element.
+ */
 export const ScrollAreaRoot = (props: ScrollAreaRootProps) => {
 	const {
 		className,
@@ -30,6 +34,10 @@ export const ScrollAreaRoot = (props: ScrollAreaRootProps) => {
 	)
 }
 
+/**
+ * The actual scrollable container of the scroll area.
+ * Renders a `<div>` element.
+ */
 export const ScrollAreaViewport = (props: ScrollAreaViewportProps) => {
 	const {
 		scrollFade,
@@ -49,6 +57,10 @@ export const ScrollAreaViewport = (props: ScrollAreaViewportProps) => {
 	)
 }
 
+/**
+ * A container for the content of the scroll area.
+ * Renders a `<div>` element.
+ */
 export const ScrollAreaContent = (props: ScrollAreaContentProps) => {
 	const {
 		className,
@@ -66,6 +78,10 @@ export const ScrollAreaContent = (props: ScrollAreaContentProps) => {
 	)
 }
 
+/**
+ * A vertical or horizontal scrollbar for the scroll area.
+ * Renders a `<div>` element.
+ */
 export const ScrollAreaScrollbar = (props: ScrollAreaScrollbarProps) => {
 	const {
 		className,
@@ -83,6 +99,10 @@ export const ScrollAreaScrollbar = (props: ScrollAreaScrollbarProps) => {
 	)
 }
 
+/**
+ * The draggable part of the scrollbar that indicates the current scroll position.
+ * Renders a `<div>` element.
+ */
 export const ScrollAreaThumb = (props: ScrollAreaThumbProps) => {
 	const {
 		className,
@@ -100,6 +120,10 @@ export const ScrollAreaThumb = (props: ScrollAreaThumbProps) => {
 	)
 }
 
+/**
+ * A small rectangular area that appears at the intersection of horizontal and vertical scrollbars.
+ * Renders a `<div>` element.
+ */
 export const ScrollAreaCorner = (props: ScrollAreaCornerProps) => {
 	const {
 		className,

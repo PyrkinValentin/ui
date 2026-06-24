@@ -1,24 +1,3 @@
-import { createPreviewCardHandle } from "./preview-card.utils"
+export type * from "./preview-card.props"
 
-import {
-	PreviewCardRoot,
-	PreviewCardTrigger,
-	PreviewCardPortal,
-	PreviewCardBackdrop,
-	PreviewCardPositioner,
-	PreviewCardPopup,
-	PreviewCardArrow,
-	PreviewCardViewport,
-} from "./preview-card"
-
-export const PreviewCard = {
-	Root: PreviewCardRoot,
-	Trigger: PreviewCardTrigger,
-	Portal: PreviewCardPortal,
-	Backdrop: PreviewCardBackdrop,
-	Positioner: PreviewCardPositioner,
-	Popup: PreviewCardPopup,
-	Arrow: PreviewCardArrow,
-	Viewport: PreviewCardViewport,
-	createHandle: createPreviewCardHandle,
-} as const
+export * as PreviewCard from "./preview-card.parts"

@@ -13,6 +13,10 @@ import { toClassNames } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * The root container for generic list or menu items holding layout and styling.
+ * Renders a `<div>` element.
+ */
 export const ItemRoot = (props: ItemRootProps) => {
 	const {
 		className,
@@ -31,6 +35,10 @@ export const ItemRoot = (props: ItemRootProps) => {
 	)
 }
 
+/**
+ * A container for visual media like icons, avatars, or images inside the item.
+ * Renders a `<span>` element.
+ */
 export const ItemMedia = (props: ItemMediaProps) => {
 	const {
 		className,
@@ -49,6 +57,10 @@ export const ItemMedia = (props: ItemMediaProps) => {
 	)
 }
 
+/**
+ * A wrapper container for the textual content of the item.
+ * Renders a `<div>` element.
+ */
 export const ItemContent = (props: ItemContentProps) => {
 	const {
 		className,
@@ -67,6 +79,10 @@ export const ItemContent = (props: ItemContentProps) => {
 	)
 }
 
+/**
+ * The primary text title displayed within the item content.
+ * Renders an `<h2>` element.
+ */
 export const ItemTitle = (props: ItemTitleProps) => {
 	const {
 		className,
@@ -85,6 +101,10 @@ export const ItemTitle = (props: ItemTitleProps) => {
 	)
 }
 
+/**
+ * The secondary text description providing additional details about the item.
+ * Renders a `<p>` element.
+ */
 export const ItemDescription = (props: ItemDescriptionProps) => {
 	const {
 		className,
@@ -103,6 +123,10 @@ export const ItemDescription = (props: ItemDescriptionProps) => {
 	)
 }
 
+/**
+ * A container for interactive elements or buttons placed at the end of the item.
+ * Renders a `<div>` element.
+ */
 export const ItemAction = (props: ItemActionProps) => {
 	const {
 		className,

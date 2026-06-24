@@ -1,11 +1,3 @@
-import { FieldRoot, FieldLabel, FieldControl, FieldDescription, FieldItem, FieldError, FieldValidity } from "./field"
+export type * from "./field.props"
 
-export const Field = {
-	Root: FieldRoot,
-	Label: FieldLabel,
-	Control: FieldControl,
-	Description: FieldDescription,
-	Item: FieldItem,
-	Error: FieldError,
-	Validity: FieldValidity,
-} as const
+export * as Field from "./field.parts"

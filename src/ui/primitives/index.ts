@@ -1,1 +1,1 @@
-export { Render } from "./render"
+export * from "./render"

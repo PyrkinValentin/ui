@@ -14,6 +14,7 @@ import type {
 	DrawerDescriptionProps,
 	DrawerActionsProps,
 	DrawerCloseProps,
+	DrawerVirtualKeyboardProviderProps,
 } from "./drawer.props"
 
 import type { DrawerViewportContextValue } from "./drawer.types"
@@ -28,6 +29,10 @@ import { X } from "lucide-react"
 import { Render } from "../../primitives"
 import { DrawerViewportContext } from "./drawer.context"
 
+/**
+ * Groups all parts of the drawer.
+ * Doesn't render its own HTML element.
+ */
 export const DrawerRoot = <Payload = unknown>(props: DrawerRootProps<Payload>) => {
 	const {
 		children,
@@ -41,6 +46,10 @@ export const DrawerRoot = <Payload = unknown>(props: DrawerRootProps<Payload>) =
 	)
 }
 
+/**
+ * A button that opens the drawer.
+ * Renders a `<button>` element.
+ */
 export const DrawerTrigger = <Payload = unknown>(props: DrawerTriggerProps<Payload>) => {
 	const {
 		className,
@@ -58,6 +67,10 @@ export const DrawerTrigger = <Payload = unknown>(props: DrawerTriggerProps<Paylo
 	)
 }
 
+/**
+ * An invisible area that listens for swipe gestures to open the drawer.
+ * Renders a `<div>` element.
+ */
 export const DrawerSwipeArea = (props: DrawerSwipeAreaProps) => {
 	const {
 		className,
@@ -75,6 +88,11 @@ export const DrawerSwipeArea = (props: DrawerSwipeAreaProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const DrawerPortal = (props: DrawerPortalProps) => {
 	const {
 		className,
@@ -92,6 +110,10 @@ export const DrawerPortal = (props: DrawerPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the popup.
+ * Renders a `<div>` element.
+ */
 export const DrawerBackdrop = (props: DrawerBackdropProps) => {
 	const {
 		className,
@@ -109,6 +131,10 @@ export const DrawerBackdrop = (props: DrawerBackdropProps) => {
 	)
 }
 
+/**
+ * A positioning container for the drawer popup that can be made scrollable.
+ * Renders a `<div>` element.
+ */
 export const DrawerViewport = (props: DrawerViewportProps) => {
 	const {
 		position = "bottom",
@@ -134,6 +160,10 @@ export const DrawerViewport = (props: DrawerViewportProps) => {
 	)
 }
 
+/**
+ * A container for the drawer contents.
+ * Renders a `<div>` element.
+ */
 export const DrawerPopup = (props: DrawerPopupProps) => {
 	const { position } = useDrawerViewportContext()
 
@@ -155,6 +185,10 @@ export const DrawerPopup = (props: DrawerPopupProps) => {
 	)
 }
 
+/**
+ * A visual handle element indicating that the drawer can be dragged.
+ * Renders a `<span>` element.
+ */
 export const DrawerHandle = (props: DrawerHandleProps) => {
 	const { position } = useDrawerViewportContext()
 
@@ -174,6 +208,10 @@ export const DrawerHandle = (props: DrawerHandleProps) => {
 	)
 }
 
+/**
+ * A container for the drawer contents.
+ * Renders a `<div>` element.
+ */
 export const DrawerContent = (props: DrawerContentProps) => {
 	const {
 		className,
@@ -191,6 +229,10 @@ export const DrawerContent = (props: DrawerContentProps) => {
 	)
 }
 
+/**
+ * A heading that labels the drawer.
+ * Renders an `<h2>` element.
+ */
 export const DrawerTitle = (props: DrawerTitleProps) => {
 	const {
 		className,
@@ -208,6 +250,10 @@ export const DrawerTitle = (props: DrawerTitleProps) => {
 	)
 }
 
+/**
+ * A paragraph with additional information about the drawer.
+ * Renders a `<p>` element.
+ */
 export const DrawerDescription = (props: DrawerDescriptionProps) => {
 	const {
 		className,
@@ -225,6 +271,10 @@ export const DrawerDescription = (props: DrawerDescriptionProps) => {
 	)
 }
 
+/**
+ * A wrapper container for the action buttons inside the drawer.
+ * Renders a `<div>` element.
+ */
 export const DrawerActions = (props: DrawerActionsProps) => {
 	const {
 		className,
@@ -244,6 +294,10 @@ export const DrawerActions = (props: DrawerActionsProps) => {
 	)
 }
 
+/**
+ * A button that closes the drawer.
+ * Renders a `<button>` element.
+ */
 export const DrawerClose = (props: DrawerCloseProps) => {
 	const {
 		nativeClose,
@@ -264,5 +318,18 @@ export const DrawerClose = (props: DrawerCloseProps) => {
 					: null
 			)}
 		</Drawer.Close>
+	)
+}
+
+/**
+ * Provides keyboard-aware focus and scroll handling for bottom-sheet drawers with form fields.
+ */
+export const DrawerVirtualKeyboardProvider = (props: DrawerVirtualKeyboardProviderProps) => {
+	const { children } = props
+
+	return (
+		<Drawer.VirtualKeyboardProvider>
+			{children}
+		</Drawer.VirtualKeyboardProvider>
 	)
 }

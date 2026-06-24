@@ -14,6 +14,10 @@ import { toClassNames } from "../../utils"
 
 import { Field } from "@base-ui/react/field"
 
+/**
+ * Groups all parts of the field.
+ * Renders a `<div>` element.
+ */
 export const FieldRoot = (props: FieldRootProps) => {
 	const {
 		className,
@@ -31,6 +35,10 @@ export const FieldRoot = (props: FieldRootProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with the field control.
+ * Renders a `<label>` element.
+ */
 export const FieldLabel = (props: FieldLabelProps) => {
 	const {
 		className,
@@ -48,6 +56,10 @@ export const FieldLabel = (props: FieldLabelProps) => {
 	)
 }
 
+/**
+ * The form control to label and validate.
+ * Renders an `<input>` element.
+ */
 export const FieldControl = (props: FieldControlProps) => {
 	const {
 		className,
@@ -62,6 +74,10 @@ export const FieldControl = (props: FieldControlProps) => {
 	)
 }
 
+/**
+ * A paragraph with additional information about the field.
+ * Renders a `<p>` element.
+ */
 export const FieldDescription = (props: FieldDescriptionProps) => {
 	const {
 		className,
@@ -79,6 +95,10 @@ export const FieldDescription = (props: FieldDescriptionProps) => {
 	)
 }
 
+/**
+ * Groups individual items in a checkbox group or radio group with a label and description.
+ * Renders a `<div>` element.
+ */
 export const FieldItem = (props: FieldItemProps) => {
 	const {
 		className,
@@ -96,6 +116,10 @@ export const FieldItem = (props: FieldItemProps) => {
 	)
 }
 
+/**
+ * An error message displayed if the field control fails validation.
+ * Renders a `<div>` element.
+ */
 export const FieldError = (props: FieldErrorProps) => {
 	const {
 		className,
@@ -113,6 +137,10 @@ export const FieldError = (props: FieldErrorProps) => {
 	)
 }
 
+/**
+ * Used to display a custom message based on the field's validity.
+ * Requires `children` to be a function that accepts field validity state as an argument.
+ */
 export const FieldValidity = (props: FieldValidityProps) => {
 	return (
 		<Field.Validity {...props}/>

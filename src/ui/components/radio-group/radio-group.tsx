@@ -6,7 +6,11 @@ import { toClassNames } from "../../utils"
 
 import { RadioGroup as BaseRadioGroup } from "@base-ui/react/radio-group"
 
-export const RadioGroup = (props: RadioGroupProps) => {
+/**
+ * Provides a shared state to a series of radio buttons.
+ * Renders a `<div>` element.
+ */
+export const RadioGroup = <Value = unknown>(props: RadioGroupProps<Value>) => {
 	const {
 		className,
 		children,

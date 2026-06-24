@@ -1,22 +1,3 @@
-import { usePaginationManager } from "./pagination.hooks"
+export type * from "./pagination.props"
 
-import {
-	PaginationRoot,
-	PaginationList,
-	PaginationItem,
-	PaginationPrev,
-	PaginationNext,
-	PaginationPage,
-	PaginationEllipsis,
-} from "./pagination"
-
-export const Pagination = {
-	Root: PaginationRoot,
-	List: PaginationList,
-	Item: PaginationItem,
-	Prev: PaginationPrev,
-	Next: PaginationNext,
-	Page: PaginationPage,
-	Ellipsis: PaginationEllipsis,
-	useManager: usePaginationManager,
-} as const
+export * as Pagination from "./pagination.parts"

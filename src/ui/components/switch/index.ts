@@ -1,6 +1,3 @@
-import { SwitchRoot, SwitchThumb } from "./switch"
+export type * from "./switch.props"
 
-export const Switch = {
-	Root: SwitchRoot,
-	Thumb: SwitchThumb,
-} as const
+export * as Switch from "./switch.parts"

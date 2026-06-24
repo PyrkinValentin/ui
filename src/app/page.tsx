@@ -25,7 +25,7 @@ export default function Home() {
 						>
 							<Table.Cell className="font-medium">
 								<div className="flex items-center gap-2">
-									#{user.id.toString()}
+									#{user.id}
 
 									<Button
 										iconOnly

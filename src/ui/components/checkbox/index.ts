@@ -1,6 +1,3 @@
-import { CheckboxRoot, CheckboxIndicator } from "./checkbox"
+export type * from "./checkbox.props"
 
-export const Checkbox = {
-	Root: CheckboxRoot,
-	Indicator: CheckboxIndicator,
-} as const
+export * as Checkbox from "./checkbox.parts"

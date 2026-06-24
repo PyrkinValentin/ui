@@ -1,6 +1,3 @@
-import { FieldsetRoot, FieldsetLegend } from "./fieldset"
+export type * from "./fieldset.props"
 
-export const Fieldset = {
-	Root: FieldsetRoot,
-	Legend: FieldsetLegend,
-} as const
+export * as Fieldset from "./fieldset.parts"

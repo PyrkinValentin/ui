@@ -6,6 +6,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * A compact element used to display tags, categories, or status labels.
+ * Renders a `<span>` element.
+ */
 export const Chip = (props: ChipProps) => {
 	const {
 		variant = "primary",

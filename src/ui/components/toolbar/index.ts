@@ -1,10 +1,3 @@
-import { ToolbarRoot, ToolbarButton, ToolbarLink, ToolbarInput, ToolbarSeparator, ToolbarGroup } from "./toolbar"
+export type * from "./toolbar.props"
 
-export const Toolbar = {
-	Root: ToolbarRoot,
-	Button: ToolbarButton,
-	Link: ToolbarLink,
-	Input: ToolbarInput,
-	Separator: ToolbarSeparator,
-	Group: ToolbarGroup,
-} as const
+export * as Toolbar from "./toolbar.parts"

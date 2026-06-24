@@ -1,9 +1,3 @@
-import { MeterRoot, MeterLabel, MeterValue, MeterTrack, MeterIndicator } from "./meter"
+export type * from "./meter.props"
 
-export const Meter = {
-	Root: MeterRoot,
-	Label: MeterLabel,
-	Value: MeterValue,
-	Track: MeterTrack,
-	Indicator: MeterIndicator,
-} as const
+export * as Meter from "./meter.parts"

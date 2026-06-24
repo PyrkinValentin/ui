@@ -22,6 +22,10 @@ import { AlertDialog } from "@base-ui/react/alert-dialog"
 import { X } from "lucide-react"
 import { Render } from "../../primitives"
 
+/**
+ * Groups all parts of the alert dialog.
+ * Doesn't render its own HTML element.
+ */
 export const AlertDialogRoot = <Payload = unknown>(props: AlertDialogRootProps<Payload>) => {
 	const {
 		children,
@@ -35,6 +39,10 @@ export const AlertDialogRoot = <Payload = unknown>(props: AlertDialogRootProps<P
 	)
 }
 
+/**
+ * A button that opens the alert dialog.
+ * Renders a `<button>` element.
+ */
 export const AlertDialogTrigger = <Payload = unknown>(props: AlertDialogTriggerProps<Payload>) => {
 	const {
 		className,
@@ -52,6 +60,11 @@ export const AlertDialogTrigger = <Payload = unknown>(props: AlertDialogTriggerP
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const AlertDialogPortal = (props: AlertDialogPortalProps) => {
 	const {
 		className,
@@ -69,6 +82,10 @@ export const AlertDialogPortal = (props: AlertDialogPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the popup.
+ * Renders a `<div>` element.
+ */
 export const AlertDialogBackdrop = (props: AlertDialogBackdropProps) => {
 	const {
 		className,
@@ -86,6 +103,10 @@ export const AlertDialogBackdrop = (props: AlertDialogBackdropProps) => {
 	)
 }
 
+/**
+ * A positioning container for the dialog popup that can be made scrollable.
+ * Renders a `<div>` element.
+ */
 export const AlertDialogViewport = (props: AlertDialogViewportProps) => {
 	const {
 		position = "center",
@@ -105,6 +126,10 @@ export const AlertDialogViewport = (props: AlertDialogViewportProps) => {
 	)
 }
 
+/**
+ * A container for the dialog contents.
+ * Renders a `<div>` element.
+ */
 export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	const {
 		size = "md",
@@ -124,6 +149,10 @@ export const AlertDialogPopup = (props: AlertDialogPopupProps) => {
 	)
 }
 
+/**
+ * A visual icon representing the status or severity of the alert dialog.
+ * Renders a `<span>` element.
+ */
 export const AlertDialogIndicator = (props: AlertDialogIndicatorProps) => {
 	const {
 		status = "neutral",
@@ -146,6 +175,10 @@ export const AlertDialogIndicator = (props: AlertDialogIndicatorProps) => {
 	)
 }
 
+/**
+ * A heading that labels the dialog.
+ * Renders an `<h2>` element.
+ */
 export const AlertDialogTitle = (props: AlertDialogTitleProps) => {
 	const {
 		className,
@@ -163,6 +196,10 @@ export const AlertDialogTitle = (props: AlertDialogTitleProps) => {
 	)
 }
 
+/**
+ * A paragraph with additional information about the dialog.
+ * Renders a `<p>` element.
+ */
 export const AlertDialogDescription = (props: AlertDialogDescriptionProps) => {
 	const {
 		className,
@@ -180,6 +217,10 @@ export const AlertDialogDescription = (props: AlertDialogDescriptionProps) => {
 	)
 }
 
+/**
+ * A wrapper container for the action buttons inside the dialog.
+ * Renders a `<div>` element.
+ */
 export const AlertDialogActions = (props: AlertDialogActionsProps) => {
 	const {
 		className,
@@ -199,6 +240,10 @@ export const AlertDialogActions = (props: AlertDialogActionsProps) => {
 	)
 }
 
+/**
+ * A button that closes the dialog.
+ * Renders a `<button>` element.
+ */
 export const AlertDialogClose = (props: AlertDialogCloseProps) => {
 	const {
 		nativeClose,

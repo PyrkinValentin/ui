@@ -27,6 +27,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { ContextMenu } from "@base-ui/react/context-menu"
 import { Check } from "lucide-react"
 
+/**
+ * A component that creates a context menu activated by right-clicking or long pressing.
+ * Doesn't render its own HTML element.
+ */
 export const ContextMenuRoot = (props: ContextMenuRootProps) => {
 	const {
 		children,
@@ -40,6 +44,10 @@ export const ContextMenuRoot = (props: ContextMenuRootProps) => {
 	)
 }
 
+/**
+ * An area that opens the menu on right click or long press.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuTrigger = (props: ContextMenuTriggerProps) => {
 	const {
 		className,
@@ -57,6 +65,11 @@ export const ContextMenuTrigger = (props: ContextMenuTriggerProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuPortal = (props: ContextMenuPortalProps) => {
 	const {
 		className,
@@ -74,6 +87,10 @@ export const ContextMenuPortal = (props: ContextMenuPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the menu popup.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuBackdrop = (props: ContextMenuBackdropProps) => {
 	const {
 		className,
@@ -91,6 +108,10 @@ export const ContextMenuBackdrop = (props: ContextMenuBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the menu popup against the trigger.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuPositioner = (props: ContextMenuPositionerProps) => {
 	const {
 		align,
@@ -120,6 +141,10 @@ export const ContextMenuPositioner = (props: ContextMenuPositionerProps) => {
 	)
 }
 
+/**
+ * A container for the menu items.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuPopup = (props: ContextMenuPopupProps) => {
 	const {
 		className,
@@ -137,6 +162,10 @@ export const ContextMenuPopup = (props: ContextMenuPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the menu anchor.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuArrow = (props: ContextMenuArrowProps) => {
 	const {
 		className,
@@ -151,6 +180,10 @@ export const ContextMenuArrow = (props: ContextMenuArrowProps) => {
 	)
 }
 
+/**
+ * An individual interactive item in the menu.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuItem = (props: ContextMenuItemProps) => {
 	const {
 		variant = "primary",
@@ -170,6 +203,10 @@ export const ContextMenuItem = (props: ContextMenuItemProps) => {
 	)
 }
 
+/**
+ * A link in the menu that can be used to navigate to a different page or section.
+ * Renders an `<a>` element.
+ */
 export const ContextMenuLinkItem = (props: ContextMenuLinkItemProps) => {
 	const {
 		className,
@@ -187,6 +224,10 @@ export const ContextMenuLinkItem = (props: ContextMenuLinkItemProps) => {
 	)
 }
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuSeparator = (props: ContextMenuSeparatorProps) => {
 	const {
 		className,
@@ -201,6 +242,10 @@ export const ContextMenuSeparator = (props: ContextMenuSeparatorProps) => {
 	)
 }
 
+/**
+ * Groups all parts of a submenu.
+ * Doesn't render its own HTML element.
+ */
 export const ContextMenuSubmenuRoot = (props: ContextMenuSubmenuRootProps) => {
 	const {
 		children,
@@ -214,6 +259,10 @@ export const ContextMenuSubmenuRoot = (props: ContextMenuSubmenuRootProps) => {
 	)
 }
 
+/**
+ * A menu item that opens a submenu.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuSubmenuTrigger = (props: ContextMenuSubmenuTriggerProps) => {
 	const {
 		className,
@@ -231,6 +280,10 @@ export const ContextMenuSubmenuTrigger = (props: ContextMenuSubmenuTriggerProps)
 	)
 }
 
+/**
+ * Groups related menu items with the corresponding label.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuGroup = (props: ContextMenuGroupProps) => {
 	const {
 		className,
@@ -248,6 +301,10 @@ export const ContextMenuGroup = (props: ContextMenuGroupProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with its parent group.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuGroupLabel = (props: ContextMenuGroupLabelProps) => {
 	const {
 		className,
@@ -265,6 +322,10 @@ export const ContextMenuGroupLabel = (props: ContextMenuGroupLabelProps) => {
 	)
 }
 
+/**
+ * Groups related radio items.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuRadioGroup = (props: ContextMenuRadioGroupProps) => {
 	const {
 		className,
@@ -282,6 +343,10 @@ export const ContextMenuRadioGroup = (props: ContextMenuRadioGroupProps) => {
 	)
 }
 
+/**
+ * A menu item that works like a radio button in a given group.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuRadioItem = (props: ContextMenuRadioItemProps) => {
 	const {
 		className,
@@ -299,6 +364,10 @@ export const ContextMenuRadioItem = (props: ContextMenuRadioItemProps) => {
 	)
 }
 
+/**
+ * Indicates whether the radio item is selected.
+ * Renders a `<span>` element.
+ */
 export const ContextMenuRadioItemIndicator = (props: ContextMenuRadioItemIndicatorProps) => {
 	const {
 		keepMounted = true,
@@ -321,6 +390,10 @@ export const ContextMenuRadioItemIndicator = (props: ContextMenuRadioItemIndicat
 	)
 }
 
+/**
+ * A menu item that toggles a setting on or off.
+ * Renders a `<div>` element.
+ */
 export const ContextMenuCheckboxItem = (props: ContextMenuCheckboxItemProps) => {
 	const {
 		className,
@@ -338,6 +411,10 @@ export const ContextMenuCheckboxItem = (props: ContextMenuCheckboxItemProps) => 
 	)
 }
 
+/**
+ * Indicates whether the checkbox item is ticked.
+ * Renders a `<span>` element.
+ */
 export const ContextMenuCheckboxItemIndicator = (props: ContextMenuCheckboxItemIndicatorProps) => {
 	const {
 		keepMounted = true,

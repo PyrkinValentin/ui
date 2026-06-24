@@ -1,7 +1,3 @@
-import { OTPFieldRoot, OTPFieldInput, OTPFieldSeparator } from "./otp-field"
+export type * from "./otp-field.props"
 
-export const OTPField = {
-	Root: OTPFieldRoot,
-	Input: OTPFieldInput,
-	Separator: OTPFieldSeparator,
-} as const
+export * as OTPField from "./otp-field.parts"
