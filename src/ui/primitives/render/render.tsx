@@ -3,6 +3,9 @@ import type { RenderProps } from "./render.props"
 
 import { useRender } from "@base-ui/react/use-render"
 
+/**
+ * Renders a element.
+ */
 export const Render = <DefaultTagName extends keyof JSX.IntrinsicElements, State extends Record<string, unknown>, RenderedElementType extends Element, Enabled extends boolean | undefined = undefined>(props: RenderProps<DefaultTagName, State, RenderedElementType, Enabled>) => {
 	const {
 		enabled,

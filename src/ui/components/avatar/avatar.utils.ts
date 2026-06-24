@@ -1,11 +1,21 @@
 const SPACES_REGEX = /\s+/
 
 type GetInitialsOptions = {
+	/** The value returned if the name is empty or cannot be parsed. */
 	fallback?: string
+	/** The maximum number of initials to extract from a single word. */
 	maxOneWordLength?: number
+	/** The maximum total length of the returned initials string. */
 	maxLength?: number
 }
 
+/**
+ * Generates initial letters from a user's name for the avatar placeholder.
+ *
+ * @param name - The full name or username.
+ * @param options - Configuration options for initials generation.
+ * @returns The extracted initials in uppercase, or the fallback value.
+ */
 export const getAvatarInitials = (name?: string, options: GetInitialsOptions = {}): string => {
 	const {
 		fallback = "?",

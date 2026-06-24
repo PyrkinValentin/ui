@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { Fieldset } from "@base-ui/react/fieldset"
 
+/**
+ * Groups a shared legend with related controls.
+ * Renders a `<fieldset>` element.
+ */
 export const FieldsetRoot = (props: FieldsetRootProps) => {
 	const {
 		className,
@@ -23,6 +27,10 @@ export const FieldsetRoot = (props: FieldsetRootProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with the fieldset.
+ * Renders a `<div>` element.
+ */
 export const FieldsetLegend = (props: FieldsetLegendProps) => {
 	const {
 		className,

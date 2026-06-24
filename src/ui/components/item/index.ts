@@ -1,10 +1,3 @@
-import { ItemRoot, ItemMedia, ItemContent, ItemTitle, ItemDescription, ItemAction } from "./item"
+export type * from "./item.props"
 
-export const Item = {
-	Root: ItemRoot,
-	Media: ItemMedia,
-	Content: ItemContent,
-	Title: ItemTitle,
-	Description: ItemDescription,
-	Action: ItemAction,
-} as const
+export * as Item from "./item.parts"

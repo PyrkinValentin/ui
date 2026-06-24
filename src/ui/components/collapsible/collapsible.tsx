@@ -14,6 +14,10 @@ import { Collapsible } from "@base-ui/react/collapsible"
 import { ChevronDown } from "lucide-react"
 import { Render } from "../../primitives"
 
+/**
+ * Groups all parts of the collapsible.
+ * Renders a `<div>` element.
+ */
 export const CollapsibleRoot = (props: CollapsibleRootProps) => {
 	const {
 		className,
@@ -31,6 +35,10 @@ export const CollapsibleRoot = (props: CollapsibleRootProps) => {
 	)
 }
 
+/**
+ * A button that opens and closes the collapsible panel.
+ * Renders a `<button>` element.
+ */
 export const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {
 	const {
 		className,
@@ -48,6 +56,10 @@ export const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {
 	)
 }
 
+/**
+ * A visual indicator that changes state when the collapsible panel opens or closes.
+ * Renders a `<span>` element.
+ */
 export const CollapsibleIcon = (props: CollapsibleIconProps) => {
 	const {
 		className,
@@ -66,6 +78,10 @@ export const CollapsibleIcon = (props: CollapsibleIconProps) => {
 	)
 }
 
+/**
+ * A panel with the collapsible contents.
+ * Renders a `<div>` element.
+ */
 export const CollapsiblePanel = (props: CollapsiblePanelProps) => {
 	const {
 		className,
@@ -83,6 +99,10 @@ export const CollapsiblePanel = (props: CollapsiblePanelProps) => {
 	)
 }
 
+/**
+ * A container wrapper for the internal elements inside the collapsible panel.
+ * Renders a `<div>` element.
+ */
 export const CollapsibleContent = (props: CollapsibleContentProps) => {
 	const {
 		className,

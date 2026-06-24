@@ -8,6 +8,10 @@ import { focusSlot, toClassNames } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * A wrapper container that groups a form input with related actions or indicators.
+ * Renders a `<div>` element.
+ */
 export const InputGroup = (props: InputGroupProps) => {
 	const {
 		className,

@@ -16,10 +16,15 @@ export type UsePaginationSyncOptions = {
 }
 
 export type UsePaginationManagerOptions = {
+	/** The total number of pages available. */
 	total: number
+	/** The current active page number. */
 	page: number
+	/** The number of active pages shown on each side of the current page. */
 	siblings?: number
+	/** The number of active pages shown at the start and end boundaries. */
 	boundaries?: number
+	/** Callback invoked when the active page changes. */
 	onPageChange?: (page: number, eventDetails: PaginationRootChangeEventDetails) => void
 }
 

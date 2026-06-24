@@ -15,6 +15,10 @@ import { toClassNames } from "../../utils"
 import { ChevronRight, Ellipsis } from "lucide-react"
 import { Render } from "../../primitives"
 
+/**
+ * The root container that establishes the navigation landmark for breadcrumbs.
+ * Renders a `<nav>` element.
+ */
 export const BreadcrumbsRoot = (props: BreadcrumbsRootProps) => {
 	const {
 		className,
@@ -33,6 +37,10 @@ export const BreadcrumbsRoot = (props: BreadcrumbsRootProps) => {
 	)
 }
 
+/**
+ * An ordered list container holding the breadcrumb items.
+ * Renders an `<ol>` element.
+ */
 export const BreadcrumbsList = (props: BreadcrumbsListProps) => {
 	const {
 		className,
@@ -51,6 +59,10 @@ export const BreadcrumbsList = (props: BreadcrumbsListProps) => {
 	)
 }
 
+/**
+ * An individual item container within the breadcrumb list.
+ * Renders a `<li>` element.
+ */
 export const BreadcrumbsItem = (props: BreadcrumbsItemProps) => {
 	const {
 		className,
@@ -69,6 +81,10 @@ export const BreadcrumbsItem = (props: BreadcrumbsItemProps) => {
 	)
 }
 
+/**
+ * A visual divider displayed between breadcrumb items.
+ * Renders a `<li>` element.
+ */
 export const BreadcrumbsSeparator = (props: BreadcrumbsSeparatorProps) => {
 	const {
 		className,
@@ -89,6 +105,10 @@ export const BreadcrumbsSeparator = (props: BreadcrumbsSeparatorProps) => {
 	)
 }
 
+/**
+ * A clickable link pointing to a previous level in the navigation hierarchy.
+ * Renders an `<a>` element.
+ */
 export const BreadcrumbsLink = (props: BreadcrumbsLinkProps) => {
 	const {
 		className,
@@ -107,6 +127,10 @@ export const BreadcrumbsLink = (props: BreadcrumbsLinkProps) => {
 	)
 }
 
+/**
+ * The text element representing the current active page in the path.
+ * Renders a `<span>` element.
+ */
 export const BreadcrumbsPage = (props: BreadcrumbsPageProps) => {
 	const {
 		className,
@@ -128,6 +152,10 @@ export const BreadcrumbsPage = (props: BreadcrumbsPageProps) => {
 	)
 }
 
+/**
+ * A visual indicator showing that some middle breadcrumb steps are hidden.
+ * Renders a `<span>` element.
+ */
 export const BreadcrumbsEllipsis = (props: BreadcrumbsEllipsisProps) => {
 	const {
 		className,

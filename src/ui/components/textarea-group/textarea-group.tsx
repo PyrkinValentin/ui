@@ -8,6 +8,10 @@ import { focusSlot, toClassNames } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * A wrapper container that groups a textarea field with related actions or indicators.
+ * Renders a `<div>` element.
+ */
 export const TextareaGroup = (props: TextareaGroupProps) => {
 	const {
 		className,

@@ -1,19 +1,3 @@
-import {
-	BreadcrumbsRoot,
-	BreadcrumbsList,
-	BreadcrumbsItem,
-	BreadcrumbsSeparator,
-	BreadcrumbsLink,
-	BreadcrumbsPage,
-	BreadcrumbsEllipsis
-} from "./breadcrumbs"
+export type * from "./breadcrumbs.props"
 
-export const Breadcrumbs = {
-	Root: BreadcrumbsRoot,
-	List: BreadcrumbsList,
-	Item: BreadcrumbsItem,
-	Separator: BreadcrumbsSeparator,
-	Link: BreadcrumbsLink,
-	Page: BreadcrumbsPage,
-	Ellipsis: BreadcrumbsEllipsis,
-} as const
+export * as Breadcrumbs from "./breadcrumbs.parts"

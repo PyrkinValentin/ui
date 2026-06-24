@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { Tabs } from "@base-ui/react/tabs"
 
+/**
+ * Groups the tabs and the corresponding panels.
+ * Renders a `<div>` element.
+ */
 export const TabsRoot = (props: TabsRootProps) => {
 	const {
 		className,
@@ -23,6 +27,10 @@ export const TabsRoot = (props: TabsRootProps) => {
 	)
 }
 
+/**
+ * Groups the individual tab buttons.
+ * Renders a `<div>` element.
+ */
 export const TabsList = (props: TabsListProps) => {
 	const {
 		className,
@@ -40,6 +48,10 @@ export const TabsList = (props: TabsListProps) => {
 	)
 }
 
+/**
+ * An individual interactive tab button that toggles the corresponding panel.
+ * Renders a `<button>` element.
+ */
 export const TabsTab = (props: TabsTabProps) => {
 	const {
 		className,
@@ -57,6 +69,10 @@ export const TabsTab = (props: TabsTabProps) => {
 	)
 }
 
+/**
+ * A visual indicator that can be styled to match the position of the currently active tab.
+ * Renders a `<span>` element.
+ */
 export const TabsIndicator = (props: TabsIndicatorProps) => {
 	const {
 		renderBeforeHydration = true,
@@ -76,6 +92,10 @@ export const TabsIndicator = (props: TabsIndicatorProps) => {
 	)
 }
 
+/**
+ * A panel displayed when the corresponding tab is active.
+ * Renders a `<div>` element.
+ */
 export const TabsPanel = (props: TabsPanelProps) => {
 	const {
 		className,

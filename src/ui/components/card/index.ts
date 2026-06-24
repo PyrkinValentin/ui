@@ -1,8 +1,3 @@
-import { CardRoot, CardContent, CardTitle, CardDescription } from "./card"
+export type * from "./card.props"
 
-export const Card = {
-	Root: CardRoot,
-	Content: CardContent,
-	Title: CardTitle,
-	Description: CardDescription,
-} as const
+export * as Card from "./card.parts"

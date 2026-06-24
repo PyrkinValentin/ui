@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { Switch } from "@base-ui/react/switch"
 
+/**
+ * Represents the switch itself.
+ * Renders a `<span>` element and a hidden `<input>` beside.
+ */
 export const SwitchRoot = (props: SwitchRootProps) => {
 	const {
 		className,
@@ -23,6 +27,10 @@ export const SwitchRoot = (props: SwitchRootProps) => {
 	)
 }
 
+/**
+ * The movable part of the switch that indicates whether the switch is on or off.
+ * Renders a `<span>`.
+ */
 export const SwitchThumb = (props: SwitchThumbProps) => {
 	const {
 		className,

@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * The root container for card components that holds structural layout and styles.
+ * Renders a `<div>` element.
+ */
 export const CardRoot = (props: CardRootProps) => {
 	const {
 		className,
@@ -24,6 +28,10 @@ export const CardRoot = (props: CardRootProps) => {
 	)
 }
 
+/**
+ * A container wrapper for the internal content and body elements of a card.
+ * Renders a `<div>` element.
+ */
 export const CardContent = (props: CardContentProps) => {
 	const {
 		className,
@@ -42,6 +50,10 @@ export const CardContent = (props: CardContentProps) => {
 	)
 }
 
+/**
+ * The heading or primary title displayed within a card.
+ * Renders an `<h2>` element.
+ */
 export const CardTitle = (props: CardTitleProps) => {
 	const {
 		className,
@@ -60,6 +72,10 @@ export const CardTitle = (props: CardTitleProps) => {
 	)
 }
 
+/**
+ * The secondary or descriptive text providing context within a card.
+ * Renders a `<p>` element.
+ */
 export const CardDescription = (props: CardDescriptionProps) => {
 	const {
 		className,

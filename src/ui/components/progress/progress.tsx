@@ -12,6 +12,10 @@ import { toClassNames } from "../../utils"
 
 import { Progress } from "@base-ui/react/progress"
 
+/**
+ * Groups all parts of the progress bar and provides the task completion status to screen readers.
+ * Renders a `<div>` element.
+ */
 export const ProgressRoot = (props: ProgressRootProps) => {
 	const {
 		className,
@@ -29,6 +33,10 @@ export const ProgressRoot = (props: ProgressRootProps) => {
 	)
 }
 
+/**
+ * An accessible label for the progress bar.
+ * Renders a `<span>` element.
+ */
 export const ProgressLabel = (props: ProgressLabelProps) => {
 	const {
 		className,
@@ -46,6 +54,10 @@ export const ProgressLabel = (props: ProgressLabelProps) => {
 	)
 }
 
+/**
+ * A text label displaying the current value.
+ * Renders a `<span>` element.
+ */
 export const ProgressValue = (props: ProgressValueProps) => {
 	const {
 		className,
@@ -63,6 +75,10 @@ export const ProgressValue = (props: ProgressValueProps) => {
 	)
 }
 
+/**
+ * Contains the progress bar indicator.
+ * Renders a `<div>` element.
+ */
 export const ProgressTrack = (props: ProgressTrackProps) => {
 	const {
 		className,
@@ -80,6 +96,10 @@ export const ProgressTrack = (props: ProgressTrackProps) => {
 	)
 }
 
+/**
+ * Visualizes the completion status of the task.
+ * Renders a `<div>` element.
+ */
 export const ProgressIndicator = (props: ProgressIndicatorProps) => {
 	const {
 		className,

@@ -30,6 +30,9 @@ import { Render } from "../../primitives"
 import { Spinner } from "../spinner"
 import { ToastRootContext } from "./toast.context"
 
+/**
+ * Provides a context for creating and managing toasts.
+ */
 export const ToastProvider = (props: ToastProviderProps) => {
 	const {
 		children,
@@ -43,6 +46,11 @@ export const ToastProvider = (props: ToastProviderProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the viewport to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const ToastPortal = (props: ToastPortalProps) => {
 	const {
 		className,
@@ -60,6 +68,10 @@ export const ToastPortal = (props: ToastPortalProps) => {
 	)
 }
 
+/**
+ * A container viewport for toasts.
+ * Renders a `<div>` element.
+ */
 export const ToastViewport = (props: ToastViewportProps) => {
 	const {
 		position = "bottom-right",
@@ -79,6 +91,10 @@ export const ToastViewport = (props: ToastViewportProps) => {
 	)
 }
 
+/**
+ * Positions the toast against the anchor.
+ * Renders a `<div>` element.
+ */
 export const ToastPositioner = (props: ToastPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -98,6 +114,10 @@ export const ToastPositioner = (props: ToastPositionerProps) => {
 	)
 }
 
+/**
+ * Groups all parts of an individual toast.
+ * Renders a `<div>` element.
+ */
 export const ToastRoot = <Data extends ToastData>(props: ToastRootProps<Data>) => {
 	const {
 		toast,
@@ -135,6 +155,10 @@ export const ToastRoot = <Data extends ToastData>(props: ToastRootProps<Data>) =
 	)
 }
 
+/**
+ * Displays an element positioned against the toast anchor.
+ * Renders a `<div>` element.
+ */
 export const ToastArrow = (props: ToastArrowProps) => {
 	const {
 		className,
@@ -149,6 +173,10 @@ export const ToastArrow = (props: ToastArrowProps) => {
 	)
 }
 
+/**
+ * A container for the contents of a toast.
+ * Renders a `<div>` element.
+ */
 export const ToastContent = (props: ToastContentProps) => {
 	const {
 		className,
@@ -166,6 +194,10 @@ export const ToastContent = (props: ToastContentProps) => {
 	)
 }
 
+/**
+ * A visual icon or loading spinner representing the type or status of the toast.
+ * Renders a `<span>` element.
+ */
 export const ToastIndicator = (props: ToastIndicatorProps) => {
 	const { type, status, indicator } = useToastRootContext()
 
@@ -192,6 +224,10 @@ export const ToastIndicator = (props: ToastIndicatorProps) => {
 	)
 }
 
+/**
+ * A title that labels the toast.
+ * Renders an `<h2>` element.
+ */
 export const ToastTitle = (props: ToastTitleProps) => {
 	const {
 		className,
@@ -209,6 +245,11 @@ export const ToastTitle = (props: ToastTitleProps) => {
 	)
 }
 
+/**
+ * A description that describes the toast.
+ * Can be used as the default message for the toast when no title is provided.
+ * Renders a `<p>` element.
+ */
 export const ToastDescription = (props: ToastDescriptionProps) => {
 	const {
 		className,
@@ -226,6 +267,10 @@ export const ToastDescription = (props: ToastDescriptionProps) => {
 	)
 }
 
+/**
+ * Performs an action when clicked.
+ * Renders a `<button>` element.
+ */
 export const ToastAction = (props: ToastActionProps) => {
 	const {
 		nativeAction = true,
@@ -245,6 +290,10 @@ export const ToastAction = (props: ToastActionProps) => {
 	)
 }
 
+/**
+ * Closes the toast when clicked.
+ * Renders a `<button>` element.
+ */
 export const ToastClose = (props: ToastCloseProps) => {
 	const {
 		nativeClose = true,

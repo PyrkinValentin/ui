@@ -15,6 +15,10 @@ import { toClassNames } from "../../utils"
 
 import { Tooltip } from "@base-ui/react/tooltip"
 
+/**
+ * Provides a shared delay for multiple tooltips. The grouping logic ensures that
+ * once a tooltip becomes visible, the adjacent tooltips will be shown instantly.
+ */
 export const TooltipProvider = (props: TooltipProviderProps) => {
 	const {
 		children,
@@ -28,6 +32,10 @@ export const TooltipProvider = (props: TooltipProviderProps) => {
 	)
 }
 
+/**
+ * Groups all parts of the tooltip.
+ * Doesn't render its own HTML element.
+ */
 export const TooltipRoot = <Payload = unknown>(props: TooltipRootProps<Payload>) => {
 	const {
 		children,
@@ -41,6 +49,10 @@ export const TooltipRoot = <Payload = unknown>(props: TooltipRootProps<Payload>)
 	)
 }
 
+/**
+ * An element to attach the tooltip to.
+ * Renders a `<button>` element.
+ */
 export const TooltipTrigger = <Payload = unknown>(props: TooltipTriggerProps<Payload>) => {
 	const {
 		className,
@@ -58,6 +70,11 @@ export const TooltipTrigger = <Payload = unknown>(props: TooltipTriggerProps<Pay
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const TooltipPortal = (props: TooltipPortalProps) => {
 	const {
 		className,
@@ -75,6 +92,10 @@ export const TooltipPortal = (props: TooltipPortalProps) => {
 	)
 }
 
+/**
+ * Positions the tooltip against the trigger.
+ * Renders a `<div>` element.
+ */
 export const TooltipPositioner = (props: TooltipPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -94,6 +115,10 @@ export const TooltipPositioner = (props: TooltipPositionerProps) => {
 	)
 }
 
+/**
+ * A container for the tooltip contents.
+ * Renders a `<div>` element.
+ */
 export const TooltipPopup = (props: TooltipPopupProps) => {
 	const {
 		className,
@@ -111,6 +136,10 @@ export const TooltipPopup = (props: TooltipPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the tooltip anchor.
+ * Renders a `<div>` element.
+ */
 export const TooltipArrow = (props: TooltipArrowProps) => {
 	const {
 		className,
@@ -125,6 +154,12 @@ export const TooltipArrow = (props: TooltipArrowProps) => {
 	)
 }
 
+/**
+ * A viewport for displaying content transitions.
+ * This component is only required if one popup can be opened by multiple triggers, its content
+ * changes based on the trigger, and switching between them is animated.
+ * Renders a `<div>` element.
+ */
 export const TooltipViewport = (props: TooltipViewportProps) => {
 	const {
 		className,

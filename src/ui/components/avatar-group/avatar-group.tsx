@@ -10,6 +10,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Render } from "../../primitives"
 import { AvatarGroupContext } from "./avatar-group.context"
 
+/**
+ * A container that groups multiple avatars together, managing their layout and styling.
+ * Renders a `<div>` element.
+ */
 export const AvatarGroup = (props: AvatarGroupProps) => {
 	const {
 		orientation = "horizontal",

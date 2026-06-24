@@ -28,6 +28,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Menu } from "@base-ui/react/menu"
 import { Check } from "lucide-react"
 
+/**
+ * Groups all parts of the menu.
+ * Doesn't render its own HTML element.
+ */
 export const MenuRoot = <Payload = unknown>(props: MenuRootProps<Payload>) => {
 	const {
 		children,
@@ -41,6 +45,10 @@ export const MenuRoot = <Payload = unknown>(props: MenuRootProps<Payload>) => {
 	)
 }
 
+/**
+ * A button that opens the menu.
+ * Renders a `<button>` element.
+ */
 export const MenuTrigger = <Payload = unknown>(props: MenuTriggerProps<Payload>) => {
 	const {
 		className,
@@ -58,6 +66,11 @@ export const MenuTrigger = <Payload = unknown>(props: MenuTriggerProps<Payload>)
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const MenuPortal = (props: MenuPortalProps) => {
 	const {
 		className,
@@ -75,6 +88,10 @@ export const MenuPortal = (props: MenuPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the menu popup.
+ * Renders a `<div>` element.
+ */
 export const MenuBackdrop = (props: MenuBackdropProps) => {
 	const {
 		className,
@@ -92,6 +109,10 @@ export const MenuBackdrop = (props: MenuBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the menu popup against the trigger.
+ * Renders a `<div>` element.
+ */
 export const MenuPositioner = (props: MenuPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -111,6 +132,10 @@ export const MenuPositioner = (props: MenuPositionerProps) => {
 	)
 }
 
+/**
+ * A container for the menu items.
+ * Renders a `<div>` element.
+ */
 export const MenuPopup = (props: MenuPopupProps) => {
 	const {
 		className,
@@ -128,6 +153,10 @@ export const MenuPopup = (props: MenuPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the menu anchor.
+ * Renders a `<div>` element.
+ */
 export const MenuArrow = (props: MenuArrowProps) => {
 	const {
 		className,
@@ -142,6 +171,12 @@ export const MenuArrow = (props: MenuArrowProps) => {
 	)
 }
 
+/**
+ * A viewport for displaying content transitions.
+ * This component is only required if one popup can be opened by multiple triggers, its content
+ * changes based on the trigger, and switching between them is animated.
+ * Renders a `<div>` element.
+ */
 export const MenuViewport = (props: MenuViewportProps) => {
 	const {
 		className,
@@ -159,6 +194,10 @@ export const MenuViewport = (props: MenuViewportProps) => {
 	)
 }
 
+/**
+ * An individual interactive item in the menu.
+ * Renders a `<div>` element.
+ */
 export const MenuItem = (props: MenuItemProps) => {
 	const {
 		variant = "primary",
@@ -178,6 +217,10 @@ export const MenuItem = (props: MenuItemProps) => {
 	)
 }
 
+/**
+ * A link in the menu that can be used to navigate to a different page or section.
+ * Renders an `<a>` element.
+ */
 export const MenuLinkItem = (props: MenuLinkItemProps) => {
 	const {
 		className,
@@ -195,6 +238,10 @@ export const MenuLinkItem = (props: MenuLinkItemProps) => {
 	)
 }
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const MenuSeparator = (props: MenuSeparatorProps) => {
 	const {
 		className,
@@ -209,6 +256,10 @@ export const MenuSeparator = (props: MenuSeparatorProps) => {
 	)
 }
 
+/**
+ * Groups all parts of a submenu.
+ * Doesn't render its own HTML element.
+ */
 export const MenuSubmenuRoot = (props: MenuSubmenuRootProps) => {
 	const {
 		children,
@@ -222,6 +273,10 @@ export const MenuSubmenuRoot = (props: MenuSubmenuRootProps) => {
 	)
 }
 
+/**
+ * A menu item that opens a submenu.
+ * Renders a `<div>` element.
+ */
 export const MenuSubmenuTrigger = (props: MenuSubmenuTriggerProps) => {
 	const {
 		className,
@@ -239,6 +294,10 @@ export const MenuSubmenuTrigger = (props: MenuSubmenuTriggerProps) => {
 	)
 }
 
+/**
+ * Groups related menu items with the corresponding label.
+ * Renders a `<div>` element.
+ */
 export const MenuGroup = (props: MenuGroupProps) => {
 	const {
 		className,
@@ -256,6 +315,10 @@ export const MenuGroup = (props: MenuGroupProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with its parent group.
+ * Renders a `<div>` element.
+ */
 export const MenuGroupLabel = (props: MenuGroupLabelProps) => {
 	const {
 		className,
@@ -273,6 +336,10 @@ export const MenuGroupLabel = (props: MenuGroupLabelProps) => {
 	)
 }
 
+/**
+ * Groups related radio items.
+ * Renders a `<div>` element.
+ */
 export const MenuRadioGroup = (props: MenuRadioGroupProps) => {
 	const {
 		className,
@@ -290,6 +357,10 @@ export const MenuRadioGroup = (props: MenuRadioGroupProps) => {
 	)
 }
 
+/**
+ * A menu item that works like a radio button in a given group.
+ * Renders a `<div>` element.
+ */
 export const MenuRadioItem = (props: MenuRadioItemProps) => {
 	const {
 		className,
@@ -307,6 +378,10 @@ export const MenuRadioItem = (props: MenuRadioItemProps) => {
 	)
 }
 
+/**
+ * Indicates whether the radio item is selected.
+ * Renders a `<span>` element.
+ */
 export const MenuRadioItemIndicator = (props: MenuRadioItemIndicatorProps) => {
 	const {
 		keepMounted = true,
@@ -329,6 +404,10 @@ export const MenuRadioItemIndicator = (props: MenuRadioItemIndicatorProps) => {
 	)
 }
 
+/**
+ * A menu item that toggles a setting on or off.
+ * Renders a `<div>` element.
+ */
 export const MenuCheckboxItem = (props: MenuCheckboxItemProps) => {
 	const {
 		className,
@@ -346,6 +425,10 @@ export const MenuCheckboxItem = (props: MenuCheckboxItemProps) => {
 	)
 }
 
+/**
+ * Indicates whether the checkbox item is ticked.
+ * Renders a `<span>` element.
+ */
 export const MenuCheckboxItemIndicator = (props: MenuCheckboxItemIndicatorProps) => {
 	const {
 		keepMounted = true,

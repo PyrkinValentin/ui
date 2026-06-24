@@ -1,19 +1,3 @@
-import {
-	SliderRoot,
-	SliderLabel,
-	SliderValue,
-	SliderControl,
-	SliderTrack,
-	SliderIndicator,
-	SliderThumb,
-} from "./slider"
+export type * from "./slider.props"
 
-export const Slider = {
-	Root: SliderRoot,
-	Label: SliderLabel,
-	Value: SliderValue,
-	Control: SliderControl,
-	Track: SliderTrack,
-	Indicator: SliderIndicator,
-	Thumb: SliderThumb,
-} as const
+export * as Slider from "./slider.parts"

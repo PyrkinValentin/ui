@@ -14,6 +14,10 @@ import { toClassNames } from "../../utils"
 
 import { Slider } from "@base-ui/react/slider"
 
+/**
+ * Groups all parts of the slider.
+ * Renders a `<div>` element.
+ */
 export const SliderRoot = <Value extends number | readonly number[] = number | readonly number[]>(props: SliderRootProps<Value>) => {
 	const {
 		thumbAlignment = "edge",
@@ -33,6 +37,10 @@ export const SliderRoot = <Value extends number | readonly number[] = number | r
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with the slider thumbs.
+ * Renders a `<div>` element.
+ */
 export const SliderLabel = (props: SliderLabelProps) => {
 	const {
 		className,
@@ -50,6 +58,10 @@ export const SliderLabel = (props: SliderLabelProps) => {
 	)
 }
 
+/**
+ * Displays the current value of the slider as text.
+ * Renders an `<output>` element.
+ */
 export const SliderValue = (props: SliderValueProps) => {
 	const {
 		className,
@@ -67,6 +79,10 @@ export const SliderValue = (props: SliderValueProps) => {
 	)
 }
 
+/**
+ * The clickable, interactive part of the slider.
+ * Renders a `<div>` element.
+ */
 export const SliderControl = (props: SliderControlProps) => {
 	const {
 		className,
@@ -84,6 +100,10 @@ export const SliderControl = (props: SliderControlProps) => {
 	)
 }
 
+/**
+ * Contains the slider indicator and represents the entire range of the slider.
+ * Renders a `<div>` element.
+ */
 export const SliderTrack = (props: SliderTrackProps) => {
 	const {
 		className,
@@ -101,6 +121,10 @@ export const SliderTrack = (props: SliderTrackProps) => {
 	)
 }
 
+/**
+ * Visualizes the current value of the slider.
+ * Renders a `<div>` element.
+ */
 export const SliderIndicator = (props: SliderIndicatorProps) => {
 	const {
 		className,
@@ -115,6 +139,10 @@ export const SliderIndicator = (props: SliderIndicatorProps) => {
 	)
 }
 
+/**
+ * The draggable part of the slider at the tip of the indicator.
+ * Renders a `<div>` element and a nested `<input type="range">`.
+ */
 export const SliderThumb = (props: SliderThumbProps) => {
 	const {
 		className,

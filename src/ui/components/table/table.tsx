@@ -15,6 +15,10 @@ import { toClassNames } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * The root container used to organize and display tabular data.
+ * Renders a `<table>` element.
+ */
 export const TableRoot = (props: TableRootProps) => {
 	const {
 		className,
@@ -33,6 +37,10 @@ export const TableRoot = (props: TableRootProps) => {
 	)
 }
 
+/**
+ * A description or title displayed at the top or bottom of the table.
+ * Renders a `<caption>` element.
+ */
 export const TableCaption = (props: TableCaptionProps) => {
 	const {
 		className,
@@ -51,6 +59,10 @@ export const TableCaption = (props: TableCaptionProps) => {
 	)
 }
 
+/**
+ * A container wrapper for the group of table header rows.
+ * Renders a `<thead>` element.
+ */
 export const TableHeader = (props: TableHeaderProps) => {
 	const {
 		className,
@@ -69,6 +81,10 @@ export const TableHeader = (props: TableHeaderProps) => {
 	)
 }
 
+/**
+ * A container wrapper for the main content rows of the table.
+ * Renders a `<tbody>` element.
+ */
 export const TableBody = (props: TableBodyProps) => {
 	const {
 		className,
@@ -87,6 +103,10 @@ export const TableBody = (props: TableBodyProps) => {
 	)
 }
 
+/**
+ * An individual horizontal row container within the table.
+ * Renders a `<tr>` element.
+ */
 export const TableRow = (props: TableRowProps) => {
 	const {
 		className,
@@ -105,6 +125,10 @@ export const TableRow = (props: TableRowProps) => {
 	)
 }
 
+/**
+ * A header cell representing metadata or a title for a column or row.
+ * Renders a `<th>` element.
+ */
 export const TableHead = (props: TableHeadProps) => {
 	const {
 		scope = "col",
@@ -125,6 +149,10 @@ export const TableHead = (props: TableHeadProps) => {
 	)
 }
 
+/**
+ * A standard data cell holding individual values within a table row.
+ * Renders a `<td>` element.
+ */
 export const TableCell = (props: TableCellProps) => {
 	const {
 		className,
@@ -143,6 +171,10 @@ export const TableCell = (props: TableCellProps) => {
 	)
 }
 
+/**
+ * A container wrapper for the group of table summary or footer rows.
+ * Renders a `<tfoot>` element.
+ */
 export const TableFooter = (props: TableFooterProps) => {
 	const {
 		className,

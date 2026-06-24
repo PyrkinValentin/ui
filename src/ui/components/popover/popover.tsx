@@ -19,6 +19,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Popover } from "@base-ui/react/popover"
 import { X } from "lucide-react"
 
+/**
+ * Groups all parts of the popover.
+ * Doesn't render its own HTML element.
+ */
 export const PopoverRoot = <Payload = unknown>(props: PopoverRootProps<Payload>) => {
 	const {
 		children,
@@ -32,6 +36,10 @@ export const PopoverRoot = <Payload = unknown>(props: PopoverRootProps<Payload>)
 	)
 }
 
+/**
+ * A button that opens the popover.
+ * Renders a `<button>` element.
+ */
 export const PopoverTrigger = <Payload = unknown>(props: PopoverTriggerProps<Payload>) => {
 	const {
 		className,
@@ -49,6 +57,11 @@ export const PopoverTrigger = <Payload = unknown>(props: PopoverTriggerProps<Pay
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const PopoverPortal = (props: PopoverPortalProps) => {
 	const {
 		className,
@@ -66,6 +79,10 @@ export const PopoverPortal = (props: PopoverPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the popover.
+ * Renders a `<div>` element.
+ */
 export const PopoverBackdrop = (props: PopoverBackdropProps) => {
 	const {
 		className,
@@ -83,6 +100,10 @@ export const PopoverBackdrop = (props: PopoverBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the popover against the trigger.
+ * Renders a `<div>` element.
+ */
 export const PopoverPositioner = (props: PopoverPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -102,6 +123,10 @@ export const PopoverPositioner = (props: PopoverPositionerProps) => {
 	)
 }
 
+/**
+ * A container for the popover contents.
+ * Renders a `<div>` element.
+ */
 export const PopoverPopup = (props: PopoverPopupProps) => {
 	const {
 		className,
@@ -119,6 +144,10 @@ export const PopoverPopup = (props: PopoverPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the popover anchor.
+ * Renders a `<div>` element.
+ */
 export const PopoverArrow = (props: PopoverArrowProps) => {
 	const {
 		className,
@@ -133,6 +162,12 @@ export const PopoverArrow = (props: PopoverArrowProps) => {
 	)
 }
 
+/**
+ * A viewport for displaying content transitions.
+ * This component is only required if one popup can be opened by multiple triggers, its content
+ * changes based on the trigger, and switching between them is animated.
+ * Renders a `<div>` element.
+ */
 export const PopoverViewport = (props: PopoverViewportProps) => {
 	const {
 		className,
@@ -150,6 +185,10 @@ export const PopoverViewport = (props: PopoverViewportProps) => {
 	)
 }
 
+/**
+ * A heading that labels the popover.
+ * Renders an `<h2>` element.
+ */
 export const PopoverTitle = (props: PopoverTitleProps) => {
 	const {
 		className,
@@ -167,6 +206,10 @@ export const PopoverTitle = (props: PopoverTitleProps) => {
 	)
 }
 
+/**
+ * A paragraph with additional information about the popover.
+ * Renders a `<p>` element.
+ */
 export const PopoverDescription = (props: PopoverDescriptionProps) => {
 	const {
 		className,
@@ -184,6 +227,10 @@ export const PopoverDescription = (props: PopoverDescriptionProps) => {
 	)
 }
 
+/**
+ * A button that closes the popover.
+ * Renders a `<button>` element.
+ */
 export const PopoverClose = (props: PopoverCloseProps) => {
 	const {
 		nativeClose,

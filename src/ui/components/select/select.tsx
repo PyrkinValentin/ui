@@ -25,6 +25,10 @@ import { toClassNames } from "../../utils"
 import { Select } from "@base-ui/react/select"
 import { Check, ChevronDown } from "lucide-react"
 
+/**
+ * Groups all parts of the select.
+ * Doesn't render its own HTML element.
+ */
 export const SelectRoot = <Value = unknown, Multiple extends boolean | undefined = false>(props: SelectRootProps<Value, Multiple>) => {
 	const {
 		children,
@@ -38,6 +42,10 @@ export const SelectRoot = <Value = unknown, Multiple extends boolean | undefined
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with the select trigger.
+ * Renders a `<div>` element.
+ */
 export const SelectLabel = (props: SelectLabelProps) => {
 	const {
 		className,
@@ -55,6 +63,10 @@ export const SelectLabel = (props: SelectLabelProps) => {
 	)
 }
 
+/**
+ * A button that opens the select popup.
+ * Renders a `<button>` element.
+ */
 export const SelectTrigger = (props: SelectTriggerProps) => {
 	const {
 		className,
@@ -72,6 +84,10 @@ export const SelectTrigger = (props: SelectTriggerProps) => {
 	)
 }
 
+/**
+ * A text label of the currently selected item.
+ * Renders a `<span>` element.
+ */
 export const SelectValue = (props: SelectValueProps) => {
 	const {
 		className,
@@ -89,6 +105,10 @@ export const SelectValue = (props: SelectValueProps) => {
 	)
 }
 
+/**
+ * An icon that indicates that the trigger button opens a select popup.
+ * Renders a `<span>` element.
+ */
 export const SelectIcon = (props: SelectIconProps) => {
 	const {
 		className,
@@ -106,6 +126,11 @@ export const SelectIcon = (props: SelectIconProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const SelectPortal = (props: SelectPortalProps) => {
 	const {
 		className,
@@ -123,6 +148,10 @@ export const SelectPortal = (props: SelectPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the select popup.
+ * Renders a `<div>` element.
+ */
 export const SelectBackdrop = (props: SelectBackdropProps) => {
 	const {
 		className,
@@ -140,6 +169,10 @@ export const SelectBackdrop = (props: SelectBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the select popup.
+ * Renders a `<div>` element.
+ */
 export const SelectPositioner = (props: SelectPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -159,6 +192,10 @@ export const SelectPositioner = (props: SelectPositionerProps) => {
 	)
 }
 
+/**
+ * A container for the select list.
+ * Renders a `<div>` element.
+ */
 export const SelectPopup = (props: SelectPopupProps) => {
 	const {
 		className,
@@ -176,6 +213,10 @@ export const SelectPopup = (props: SelectPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the select popup anchor.
+ * Renders a `<div>` element.
+ */
 export const SelectArrow = (props: SelectArrowProps) => {
 	const {
 		className,
@@ -190,6 +231,10 @@ export const SelectArrow = (props: SelectArrowProps) => {
 	)
 }
 
+/**
+ * A container for the select items.
+ * Renders a `<div>` element.
+ */
 export const SelectList = (props: SelectListProps) => {
 	const {
 		className,
@@ -207,6 +252,10 @@ export const SelectList = (props: SelectListProps) => {
 	)
 }
 
+/**
+ * An individual option in the select popup.
+ * Renders a `<div>` element.
+ */
 export const SelectItem = (props: SelectItemProps) => {
 	const {
 		className,
@@ -224,6 +273,10 @@ export const SelectItem = (props: SelectItemProps) => {
 	)
 }
 
+/**
+ * A text label of the select item.
+ * Renders a `<div>` element.
+ */
 export const SelectItemText = (props: SelectItemTextProps) => {
 	const {
 		className,
@@ -241,6 +294,10 @@ export const SelectItemText = (props: SelectItemTextProps) => {
 	)
 }
 
+/**
+ * Indicates whether the select item is selected.
+ * Renders a `<span>` element.
+ */
 export const SelectItemIndicator = (props: SelectItemIndicatorProps) => {
 	const {
 		keepMounted = true,
@@ -260,6 +317,10 @@ export const SelectItemIndicator = (props: SelectItemIndicatorProps) => {
 	)
 }
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const SelectSeparator = (props: SelectSeparatorProps) => {
 	const {
 		className,
@@ -274,6 +335,10 @@ export const SelectSeparator = (props: SelectSeparatorProps) => {
 	)
 }
 
+/**
+ * Groups related select items with the corresponding label.
+ * Renders a `<div>` element.
+ */
 export const SelectGroup = (props: SelectGroupProps) => {
 	const {
 		className,
@@ -291,6 +356,10 @@ export const SelectGroup = (props: SelectGroupProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with its parent group.
+ * Renders a `<div>` element.
+ */
 export const SelectGroupLabel = (props: SelectGroupLabelProps) => {
 	const {
 		className,

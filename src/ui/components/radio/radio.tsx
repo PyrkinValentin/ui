@@ -6,6 +6,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Radio } from "@base-ui/react/radio"
 
+/**
+ * Represents the radio button itself.
+ * Renders a `<span>` element and a hidden `<input>` beside.
+ */
 export const RadioRoot = (props: RadioRootProps) => {
 	const {
 		className,
@@ -23,6 +27,10 @@ export const RadioRoot = (props: RadioRootProps) => {
 	)
 }
 
+/**
+ * Indicates whether the radio button is selected.
+ * Renders a `<span>` element.
+ */
 export const RadioIndicator = (props: RadioIndicatorProps) => {
 	const {
 		keepMounted = true,

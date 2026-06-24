@@ -1,15 +1,3 @@
-import {
-	CollapsibleRoot,
-	CollapsibleTrigger,
-	CollapsibleIcon,
-	CollapsiblePanel,
-	CollapsibleContent,
-} from "./collapsible"
+export type * from "./collapsible.props"
 
-export const Collapsible = {
-	Root: CollapsibleRoot,
-	Trigger: CollapsibleTrigger,
-	Icon: CollapsibleIcon,
-	Panel: CollapsiblePanel,
-	Content: CollapsibleContent,
-} as const
+export * as Collapsible from "./collapsible.parts"

@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { OTPField } from "@base-ui/react/otp-field"
 
+/**
+ * Groups all OTP field parts and manages their state.
+ * Renders a `<div>` element.
+ */
 export const OTPFieldRoot = (props: OTPFieldRootProps) => {
 	const {
 		className,
@@ -23,6 +27,10 @@ export const OTPFieldRoot = (props: OTPFieldRootProps) => {
 	)
 }
 
+/**
+ * An individual OTP character input.
+ * Renders an `<input>` element.
+ */
 export const OTPFieldInput = (props: OTPFieldInputProps) => {
 	const {
 		className,
@@ -37,6 +45,10 @@ export const OTPFieldInput = (props: OTPFieldInputProps) => {
 	)
 }
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const OTPFieldSeparator = (props: OTPFieldSeparatorProps) => {
 	const {
 		className,

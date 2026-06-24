@@ -1,19 +1,3 @@
-import {
-	NumberFieldRoot,
-	NumberFieldScrubArea,
-	NumberFieldScrubAreaCursor,
-	NumberFieldGroup,
-	NumberFieldDecrement,
-	NumberFieldInput,
-	NumberFieldIncrement,
-} from "./number-field"
+export type * from "./number-field.props"
 
-export const NumberField = {
-	Root: NumberFieldRoot,
-	ScrubArea: NumberFieldScrubArea,
-	ScrubAreaCursor: NumberFieldScrubAreaCursor,
-	Group: NumberFieldGroup,
-	Decrement: NumberFieldDecrement,
-	Input: NumberFieldInput,
-	Increment: NumberFieldIncrement,
-} as const
+export * as NumberField from "./number-field.parts"

@@ -19,6 +19,10 @@ import { Dialog } from "@base-ui/react/dialog"
 import { X } from "lucide-react"
 import { Render } from "../../primitives"
 
+/**
+ * Groups all parts of the dialog.
+ * Doesn't render its own HTML element.
+ */
 export const DialogRoot = <Payload = unknown>(props: DialogRootProps<Payload>) => {
 	const {
 		children,
@@ -32,6 +36,10 @@ export const DialogRoot = <Payload = unknown>(props: DialogRootProps<Payload>) =
 	)
 }
 
+/**
+ * A button that opens the dialog.
+ * Renders a `<button>` element.
+ */
 export const DialogTrigger = <Payload = unknown>(props: DialogTriggerProps<Payload>) => {
 	const {
 		className,
@@ -49,6 +57,11 @@ export const DialogTrigger = <Payload = unknown>(props: DialogTriggerProps<Paylo
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const DialogPortal = (props: DialogPortalProps) => {
 	const {
 		className,
@@ -66,6 +79,10 @@ export const DialogPortal = (props: DialogPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the popup.
+ * Renders a `<div>` element.
+ */
 export const DialogBackdrop = (props: DialogBackdropProps) => {
 	const {
 		className,
@@ -83,6 +100,10 @@ export const DialogBackdrop = (props: DialogBackdropProps) => {
 	)
 }
 
+/**
+ * A positioning container for the dialog popup that can be made scrollable.
+ * Renders a `<div>` element.
+ */
 export const DialogViewport = (props: DialogViewportProps) => {
 	const {
 		position = "center",
@@ -102,6 +123,10 @@ export const DialogViewport = (props: DialogViewportProps) => {
 	)
 }
 
+/**
+ * A container for the dialog contents.
+ * Renders a `<div>` element.
+ */
 export const DialogPopup = (props: DialogPopupProps) => {
 	const {
 		size = "md",
@@ -121,6 +146,10 @@ export const DialogPopup = (props: DialogPopupProps) => {
 	)
 }
 
+/**
+ * A heading that labels the dialog.
+ * Renders an `<h2>` element.
+ */
 export const DialogTitle = (props: DialogTitleProps) => {
 	const {
 		className,
@@ -138,6 +167,10 @@ export const DialogTitle = (props: DialogTitleProps) => {
 	)
 }
 
+/**
+ * A paragraph with additional information about the dialog.
+ * Renders a `<p>` element.
+ */
 export const DialogDescription = (props: DialogDescriptionProps) => {
 	const {
 		className,
@@ -155,6 +188,10 @@ export const DialogDescription = (props: DialogDescriptionProps) => {
 	)
 }
 
+/**
+ * A wrapper container for the action buttons inside the dialog.
+ * Renders a `<div>` element.
+ */
 export const DialogActions = (props: DialogActionsProps) => {
 	const {
 		className,
@@ -174,6 +211,10 @@ export const DialogActions = (props: DialogActionsProps) => {
 	)
 }
 
+/**
+ * A button that closes the dialog.
+ * Renders a `<button>` element.
+ */
 export const DialogClose = (props: DialogCloseProps) => {
 	const {
 		nativeClose,

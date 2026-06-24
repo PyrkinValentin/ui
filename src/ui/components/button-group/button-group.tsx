@@ -10,6 +10,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Render } from "../../primitives"
 import { ButtonGroupContext } from "./button-group.context"
 
+/**
+ * A container that groups multiple buttons together, managing their layout and styling.
+ * Renders a `<div>` element.
+ */
 export const ButtonGroup = (props: ButtonGroupProps) => {
 	const {
 		iconOnly,

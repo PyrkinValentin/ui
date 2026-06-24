@@ -10,6 +10,9 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { ToggleGroup as BaseToggleGroup } from "@base-ui/react/toggle-group"
 import { ToggleGroupContext } from "./toggle-group.context"
 
+/**
+ * Provides a shared state to a series of toggle buttons.
+ */
 export const ToggleGroup = <Value extends string>(props: ToggleGroupProps<Value>) => {
 	const {
 		iconOnly,

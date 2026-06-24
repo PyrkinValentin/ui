@@ -6,6 +6,9 @@ import { toClassNames } from "../../utils"
 
 import { Menubar as BaseMenubar } from "@base-ui/react/menubar"
 
+/**
+ * The container for menus.
+ */
 export const Menubar = (props: MenubarProps) => {
 	const {
 		className,

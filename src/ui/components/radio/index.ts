@@ -1,6 +1,3 @@
-import { RadioRoot, RadioIndicator } from "./radio"
+export type * from "./radio.props"
 
-export const Radio = {
-	Root: RadioRoot,
-	Indicator: RadioIndicator,
-} as const
+export * as Radio from "./radio.parts"

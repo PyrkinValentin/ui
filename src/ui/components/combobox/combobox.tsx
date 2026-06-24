@@ -34,6 +34,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { Combobox } from "@base-ui/react/combobox"
 import { Check, ChevronDown, X } from "lucide-react"
 
+/**
+ * Groups all parts of the combobox.
+ * Doesn't render its own HTML element.
+ */
 export const ComboboxRoot = <Value = unknown, Multiple extends boolean | undefined = false>(props: ComboboxRootProps<Value, Multiple>) => {
 	const {
 		children,
@@ -47,6 +51,10 @@ export const ComboboxRoot = <Value = unknown, Multiple extends boolean | undefin
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with the combobox trigger.
+ * Renders a `<div>` element.
+ */
 export const ComboboxLabel = (props: ComboboxLabelProps) => {
 	const {
 		className,
@@ -64,6 +72,10 @@ export const ComboboxLabel = (props: ComboboxLabelProps) => {
 	)
 }
 
+/**
+ * A wrapper for the input and its associated controls.
+ * Renders a `<div>` element.
+ */
 export const ComboboxInputGroup = (props: ComboboxInputGroupProps) => {
 	const {
 		className,
@@ -81,6 +93,10 @@ export const ComboboxInputGroup = (props: ComboboxInputGroupProps) => {
 	)
 }
 
+/**
+ * A text input to search for items in the list.
+ * Renders an `<input>` element.
+ */
 export const ComboboxInput = (props: ComboboxInputProps) => {
 	const {
 		className,
@@ -95,6 +111,10 @@ export const ComboboxInput = (props: ComboboxInputProps) => {
 	)
 }
 
+/**
+ * A button that opens the popup.
+ * Renders a `<button>` element.
+ */
 export const ComboboxTrigger = (props: ComboboxTriggerProps) => {
 	const {
 		className,
@@ -112,6 +132,10 @@ export const ComboboxTrigger = (props: ComboboxTriggerProps) => {
 	)
 }
 
+/**
+ * An icon that indicates that the trigger button opens the popup.
+ * Renders a `<span>` element.
+ */
 export const ComboboxIcon = (props: ComboboxIconProps) => {
 	const {
 		className,
@@ -129,6 +153,10 @@ export const ComboboxIcon = (props: ComboboxIconProps) => {
 	)
 }
 
+/**
+ * Clears the value when clicked.
+ * Renders a `<button>` element.
+ */
 export const ComboboxClear = (props: ComboboxClearProps) => {
 	const {
 		className,
@@ -146,6 +174,10 @@ export const ComboboxClear = (props: ComboboxClearProps) => {
 	)
 }
 
+/**
+ * The current value of the combobox.
+ * Doesn't render its own HTML element.
+ */
 export const ComboboxValue = (props: ComboboxValueProps) => {
 	const {
 		children,
@@ -159,6 +191,10 @@ export const ComboboxValue = (props: ComboboxValueProps) => {
 	)
 }
 
+/**
+ * A container for the chips in a multiselectable input.
+ * Renders a `<div>` element.
+ */
 export const ComboboxChips = (props: ComboboxChipsProps) => {
 	const {
 		className,
@@ -176,6 +212,10 @@ export const ComboboxChips = (props: ComboboxChipsProps) => {
 	)
 }
 
+/**
+ * An individual chip that represents a value in a multiselectable input.
+ * Renders a `<div>` element.
+ */
 export const ComboboxChip = (props: ComboboxChipProps) => {
 	const {
 		className,
@@ -193,6 +233,10 @@ export const ComboboxChip = (props: ComboboxChipProps) => {
 	)
 }
 
+/**
+ * A button to remove a chip.
+ * Renders a `<button>` element.
+ */
 export const ComboboxChipRemove = (props: ComboboxChipRemoveProps) => {
 	const {
 		className,
@@ -210,6 +254,11 @@ export const ComboboxChipRemove = (props: ComboboxChipRemoveProps) => {
 	)
 }
 
+/**
+ * A portal element that moves the popup to a different part of the DOM.
+ * By default, the portal element is appended to `<body>`.
+ * Renders a `<div>` element.
+ */
 export const ComboboxPortal = (props: ComboboxPortalProps) => {
 	const {
 		className,
@@ -227,6 +276,10 @@ export const ComboboxPortal = (props: ComboboxPortalProps) => {
 	)
 }
 
+/**
+ * An overlay displayed beneath the popup.
+ * Renders a `<div>` element.
+ */
 export const ComboboxBackdrop = (props: ComboboxBackdropProps) => {
 	const {
 		className,
@@ -244,6 +297,10 @@ export const ComboboxBackdrop = (props: ComboboxBackdropProps) => {
 	)
 }
 
+/**
+ * Positions the popup against the trigger.
+ * Renders a `<div>` element.
+ */
 export const ComboboxPositioner = (props: ComboboxPositionerProps) => {
 	const {
 		sideOffset = 8,
@@ -263,6 +320,10 @@ export const ComboboxPositioner = (props: ComboboxPositionerProps) => {
 	)
 }
 
+/**
+ * A container for the list.
+ * Renders a `<div>` element.
+ */
 export const ComboboxPopup = (props: ComboboxPopupProps) => {
 	const {
 		className,
@@ -280,6 +341,10 @@ export const ComboboxPopup = (props: ComboboxPopupProps) => {
 	)
 }
 
+/**
+ * Displays an element positioned against the anchor.
+ * Renders a `<div>` element.
+ */
 export const ComboboxArrow = (props: ComboboxArrowProps) => {
 	const {
 		className,
@@ -294,6 +359,15 @@ export const ComboboxArrow = (props: ComboboxArrowProps) => {
 	)
 }
 
+/**
+ * Displays a status message whose content changes are announced politely to screen readers.
+ * Useful for conveying the status of an asynchronously loaded list.
+ * This component's root element must remain mounted in the DOM to announce
+ * changes consistently across screen readers. Avoid hiding or removing the
+ * component itself with `display: none`, `hidden`, `aria-hidden`, or conditional
+ * rendering. Prefer updating or conditionally rendering its children instead.
+ * Renders a `<div>` element.
+ */
 export const ComboboxStatus = (props: ComboboxStatusProps) => {
 	const {
 		className,
@@ -314,6 +388,16 @@ export const ComboboxStatus = (props: ComboboxStatusProps) => {
 	)
 }
 
+/**
+ * Renders its children only when the list is empty.
+ * Requires the `items` prop on the root component.
+ * Announces changes politely to screen readers.
+ * This component's root element must remain mounted in the DOM to announce
+ * changes consistently across screen readers. Avoid hiding or removing the
+ * component itself with `display: none`, `hidden`, `aria-hidden`, or conditional
+ * rendering. Prefer updating or conditionally rendering its children instead.
+ * Renders a `<div>` element.
+ */
 export const ComboboxEmpty = (props: ComboboxEmptyProps) => {
 	const {
 		className,
@@ -331,6 +415,10 @@ export const ComboboxEmpty = (props: ComboboxEmptyProps) => {
 	)
 }
 
+/**
+ * A list container for the items.
+ * Renders a `<div>` element.
+ */
 export const ComboboxList = (props: ComboboxListProps) => {
 	const {
 		className,
@@ -348,6 +436,11 @@ export const ComboboxList = (props: ComboboxListProps) => {
 	)
 }
 
+/**
+ * Displays a single row of items in a grid list.
+ * Enable `grid` on the root component to turn the listbox into a grid.
+ * Renders a `<div>` element.
+ */
 export const ComboboxRow = (props: ComboboxRowProps) => {
 	const {
 		className,
@@ -365,6 +458,10 @@ export const ComboboxRow = (props: ComboboxRowProps) => {
 	)
 }
 
+/**
+ * An individual item in the list.
+ * Renders a `<div>` element.
+ */
 export const ComboboxItem = (props: ComboboxItemProps) => {
 	const {
 		className,
@@ -382,6 +479,10 @@ export const ComboboxItem = (props: ComboboxItemProps) => {
 	)
 }
 
+/**
+ * Indicates whether the item is selected.
+ * Renders a `<span>` element.
+ */
 export const ComboboxItemIndicator = (props: ComboboxItemIndicatorProps) => {
 	const {
 		keepMounted = true,
@@ -401,6 +502,10 @@ export const ComboboxItemIndicator = (props: ComboboxItemIndicatorProps) => {
 	)
 }
 
+/**
+ * A separator element accessible to screen readers.
+ * Renders a `<div>` element.
+ */
 export const ComboboxSeparator = (props: ComboboxSeparatorProps) => {
 	const {
 		className,
@@ -415,6 +520,10 @@ export const ComboboxSeparator = (props: ComboboxSeparatorProps) => {
 	)
 }
 
+/**
+ * Groups related items with the corresponding label.
+ * Renders a `<div>` element.
+ */
 export const ComboboxGroup = (props: ComboboxGroupProps) => {
 	const {
 		className,
@@ -432,6 +541,10 @@ export const ComboboxGroup = (props: ComboboxGroupProps) => {
 	)
 }
 
+/**
+ * An accessible label that is automatically associated with its parent group.
+ * Renders a `<div>` element.
+ */
 export const ComboboxGroupLabel = (props: ComboboxGroupLabelProps) => {
 	const {
 		className,
@@ -449,6 +562,12 @@ export const ComboboxGroupLabel = (props: ComboboxGroupLabelProps) => {
 	)
 }
 
+/**
+ * Renders filtered list items.
+ * Doesn't render its own HTML element.
+ *
+ * If rendering a flat list, pass a function child to the `List` component instead, which implicitly wraps it.
+ */
 export const ComboboxCollection = (props: ComboboxCollectionProps) => {
 	const { children } = props
 

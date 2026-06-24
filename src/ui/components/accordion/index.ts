@@ -1,19 +1,3 @@
-import {
-	AccordionRoot,
-	AccordionItem,
-	AccordionHeader,
-	AccordionTrigger,
-	AccordionIcon,
-	AccordionPanel,
-	AccordionContent,
-} from "./accordion"
+export type * from "./accordion.props"
 
-export const Accordion = {
-	Root: AccordionRoot,
-	Item: AccordionItem,
-	Header: AccordionHeader,
-	Trigger: AccordionTrigger,
-	Icon: AccordionIcon,
-	Panel: AccordionPanel,
-	Content: AccordionContent,
-} as const
+export * as Accordion from "./accordion.parts"

@@ -6,6 +6,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * A visual indicator used to signal an asynchronous loading state.
+ * Renders a `<span>` element.
+ */
 export const Spinner = (props: SpinnerProps) => {
 	const {
 		size = "md",

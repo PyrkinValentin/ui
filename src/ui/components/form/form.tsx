@@ -6,6 +6,10 @@ import { toClassNames } from "../../utils"
 
 import { Form as BaseForm } from "@base-ui/react"
 
+/**
+ * A native form element with consolidated error handling.
+ * Renders a `<form>` element.
+ */
 export const Form = <FormValues extends Record<string, unknown> = Record<string, unknown>>(props: FormProps<FormValues>) => {
 	const {
 		className,

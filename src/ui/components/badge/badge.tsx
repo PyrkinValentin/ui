@@ -6,6 +6,10 @@ import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Render } from "../../primitives"
 
+/**
+ * The root container used to position a badge relative to its content.
+ * Renders a `<span>` element.
+ */
 export const BadgeRoot = (props: BadgeRootProps) => {
 	const {
 		className,
@@ -24,6 +28,10 @@ export const BadgeRoot = (props: BadgeRootProps) => {
 	)
 }
 
+/**
+ * A visual element that displays a status dot, count, or text inside the badge.
+ * Renders a `<span>` element.
+ */
 export const BadgeIndicator = (props: BadgeIndicatorProps) => {
 	const {
 		invisible = false,

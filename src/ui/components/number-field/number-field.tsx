@@ -15,6 +15,10 @@ import { toClassNames } from "../../utils"
 import { NumberField } from "@base-ui/react/number-field"
 import { Minus, MoveHorizontal, Plus } from "lucide-react"
 
+/**
+ * Groups all parts of the number field and manages its state.
+ * Renders a `<div>` element.
+ */
 export const NumberFieldRoot = (props: NumberFieldRootProps) => {
 	const {
 		className,
@@ -32,6 +36,10 @@ export const NumberFieldRoot = (props: NumberFieldRootProps) => {
 	)
 }
 
+/**
+ * An interactive area where the user can click and drag to change the field value.
+ * Renders a `<span>` element.
+ */
 export const NumberFieldScrubArea = (props: NumberFieldScrubAreaProps) => {
 	const {
 		className,
@@ -49,6 +57,13 @@ export const NumberFieldScrubArea = (props: NumberFieldScrubAreaProps) => {
 	)
 }
 
+/**
+ * A custom element to display instead of the native cursor while using the scrub area.
+ * Renders a `<span>` element.
+ *
+ * This component uses the [Pointer Lock API](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API), which may prompt the browser to display a related notification. It is disabled
+ * in Safari to avoid a layout shift that this notification causes there.
+ */
 export const NumberFieldScrubAreaCursor = (props: NumberFieldScrubAreaCursorProps) => {
 	const {
 		className,
@@ -66,6 +81,10 @@ export const NumberFieldScrubAreaCursor = (props: NumberFieldScrubAreaCursorProp
 	)
 }
 
+/**
+ * Groups the input with the increment and decrement buttons.
+ * Renders a `<div>` element.
+ */
 export const NumberFieldGroup = (props: NumberFieldGroupProps) => {
 	const {
 		className,
@@ -83,6 +102,10 @@ export const NumberFieldGroup = (props: NumberFieldGroupProps) => {
 	)
 }
 
+/**
+ * A stepper button that decreases the field value when clicked.
+ * Renders a `<button>` element.
+ */
 export const NumberFieldDecrement = (props: NumberFieldDecrementProps) => {
 	const {
 		className,
@@ -100,6 +123,10 @@ export const NumberFieldDecrement = (props: NumberFieldDecrementProps) => {
 	)
 }
 
+/**
+ * The native input control in the number field.
+ * Renders an `<input>` element.
+ */
 export const NumberFieldInput = (props: NumberFieldInputProps) => {
 	const {
 		className,
@@ -114,6 +141,10 @@ export const NumberFieldInput = (props: NumberFieldInputProps) => {
 	)
 }
 
+/**
+ * A stepper button that increases the field value when clicked.
+ * Renders a `<button>` element.
+ */
 export const NumberFieldIncrement = (props: NumberFieldIncrementProps) => {
 	const {
 		className,

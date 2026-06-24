@@ -40,6 +40,9 @@ export const usePaginationSync = (options: UsePaginationSyncOptions) => {
 	}, [total, page, onPageChange])
 }
 
+/**
+ * Configuration options for managing pagination state and item generation.
+ */
 export const usePaginationManager = (options: UsePaginationManagerOptions): UsePaginationManagerReturn => {
 	const {
 		page = 1,

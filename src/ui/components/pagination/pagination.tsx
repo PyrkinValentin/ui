@@ -28,6 +28,10 @@ import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react"
 import { Render } from "../../primitives"
 import { PaginationRootContext } from "./pagination.context"
 
+/**
+ * The root container that provides navigation context for the pagination components.
+ * Renders a `<nav>` element.
+ */
 export const PaginationRoot = (props: PaginationRootProps) => {
 	const {
 		total,
@@ -69,6 +73,10 @@ export const PaginationRoot = (props: PaginationRootProps) => {
 	)
 }
 
+/**
+ * A container holding the individual pagination items or page controls.
+ * Renders a `<ul>` element.
+ */
 export const PaginationList = (props: PaginationListProps) => {
 	const {
 		className,
@@ -87,6 +95,10 @@ export const PaginationList = (props: PaginationListProps) => {
 	)
 }
 
+/**
+ * A wrapper container for a single item within the pagination list.
+ * Renders a `<li>` element.
+ */
 export const PaginationItem = (props: PaginationItemProps) => {
 	const {
 		children,
@@ -103,6 +115,10 @@ export const PaginationItem = (props: PaginationItemProps) => {
 	)
 }
 
+/**
+ * A button that navigates to the previous page in the pagination flow.
+ * Renders a `<button>` element.
+ */
 export const PaginationPrev = (props: PaginationPrevProps) => {
 	const { size, page, onPageChange } = usePaginationRootContext()
 
@@ -144,6 +160,10 @@ export const PaginationPrev = (props: PaginationPrevProps) => {
 	)
 }
 
+/**
+ * A button that navigates to the next page in the pagination flow.
+ * Renders a `<button>` element.
+ */
 export const PaginationNext = (props: PaginationNextProps) => {
 	const { size, page, total, onPageChange } = usePaginationRootContext()
 
@@ -185,6 +205,10 @@ export const PaginationNext = (props: PaginationNextProps) => {
 	)
 }
 
+/**
+ * An individual interactive button representing a specific page number.
+ * Renders a `<button>` element.
+ */
 export const PaginationPage = (props: PaginationPageProps) => {
 	const { size, page, onPageChange } = usePaginationRootContext()
 
@@ -232,6 +256,10 @@ export const PaginationPage = (props: PaginationPageProps) => {
 	)
 }
 
+/**
+ * A visual placeholder indicating skipped or hidden page ranges.
+ * Renders a `<span>` element.
+ */
 export const PaginationEllipsis = (props: PaginationEllipsisProps) => {
 	const { size } = usePaginationRootContext()
 
