@@ -1,7 +1,8 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { ArrowLeft, Layers, Search } from "lucide-react"
+import Link from "next/link"
+import { ArrowLeft, ArrowUpRight, Layers, Search } from "lucide-react"
 
 import { Input } from "@/ui/components"
 import {
@@ -13,6 +14,7 @@ import { ONEUI_FULL_GZIP } from "@/shared/bundle-data"
 
 import { Reveal, ThemeToggle, useScrolled } from "../_landing/ui"
 import { BundleChart } from "./bundle-chart"
+import { CodeBlock } from "./code-block"
 
 import "../landing.css"
 
@@ -72,9 +74,13 @@ function ComponentCard({ c }: { c: ComponentDoc }) {
 		<div className="spotlight group flex flex-col gap-4 rounded-2xl border border-separator bg-surface p-5 transition duration-300 hover:-translate-y-0.5 hover:shadow-md">
 			<div className="flex items-start justify-between gap-3">
 				<div>
-					<h3 id={c.id} className="scroll-mt-24 font-mono text-base font-semibold text-foreground">
+					<Link
+						href={`/docs/${c.id}`}
+						className="group/link inline-flex items-center gap-1 font-mono text-base font-semibold text-foreground transition-colors hover:text-info"
+					>
 						{c.name}
-					</h3>
+						<ArrowUpRight className="size-3.5 opacity-0 transition group-hover/link:opacity-100" />
+					</Link>
 					<p className="mt-1 text-sm text-muted">{c.blurb}</p>
 				</div>
 				<span className="shrink-0 rounded-full bg-neutral px-2.5 py-1 text-xs font-medium text-muted">
@@ -106,11 +112,7 @@ function ComponentCard({ c }: { c: ComponentDoc }) {
 				</div>
 			)}
 
-			<code className="mt-auto block rounded-lg bg-eclipse px-3 py-2 font-mono text-xs text-snow">
-				<span className="text-muted">import</span> {"{ "}
-				{c.importName}
-				{" }"} <span className="text-muted">from</span> &quot;one-ui&quot;
-			</code>
+			<CodeBlock className="mt-auto" code={`import { ${c.importName} } from "one-ui"`} />
 		</div>
 	)
 }

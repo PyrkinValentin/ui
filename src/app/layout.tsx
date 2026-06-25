@@ -15,11 +15,39 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://one-ui.example"
+const title = "One UI — The React UI kit that feels alive"
+const description =
+	"52 accessible, fully-typed React components built on Base UI. Tailwind-native, themeable with OKLCH tokens, dark mode out of the box, with a signature jelly bounce."
+
 export const metadata: Metadata = {
-	title: "One UI — The React UI kit that feels alive",
-	description:
-		"52 accessible, fully-typed React components built on Base UI. Tailwind-native, themeable with OKLCH tokens, dark mode out of the box, with a signature jelly bounce.",
-};
+	metadataBase: new URL(siteUrl),
+	title,
+	description,
+	applicationName: "One UI",
+	keywords: [
+		"React",
+		"UI kit",
+		"component library",
+		"Base UI",
+		"Tailwind CSS",
+		"design system",
+		"accessible components",
+		"TypeScript",
+	],
+	openGraph: {
+		type: "website",
+		url: siteUrl,
+		siteName: "One UI",
+		title,
+		description,
+	},
+	twitter: {
+		card: "summary_large_image",
+		title,
+		description,
+	},
+}
 
 export default function RootLayout({
 																		 children,
@@ -33,6 +61,10 @@ export default function RootLayout({
 			className={`${geistSans.variable} ${geistMono.variable}`}
 		>
 			<body>
+				<noscript>
+					{/* Keep scroll-reveal content visible when JS is unavailable */}
+					<style>{`.reveal{opacity:1!important;transform:none!important;filter:none!important}`}</style>
+				</noscript>
 				<ThemeProvider
 					disableTransitionOnChange
 					attribute="class"

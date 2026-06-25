@@ -1,7 +1,26 @@
 {
 	"name": "one-ui.v2",
 	"version": "0.1.0",
+	"description": "52 accessible, fully-typed React components built on Base UI. Tailwind-native, themeable with OKLCH tokens, with a signature jelly bounce.",
 	"private": true,
+	"type": "module",
+	"sideEffects": [
+		"**/*.css"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./styles.css": "./dist/styles.css",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -9,21 +28,29 @@
 		"lint": "eslint",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"measure": "node scripts/measure-bundle.mjs"
+		"measure": "node scripts/measure-bundle.mjs",
+		"build:lib": "tsup",
+		"build:css": "tailwindcss -i ./src/ui/styles/styles.css -o ./dist/styles.css --minify",
+		"build:pkg": "npm run build:lib && npm run build:css",
+		"prepublishOnly": "npm run build:pkg"
 	},
 	"dependencies": {
 		"@base-ui/react": "^1.6.0",
 		"@teispace/next-themes": "^2.0.2",
 		"lucide-react": "^1.21.0",
-		"next": "16.2.9",
-		"react": "19.2.7",
-		"react-dom": "19.2.7"
+		"next": "16.2.9"
+	},
+	"peerDependencies": {
+		"react": ">=18.3.0",
+		"react-dom": ">=18.3.0"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^4",
+		"@storybook/addon-a11y": "^9",
 		"@storybook/addon-docs": "^9",
 		"@storybook/addon-themes": "^9",
 		"@storybook/react-vite": "^9",
+		"@tailwindcss/cli": "^4",
 		"@tailwindcss/postcss": "^4",
 		"@tailwindcss/vite": "^4",
 		"@types/node": "^20",
@@ -31,10 +58,14 @@
 		"@types/react-dom": "^19",
 		"@vitejs/plugin-react": "^4",
 		"esbuild": "^0.25",
+		"esbuild-plugin-preserve-directives": "^0.0.11",
 		"eslint": "^9",
 		"eslint-config-next": "16.2.9",
+		"react": "19.2.7",
+		"react-dom": "19.2.7",
 		"storybook": "^9",
 		"tailwindcss": "^4",
+		"tsup": "^8",
 		"typescript": "^5",
 		"vite": "^6"
 	}
