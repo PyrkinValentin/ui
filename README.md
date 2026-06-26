@@ -43,8 +43,10 @@ Cora-UI is purposely tailored to fit data-dense, mission-critical production pla
 
 * **SaaS Foundations** — Instant scaffolding for complex stateful tables, modal overlays, and contextual notifications.
 * **Control Dashboards** — Ergonomic, pixel-dense layouts built to manage heavy reactive states cleanly.
-* **E-Commerce Layers** — Highly performant, SEO-optimized, and micro-interactive transactional paths.
+* **E-Commerce Storefronts** — Highly performant, accessible, and SEO-friendly components for smooth shopping journeys.
+* **Marketing Sites & Landing Pages** — Polished, visually striking user interfaces engineered entirely without a heavyweight runtime.
 * **Static Landing Engines** — Strips away blocking scripts to keep vital performance metrics running smoothly.
+
 
 ---
 
