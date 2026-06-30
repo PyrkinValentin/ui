@@ -42,32 +42,38 @@
 			"import": "./build/index.js",
 			"types": "./build/index.d.ts"
 		},
+		"./hooks": {
+			"import": "./build/hooks/index.js",
+			"types": "./build/hooks/index.d.ts"
+		},
+		"./utils": {
+			"import": "./build/utils/index.js",
+			"types": "./build/utils/index.d.ts"
+		},
 		"./styles": "./build/styles/styles.css",
-		"./hooks": "./build/hooks/index.js"
+		"./package.json": "./package.json"
 	},
 	"files": [
 		"build"
 	],
 	"scripts": {
-		"build": "tsup",
+		"build": "tsup && tsup --config tsup.utils.config.ts && tailwindcss -i src/styles/styles.css -o build/styles/styles.css --minify",
 		"prepublishOnly": "npm run build"
 	},
 	"peerDependencies": {
 		"react": ">=19.0.0",
-		"react-dom": ">=19.0.0",
-		"tailwindcss": ">=4.0.0"
+		"react-dom": ">=19.0.0"
 	},
 	"dependencies": {
 		"@base-ui/react": "^1.6.0",
 		"lucide-react": "^1.22.0"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": ">=4.0.0",
+		"@tailwindcss/cli": ">=4.0.0",
 		"@types/react": ">=19.0.0",
 		"@types/react-dom": ">=19.0.0",
-		"postcss": ">=8.4.0",
-		"tsup": ">=8.0.0",
 		"tailwindcss": ">=4.0.0",
+		"tsup": ">=8.0.0",
 		"typescript": ">=6.0.0"
 	},
 	"sideEffects": false,
