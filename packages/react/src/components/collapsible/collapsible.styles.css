@@ -1,0 +1,59 @@
+.collapsible {
+  @apply w-full;
+}
+
+.collapsible__trigger {
+  @apply relative px-4 py-3 w-full flex items-center gap-2 rounded-lg text-left text-sm font-medium
+  transition-[border-radius,box-shadow,background-color,opacity] motion-reduce:transition-none;
+
+  &[data-panel-open] {
+    & .collapsible__icon {
+      @apply rotate-180;
+    }
+  }
+
+  & > svg {
+    @apply size-4 text-muted;
+  }
+
+  &:hover,
+  &:active {
+    &:not([data-panel-open]) {
+      @apply bg-neutral-soft;
+    }
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-panel-open] {
+    @apply rounded-b-none;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.collapsible__icon {
+  @apply shrink-0 ms-auto size-4 flex items-center justify-center text-muted select-none transition-transform
+  motion-reduce:transition-none;
+
+  & > svg {
+    @apply size-full;
+  }
+}
+
+.collapsible__panel {
+  @apply h-(--collapsible-panel-height) overflow-hidden transition-[height] motion-reduce:transition-none;
+
+  &[data-ending-style],
+  &[data-starting-style] {
+    @apply h-0;
+  }
+}
+
+.collapsible__content {
+  @apply px-4 pb-3 text-sm text-muted;
+}

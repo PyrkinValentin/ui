@@ -1,0 +1,83 @@
+type DataAttrs = Record<DataAttribute, string>
+type DataObject = Record<string, string | number | boolean | null | undefined>
+type DataAttribute = `data-${string}`
+
+const MAX_CACHE_SIZE = 500
+const cache = new Map<string, DataAttribute>()
+
+const createDataAttr = (value?: string): DataAttribute | undefined => {
+	if (
+		typeof value !== "string" ||
+		value === ""
+	) return
+
+	const cached = cache.get(value)
+
+	if (cached !== undefined) {
+		cache.delete(value)
+		cache.set(value, cached)
+
+		return cached
+	}
+
+	let result = ""
+
+	for (let i = 0; i < value.length; i++) {
+		const char = value[i]
+
+		if (char >= "A" && char <= "Z") {
+			result += (i !== 0 ? "-" : "") + char.toLowerCase()
+		} else if (char === "_") {
+			result += "-"
+		} else {
+			result += char
+		}
+	}
+
+	if (cache.size >= MAX_CACHE_SIZE) {
+		const firstKey = cache
+			.keys()
+			.next()
+
+		if (!firstKey.done) {
+			cache.delete(firstKey.value)
+		}
+	}
+
+	const finalKey: DataAttribute = `data-${result}`
+
+	cache.set(value, finalKey)
+
+	return finalKey
+}
+
+export const toDataAttrs = <Data extends DataObject>(object?: Data) => {
+	if (
+		!object ||
+		typeof object !== "object"
+	) return {}
+
+	const dataAttrs: DataAttrs = {}
+
+	for (const key in object) {
+		const value = object[key]
+
+		if (
+			value === undefined ||
+			value === null ||
+			value === false
+		) {
+			continue
+		}
+
+		const dataAttr = createDataAttr(key)
+
+		if (!dataAttr) continue
+
+		dataAttrs[dataAttr] = value === true
+			? ""
+			: `${value}`
+	}
+
+	return dataAttrs
+}

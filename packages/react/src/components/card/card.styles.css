@@ -1,0 +1,19 @@
+.card {
+  @apply overflow-hidden relative w-full flex flex-col rounded-lg border border-border shadow-xs bg-surface;
+}
+
+.card__content {
+  @apply px-4 py-3 grow min-w-0;
+}
+
+.card__title {
+  @apply text-sm font-medium text-pretty text-foreground leading-snug;
+}
+
+.card__description {
+  @apply text-sm text-pretty text-muted;
+
+  .card__title + & {
+    @apply mt-0.5;
+  }
+}

@@ -1,0 +1,19 @@
+import { defineConfig } from "tsup"
+
+export default defineConfig({
+	entry: ["src/index.ts", "src/hooks/index.ts", "src/utils/index.ts", "src/styles/styles.css"],
+	format: ["esm"],
+	dts: true,
+	clean: true,
+	outDir: "build",
+	tsconfig: "tsconfig.json",
+	banner: {
+		js: '"use client";',
+	},
+	external: [
+		"react",
+		"react-dom",
+		"@base-ui/react",
+		"lucide-react"
+	]
+});

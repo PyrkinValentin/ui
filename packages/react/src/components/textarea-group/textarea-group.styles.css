@@ -1,0 +1,43 @@
+.textarea-group {
+  @apply relative p-4 w-full flex flex-col gap-4 rounded-md bg-neutral text-neutral-foreground text-sm cursor-text
+  transition motion-reduce:transition-none;
+
+  & textarea {
+    @apply p-0 w-auto min-h-[3lh] max-h-[10lh] rounded-none bg-transparent transition-none;
+
+    &:hover,
+    &:active {
+      &:not(:focus) {
+        @apply bg-transparent;
+      }
+    }
+
+    &:focus,
+    &[data-invalid] {
+      @apply outline-0 ring-0 ring-offset-0 border-none shadow-none;
+    }
+
+    &[data-disabled] {
+      @apply opacity-100;
+    }
+  }
+
+  &:hover,
+  &:active {
+    &:has(textarea:not(:focus)) {
+      @apply bg-neutral-hover;
+    }
+  }
+
+  &:has(textarea:focus) {
+    @apply z-10 status-focus;
+  }
+
+  &:has(textarea[data-disabled]) {
+    @apply status-disable;
+  }
+
+  &:has(textarea[data-invalid]) {
+    @apply status-invalid;
+  }
+}

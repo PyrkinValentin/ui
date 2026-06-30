@@ -1,0 +1,165 @@
+.alert-dialog__trigger {
+  @apply relative transition motion-reduce:transition-none;
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.alert-dialog__backdrop {
+  @apply fixed inset-0 bg-backdrop transition-opacity motion-reduce:transition-none;
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    @apply opacity-0;
+  }
+}
+
+.alert-dialog__viewport {
+  @apply fixed inset-0 p-2 flex;
+
+  &[data-position="top"] {
+    @apply items-start justify-center;
+
+    & .alert-dialog__popup {
+      @apply origin-top;
+    }
+  }
+
+  &[data-position="center"] {
+    @apply items-center justify-center;
+
+    & .alert-dialog__popup {
+      @apply origin-center;
+    }
+  }
+
+  &[data-position="bottom"] {
+    @apply items-end justify-center;
+
+    & .alert-dialog__popup {
+      @apply origin-bottom;
+    }
+  }
+
+  & .alert-dialog__popup {
+    @apply relative left-auto top-auto translate-none max-w-full max-h-full;
+  }
+}
+
+.alert-dialog__popup {
+  @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 max-w-[calc(100%-(--spacing(4)))]
+  max-h-[calc(100%-(--spacing(4)))] flex flex-col items-center rounded-lg shadow-lg border border-border bg-overlay
+  transition motion-reduce:transition-none;
+
+  &:focus-visible {
+    @apply status-focus;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style],
+  &[data-nested-dialog-open] {
+    @apply opacity-0 scale-90;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    &[data-nested] {
+      @apply transform-[translateY(-100%)];
+    }
+  }
+
+  &[data-nested-dialog-open] {
+    @apply transform-[translateY(100%)] pointer-events-none;
+  }
+
+  &[data-size="sm"] {
+    @apply w-xs;
+  }
+
+  &[data-size="md"] {
+    @apply w-sm;
+  }
+
+  &[data-size="lg"] {
+    @apply w-md;
+  }
+
+  &[data-size="full"] {
+    @apply size-full;
+  }
+}
+
+.alert-dialog__indicator {
+  @apply mb-2 size-10 shrink-0 flex items-center justify-center rounded-md;
+
+  & > svg {
+    @apply size-6;
+  }
+
+  &[data-status="neutral"] {
+    @apply bg-neutral-soft text-neutral-soft-foreground;
+  }
+
+  &[data-status="info"] {
+    @apply bg-info-soft text-info-soft-foreground;
+  }
+
+  &[data-status="success"] {
+    @apply bg-success-soft text-success-soft-foreground;
+  }
+
+  &[data-status="warning"] {
+    @apply bg-warning-soft text-warning-soft-foreground;
+  }
+
+  &[data-status="error"] {
+    @apply bg-error-soft text-error-soft-foreground;
+  }
+}
+
+.alert-dialog__title {
+  @apply text-base text-center font-medium text-pretty text-foreground leading-snug;
+}
+
+.alert-dialog__description {
+  @apply text-base text-center text-pretty text-muted;
+
+  .alert-dialog__title + & {
+    @apply mt-1;
+  }
+}
+
+.alert-dialog__actions {
+  @apply mt-auto pt-4 w-full flex items-center justify-center gap-2;
+}
+
+.alert-dialog__close {
+  @apply relative transition motion-reduce:transition-none;
+
+  &[data-native-close] {
+    @apply z-1 absolute top-4 right-4 size-6 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
+    select-none;
+
+    & > svg {
+      @apply size-4;
+    }
+
+    &:hover,
+    &:active {
+      @apply bg-neutral-soft-hover;
+    }
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}

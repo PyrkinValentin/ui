@@ -1,0 +1,24 @@
+export { createMenuHandle as createHandle } from "./menu.utils"
+
+export {
+	MenuRoot as Root,
+	MenuTrigger as Trigger,
+	MenuPortal as Portal,
+	MenuBackdrop as Backdrop,
+	MenuPositioner as Positioner,
+	MenuPopup as Popup,
+	MenuArrow as Arrow,
+	MenuViewport as Viewport,
+	MenuItem as Item,
+	MenuLinkItem as LinkItem,
+	MenuSeparator as Separator,
+	MenuSubmenuRoot as SubmenuRoot,
+	MenuSubmenuTrigger as SubmenuTrigger,
+	MenuGroup as Group,
+	MenuGroupLabel as GroupLabel,
+	MenuRadioGroup as RadioGroup,
+	MenuRadioItem as RadioItem,
+	MenuRadioItemIndicator as RadioItemIndicator,
+	MenuCheckboxItem as CheckboxItem,
+	MenuCheckboxItemIndicator as CheckboxItemIndicator,
+} from "./menu"

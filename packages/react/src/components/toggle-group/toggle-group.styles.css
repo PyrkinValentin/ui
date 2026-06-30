@@ -1,0 +1,33 @@
+.toggle-group {
+  @apply inline-flex items-center;
+
+  & > .toggle {
+    @apply rounded-none;
+  }
+
+  &[data-orientation="horizontal"] > .toggle {
+    &:first-child {
+      @apply rounded-s-md;
+    }
+
+    &:last-child {
+      @apply rounded-e-md;
+    }
+  }
+
+  &[data-orientation="vertical"] {
+    @apply flex-col;
+
+    & > .toggle {
+      @apply w-full justify-start;
+
+      &:first-child {
+        @apply rounded-t-md;
+      }
+
+      &:last-child {
+        @apply rounded-b-md;
+      }
+    }
+  }
+}

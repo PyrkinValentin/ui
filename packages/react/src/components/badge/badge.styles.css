@@ -1,0 +1,96 @@
+.badge {
+  @apply relative shrink-0 inline-flex;
+}
+
+.badge__indicator {
+  @apply z-10 absolute px-1 flex items-center justify-center rounded-full ring ring-background font-medium
+  pointer-events-none transition-transform motion-reduce:transition-none;
+
+  & > svg {
+    @apply -mx-1;
+  }
+
+  &[data-size="sm"] {
+    @apply min-w-4 h-4 text-xs;
+
+    & > svg {
+      @apply size-3;
+    }
+
+    &[data-dot] {
+      @apply min-w-3 h-3;
+    }
+  }
+
+  &[data-size="md"] {
+    @apply min-w-4.5 h-4.5 text-sm;
+
+    & > svg {
+      @apply size-3.5;
+    }
+
+    &[data-dot] {
+      @apply min-w-3.5 h-3.5;
+    }
+  }
+
+  &[data-size="lg"] {
+    @apply min-w-5 h-5 text-base;
+
+    & > svg {
+      @apply size-4;
+    }
+
+    &[data-dot] {
+      @apply min-w-4 h-4;
+    }
+  }
+
+  &[data-side="top"] {
+    @apply top-0 -translate-y-1/4;
+  }
+
+  &[data-side="bottom"] {
+    @apply bottom-0 translate-y-1/4;
+  }
+
+  &[data-align="start"] {
+    @apply left-0 -translate-x-1/4;
+  }
+
+  &[data-align="center"] {
+    @apply left-1/2 -translate-x-1/2;
+  }
+
+  &[data-align="end"] {
+    @apply right-0 translate-x-1/4;
+  }
+
+  &[data-status="neutral"] {
+    @apply bg-neutral text-neutral-foreground;
+  }
+
+  &[data-status="info"] {
+    @apply bg-info text-info-foreground;
+  }
+
+  &[data-status="success"] {
+    @apply bg-success text-success-foreground;
+  }
+
+  &[data-status="warning"] {
+    @apply bg-warning text-warning-foreground;
+  }
+
+  &[data-status="error"] {
+    @apply bg-error text-error-foreground;
+  }
+
+  &[data-dot] {
+    @apply px-0;
+  }
+
+  &[data-invisible] {
+    @apply scale-0;
+  }
+}

@@ -1,0 +1,27 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply relative min-w-(--container-xs) min-h-full bg-background text-foreground text-base antialiased;
+
+    font-synthesis: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .root {
+    @apply isolate;
+  }
+
+  svg {
+    @apply shrink-0;
+  }
+
+  a, button {
+    @apply cursor-pointer;
+  }
+}

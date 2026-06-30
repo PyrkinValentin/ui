@@ -1,0 +1,63 @@
+.accordion {
+  @apply w-full divide-y divide-separator;
+}
+
+.accordion__trigger {
+  @apply relative px-4 py-3 w-full flex items-center gap-2 text-left text-sm font-medium
+  transition-[border-radius,box-shadow,background-color,opacity] motion-reduce:transition-none;
+
+  .accordion__item:first-child & {
+    @apply rounded-t-lg;
+  }
+
+  .accordion__item:last-child &:not([data-panel-open]) {
+    @apply rounded-b-lg;
+  }
+
+  &[data-panel-open] {
+    & .accordion__icon {
+      @apply rotate-180;
+    }
+  }
+
+  & > svg {
+    @apply size-4 text-muted;
+  }
+
+  &:hover,
+  &:active {
+    &:not([data-panel-open]) {
+      @apply bg-neutral-soft;
+    }
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
+
+.accordion__icon {
+  @apply shrink-0 ms-auto size-4 flex items-center justify-center text-muted select-none transition-transform
+  motion-reduce:transition-none;
+
+  & > svg {
+    @apply size-full;
+  }
+}
+
+.accordion__panel {
+  @apply h-(--accordion-panel-height) overflow-hidden transition-[height] motion-reduce:transition-none;
+
+  &[data-ending-style],
+  &[data-starting-style] {
+    @apply h-0;
+  }
+}
+
+.accordion__content {
+  @apply px-4 pb-3 text-sm text-muted;
+}

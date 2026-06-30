@@ -1,0 +1,69 @@
+.scroll-area {
+  @apply w-full flex flex-col overflow-hidden transition motion-reduce:transition-none;
+
+  &:has(.scroll-area__viewport:focus-visible) {
+    @apply z-10 status-focus;
+  }
+}
+
+.scroll-area__viewport {
+  @apply size-full outline-none;
+
+  &[data-scroll-fade] {
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        black min(40px, var(--scroll-area-overflow-y-start)),
+        black calc(100% - min(40px, var(--scroll-area-overflow-y-end, 40px))),
+        transparent 100%
+    ),
+    linear-gradient(
+        to right,
+        transparent 0,
+        black min(40px, var(--scroll-area-overflow-x-start)),
+        black calc(100% - min(40px, var(--scroll-area-overflow-x-end, 40px))),
+        transparent 100%
+    );
+
+    @apply mask-intersect mask-no-repeat;
+  }
+}
+
+.scroll-area__scrollbar {
+  @apply m-0.5 rounded-full bg-(--scrollbar) opacity-0 pointer-events-none transition-opacity
+  motion-reduce:transition-none;
+
+  &[data-hovering],
+  &[data-scrolling] {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  &[data-scrolling] {
+    @apply duration-0;
+  }
+
+  &[data-orientation="vertical"] {
+    @apply w-1;
+  }
+
+  &[data-orientation="horizontal"] {
+    @apply h-1;
+  }
+}
+
+.scroll-area__thumb {
+  @apply rounded-full bg-(--scrollbar-thumb) transition-colors motion-reduce:transition-none;
+
+  &[data-orientation="vertical"] {
+    @apply w-full;
+  }
+
+  &[data-orientation="horizontal"] {
+    @apply h-full;
+  }
+
+  &:hover,
+  &:active {
+    @apply bg-(--scrollbar-thumb-hover);
+  }
+}

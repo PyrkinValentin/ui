@@ -1,0 +1,43 @@
+.button-group {
+  @apply inline-flex items-center;
+
+  & > .button {
+    @apply rounded-none;
+  }
+
+  &[data-orientation="horizontal"] > .button {
+    &:first-child {
+      @apply rounded-s-md;
+    }
+
+    &:last-child {
+      @apply rounded-e-md;
+    }
+  }
+
+  &[data-orientation="vertical"] {
+    @apply flex-col;
+
+    & > .button {
+      @apply w-full justify-start;
+
+      &:first-child {
+        @apply rounded-t-md;
+      }
+
+      &:last-child {
+        @apply rounded-b-md;
+      }
+    }
+  }
+
+  &[data-variant="outline"] {
+    &[data-orientation="horizontal"] > .button:not(:last-child) {
+      @apply -me-px;
+    }
+
+    &[data-orientation="vertical"] > .button:not(:last-child) {
+      @apply -mb-px;
+    }
+  }
+}

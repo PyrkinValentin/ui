@@ -1,0 +1,77 @@
+.alert {
+  @apply relative px-4 py-3 w-full flex items-center gap-3 rounded-lg border border-border shadow-xs bg-surface;
+
+  &:has(.alert__description) {
+    @apply items-start;
+  }
+}
+
+.alert__indicator {
+  @apply size-8 shrink-0 flex items-center justify-center rounded-sm;
+
+  & > svg {
+    @apply size-5;
+  }
+
+  &[data-status="neutral"] {
+    @apply bg-neutral-soft text-neutral-soft-foreground;
+  }
+
+  &[data-status="info"] {
+    @apply bg-info-soft text-info-soft-foreground;
+  }
+
+  &[data-status="success"] {
+    @apply bg-success-soft text-success-soft-foreground;
+  }
+
+  &[data-status="warning"] {
+    @apply bg-warning-soft text-warning-soft-foreground;
+  }
+
+  &[data-status="error"] {
+    @apply bg-error-soft text-error-soft-foreground;
+  }
+}
+
+.alert__content {
+  @apply grow min-w-0;
+}
+
+.alert__title {
+  @apply text-sm font-medium text-pretty text-foreground leading-snug line-clamp-2;
+}
+
+.alert__description {
+  @apply text-sm text-pretty text-muted;
+
+  .alert__title + & {
+    @apply mt-0.5;
+  }
+}
+
+.alert__close {
+  @apply relative transition motion-reduce:transition-none;
+
+  &[data-native-close] {
+    @apply -mr-1 size-6 shrink-0 flex items-center justify-center rounded-sm bg-neutral-soft text-muted
+    select-none;
+
+    & > svg {
+      @apply size-4;
+    }
+
+    &:hover,
+    &:active {
+      @apply bg-neutral-soft-hover;
+    }
+  }
+
+  &:focus-visible {
+    @apply z-10 status-focus;
+  }
+
+  &[data-disabled] {
+    @apply status-disable;
+  }
+}
