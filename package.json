@@ -10,12 +10,12 @@
 		"react-dom": "^19.0.0"
 	},
 	"scripts": {
-		"preinstall": "npx only-allow npm",
 		"build": "npm run build --workspaces --if-present",
 		"version:bump": "npm version patch --workspaces --include-workspace-root",
 		"release": "npm run version:bump && npm publish --workspace=@cora-ui/react && git push origin main --follow-tags"
 	},
 	"engines": {
 		"node": ">=22.0.0"
-	}
+	},
+	"packageManager": "npm@11.8.0"
 }
