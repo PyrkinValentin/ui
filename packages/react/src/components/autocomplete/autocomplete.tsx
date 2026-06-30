@@ -27,7 +27,7 @@ import type {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Autocomplete } from "@base-ui/react/autocomplete"
-import { ChevronDown, X } from "lucide-react"
+import { ChevronDown, X } from "../../icons"
 
 /**
  * Groups all parts of the autocomplete.

@@ -5,7 +5,7 @@ import type { CheckboxRootProps, CheckboxIndicatorProps } from "./checkbox.props
 import { toClassNames } from "../../utils"
 
 import { Checkbox } from "@base-ui/react/checkbox"
-import { Check } from "lucide-react"
+import { Check } from "../../icons"
 
 /**
  * Represents the checkbox itself.

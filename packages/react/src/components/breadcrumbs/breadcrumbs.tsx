@@ -12,7 +12,7 @@ import type {
 
 import { toClassNames } from "../../utils"
 
-import { ChevronRight, Ellipsis } from "lucide-react"
+import { ChevronRight, Ellipsis } from "../../icons"
 import { Render } from "../../primitives"
 
 /**

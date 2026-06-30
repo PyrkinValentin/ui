@@ -5,7 +5,7 @@
     --gap: 0;
     --toast-swipe-movement-y: 0;
 
-    @apply z-1 fixed w-[calc(100%-(--spacing(4))*2)] sm:w-90;
+    @apply z-1 fixed w-[calc(100%_-_(--spacing(4))*2)] sm:w-90;
 
     &[data-position="top-center"],
     &[data-position="bottom-center"] {
@@ -64,7 +64,7 @@
         --offset-y: calc(var(--toast-offset-y) * -1 + calc(var(--toast-index) * var(--gap) * -1) + var(--toast-swipe-movement-y));
 
         @apply bottom-0 origin-bottom after:top-full
-        transform-[translateX(var(--toast-swipe-movement-x))_translateY(calc(var(--toast-swipe-movement-y)-(var(--toast-index)*var(--peek))-(var(--shrink)*var(--height))))_scale(var(--scale))];
+        transform-[translateX(var(--toast-swipe-movement-x))_translateY(calc(var(--toast-swipe-movement-y)_-_(var(--toast-index)*var(--peek))_-_(var(--shrink)*var(--height))))_scale(var(--scale))];
 
         &[data-starting-style] {
           @apply transform-[translateY(150%)];

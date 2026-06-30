@@ -19,7 +19,7 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { STATUS_INDICATORS } from "../../constants"
 
 import { AlertDialog } from "@base-ui/react/alert-dialog"
-import { X } from "lucide-react"
+import { X } from "../../icons"
 import { Render } from "../../primitives"
 
 /**

@@ -11,7 +11,7 @@ import type {
 import { toClassNames } from "../../utils"
 
 import { Collapsible } from "@base-ui/react/collapsible"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown } from "../../icons"
 import { Render } from "../../primitives"
 
 /**

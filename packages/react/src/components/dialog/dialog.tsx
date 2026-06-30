@@ -16,7 +16,7 @@ import type {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Dialog } from "@base-ui/react/dialog"
-import { X } from "lucide-react"
+import { X } from "../../icons"
 import { Render } from "../../primitives"
 
 /**

@@ -25,7 +25,7 @@ import { useDrawerViewportContext } from "./drawer.hooks"
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Drawer } from "@base-ui/react/drawer"
-import { X } from "lucide-react"
+import { X } from "../../icons"
 import { Render } from "../../primitives"
 import { DrawerViewportContext } from "./drawer.context"
 

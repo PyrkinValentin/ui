@@ -24,7 +24,7 @@ import { toClassNames, clamp, toDataAttrs } from "../../utils"
 import { REASONS } from "../../constants"
 
 import { Button } from "@base-ui/react/button"
-import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react"
+import { ChevronLeft, ChevronRight, Ellipsis } from "../../icons"
 import { Render } from "../../primitives"
 import { PaginationRootContext } from "./pagination.context"
 

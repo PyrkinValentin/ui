@@ -7,7 +7,7 @@ import { useAvatarGroupContext } from "../avatar-group/avatar-group.hooks"
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Avatar } from "@base-ui/react/avatar"
-import { UserRound } from "lucide-react"
+import { UserRound } from "../../icons"
 
 /**
  * Displays a user's profile picture, initials, or fallback icon.

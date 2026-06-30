@@ -14,7 +14,7 @@ import { toClassNames, toDataAttrs } from "../../utils"
 import { STATUS_INDICATORS } from "../../constants"
 
 import { Button } from "@base-ui/react/button"
-import { X } from "lucide-react"
+import { X } from "../../icons"
 import { Render } from "../../primitives"
 
 /**

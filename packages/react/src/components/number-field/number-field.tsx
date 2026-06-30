@@ -13,7 +13,7 @@ import type {
 import { toClassNames } from "../../utils"
 
 import { NumberField } from "@base-ui/react/number-field"
-import { Minus, MoveHorizontal, Plus } from "lucide-react"
+import { Minus, MoveHorizontal, Plus } from "../../icons"
 
 /**
  * Groups all parts of the number field and manages its state.

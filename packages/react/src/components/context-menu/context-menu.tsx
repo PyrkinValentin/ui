@@ -25,7 +25,7 @@ import {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { ContextMenu } from "@base-ui/react/context-menu"
-import { Check } from "lucide-react"
+import { Check } from "../../icons"
 
 /**
  * A component that creates a context menu activated by right-clicking or long pressing.

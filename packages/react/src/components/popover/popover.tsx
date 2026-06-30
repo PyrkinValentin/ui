@@ -17,7 +17,7 @@ import type {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Popover } from "@base-ui/react/popover"
-import { X } from "lucide-react"
+import { X } from "../../icons"
 
 /**
  * Groups all parts of the popover.

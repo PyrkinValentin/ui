@@ -13,7 +13,7 @@ import type {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Accordion } from "@base-ui/react/accordion"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown } from "../../icons"
 import { Render } from "../../primitives"
 
 /**

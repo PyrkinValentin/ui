@@ -19,7 +19,7 @@ import type {
 import { toClassNames } from "../../utils"
 
 import { NavigationMenu } from "@base-ui/react/navigation-menu"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown } from "../../icons"
 
 /**
  * Groups all parts of the navigation menu.

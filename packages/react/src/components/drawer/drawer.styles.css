@@ -119,7 +119,7 @@
   }
 
   &[data-position="top"] {
-    @apply origin-[50%_var(--bleed)] transform-[translateY(calc(-1*(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height)))))_scale(var(--scale))];
+    @apply origin-[50%_var(--bleed)] transform-[translateY(calc(-1*(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)_-_(var(--shrink)*var(--height)))))_scale(var(--scale))];
 
     &[data-starting-style],
     &[data-ending-style] {
@@ -128,7 +128,7 @@
   }
 
   &[data-position="bottom"] {
-    @apply origin-[50%_calc(100%-var(--bleed))] transform-[translateY(calc(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height))))_scale(var(--scale))];
+    @apply origin-[50%_calc(100%-var(--bleed))] transform-[translateY(calc(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)_-_(var(--shrink)*var(--height))))_scale(var(--scale))];
 
     &[data-starting-style],
     &[data-ending-style] {

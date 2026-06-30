@@ -32,7 +32,7 @@ import type {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Combobox } from "@base-ui/react/combobox"
-import { Check, ChevronDown, X } from "lucide-react"
+import { Check, ChevronDown, X } from "../../icons"
 
 /**
  * Groups all parts of the combobox.

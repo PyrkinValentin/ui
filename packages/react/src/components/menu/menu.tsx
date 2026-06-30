@@ -26,7 +26,7 @@ import {
 import { toClassNames, toDataAttrs } from "../../utils"
 
 import { Menu } from "@base-ui/react/menu"
-import { Check } from "lucide-react"
+import { Check } from "../../icons"
 
 /**
  * Groups all parts of the menu.

@@ -23,7 +23,7 @@ import type {
 import { toClassNames } from "../../utils"
 
 import { Select } from "@base-ui/react/select"
-import { Check, ChevronDown } from "lucide-react"
+import { Check, ChevronDown } from "../../icons"
 
 /**
  * Groups all parts of the select.

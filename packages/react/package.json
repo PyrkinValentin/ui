@@ -1,6 +1,6 @@
 {
 	"name": "@cora-ui/react",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"author": "Cora",
 	"description": "Next-generation, high-performance React 19 UI component kit built on Base UI and Tailwind CSS v4 with native accessibility and zero runtime overhead.",
 	"license": "MIT",
@@ -59,8 +59,7 @@
 		"tailwindcss": "^4.0.0"
 	},
 	"dependencies": {
-		"@base-ui/react": "^1.6.0",
-		"lucide-react": "^1.22.0"
+		"@base-ui/react": "^1.6.0"
 	},
 	"devDependencies": {
 		"@types/react": "^19.0.0",
