@@ -70,8 +70,7 @@
 	},
 	"sideEffects": false,
 	"publishConfig": {
-		"access": "public",
-		"directory": "build"
+		"access": "public"
 	},
 	"engines": {
 		"node": ">=22.0.0"
