@@ -1,6 +1,6 @@
 {
 	"name": "@cora-ui/monorepo",
-	"version": "1.0.28",
+	"version": "1.0.29",
 	"private": true,
 	"workspaces": [
 		"packages/*"
@@ -8,6 +8,13 @@
 	"overrides": {
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0",
+		"tsup": "^8.0.0",
+		"tailwindcss": "^4.0.0",
+		"typescript": "^6.0.3"
 	},
 	"scripts": {
 		"build": "npm run build --workspaces --if-present",
