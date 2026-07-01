@@ -11,8 +11,8 @@
 	},
 	"scripts": {
 		"build": "npm run build --workspaces --if-present",
-		"version:bump": "npm version patch --workspaces --no-git-tag-version && git add **/package.json package-lock.json && npm version patch --include-workspace-root --force",
-		"release": "npm run version:bump && npm publish --workspace=@cora-ui/react && git push origin main --follow-tags"
+		"version:bump": "npm version patch --workspaces --include-workspace-root --no-git-tag-version",
+		"release": "npm publish --workspace=@cora-ui/react && git push origin main --follow-tags"
 	},
 	"engines": {
 		"node": ">=22.0.0"
